@@ -1,0 +1,22 @@
+
+.mySelect {
+    select {
+        border: none !important;
+        border-radius: 0px !important;
+        background: none !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.401) !important;
+    
+        &:focus {
+            border-color: none; /* Change to your desired color */
+            outline: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.401);
+        }
+    
+        option {
+            font-family: "Hind Madurai", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            // margin-left: 10px;
+        }
+    }
+}

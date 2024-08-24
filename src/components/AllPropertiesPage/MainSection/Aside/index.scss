@@ -1,0 +1,47 @@
+@import url('../../../../styles/_colors.scss');
+
+.property_aside_list {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    .section-title-div {
+        padding-left: 10px;
+        .section-title {
+            color: #265733;
+            font-family: 'Montserrat', 'Helvetica Neue';
+            font-weight: 700;
+            font-size: 0.9em;
+            border-bottom: 1px solid #265733;
+        }
+    }
+
+    .aside-card-title {
+        color: #265733;
+        font-family: 'Montserrat', 'Helvetica Neue';
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+
+    .aside-card-location {
+        color: #000;
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 0.7em;
+    }
+
+    .aside-card-price {
+        color: #000;
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+
+    .aside-card-numbers {
+        color: #000;
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 0.7em;
+    }
+}

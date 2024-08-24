@@ -1,0 +1,19 @@
+
+@import '../../styles/_colors.scss';
+
+.footer {
+    margin: 0 !important;
+    background-color: #2D536F;
+    color: $white;
+
+    .text-muted {
+        color: $white !important;
+        font-family: "Hind Madurai";
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+}

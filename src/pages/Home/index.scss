@@ -1,0 +1,14 @@
+@import '../../styles/_colors.scss';
+
+
+.container-fluid{
+    background: url('../../assets/home.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 120vh;
+    padding: 0 !important;
+    display: block;
+    width: 100% !important;
+}
