@@ -68,6 +68,7 @@ Template: aios-starter-theme
 .main-nav {
     position: relative;
     display: flex;
+    margin-top: 25px;
     justify-content: space-between;
     width: 42%;
     -webkit-transition: 0.3s all ease-in-out;

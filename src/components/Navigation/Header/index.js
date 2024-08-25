@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
-import logo1 from '../../../assets/images/site-logo-b.png'
+// import logo1 from '../../../assets/images/site-logo-b.png'
 import logo2 from '../../../assets/images/site-logo.png'
-import { Navbar } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 
 function Header() {
   return (
@@ -11,25 +11,25 @@ function Header() {
         <div className="container">
             <div className="header-wrap">
                 <div className="logo">
-                    <div className="desktop hidden-sm hidden-xs">
+                    {/* <div className="desktop hidden-sm hidden-xs">
                         <div className="textwidget custom-html-widget">
                             <a href="https://serioestates.com/">
                                 <img className="skip-lazyload" src={logo2} alt="Serio Group" width="87" height="87"/>
                             </a>
                         </div>
-                    </div>
-                    <div className="mob-logo visible-sm visible-xs">
+                    </div> */}
+                    {/* <div className="mob-logo visible-sm visible-xs">
                         <div className="textwidget custom-html-widget">
                             <a href="https://serioestates.com">
                                 <img className="skip-lazyload" src={logo1} alt="Serio Group" width="201" height="69"/>
                             </a>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="header-nav">
-                    <Navbar className="navigation">
-                        <div className="menu-primary-menu-container">
-                            <ul id="main-nav" className="main-nav">
+                    <Navbar className="navigation justify-content-between">
+                        <Container className="menu-primary-menu-container">
+                            <Nav id="main-nav" className="main-nav mt-3">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46">
                                     <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
                                     <ul className="sub-menu">
@@ -99,6 +99,17 @@ function Header() {
                                         </li>
                                     </ul>
                                 </li>
+                            </Nav>
+                            <Navbar.Brand style={{padding: 0}} href="#home">
+                                <img
+                                src={logo2}
+                                width="87"
+                                height="87"
+                                className="d-inline-block align-top mb-4"
+                                alt="React Bootstrap logo"
+                                />
+                            </Navbar.Brand>
+                            <Nav className="main-nav">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
                                     <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
                                     <ul className="sub-menu">
@@ -118,8 +129,8 @@ function Header() {
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
                                     <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
                                 </li>
-                            </ul>
-                        </div>
+                            </Nav>
+                        </Container>
                     </Navbar>
                 </div>
                 <div className="header-content-holder">
