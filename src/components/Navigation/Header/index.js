@@ -100,15 +100,17 @@ function Header() {
                                     </ul>
                                 </li>
                             </Nav>
-                            <Navbar.Brand style={{padding: 0}} href="#home">
-                                <img
-                                src={logo2}
-                                width="87"
-                                height="87"
-                                className="d-inline-block align-top mb-4"
-                                alt="React Bootstrap logo"
-                                />
-                            </Navbar.Brand>
+                            <Nav>
+                                <Navbar.Brand style={{paddingTop: 0, paddingBottom: 20}} href="#home">
+                                    <img
+                                    src={logo2}
+                                    width="87"
+                                    height="87"
+                                    className="d-inline-block align-top mb-4"
+                                    alt="React Bootstrap logo"
+                                    />
+                                </Navbar.Brand>
+                            </Nav>
                             <Nav className="main-nav">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
                                     <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
