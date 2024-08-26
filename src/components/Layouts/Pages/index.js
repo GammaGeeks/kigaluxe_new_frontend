@@ -1,12 +1,23 @@
 import { Outlet } from 'react-router-dom'
-import { NotificationContainer } from 'react-notifications'
-import './index.scss'
+import FixedHeader from '../../Navigation/FixedHeader'
+import Header from '../../Navigation/Header'
+import SideMenu from '../../Navigation/SideMenu'
+import SocialMedia from '../../Navigation/SocialMedia'
+import FooterPart from '../../Footer';
 
 const Layout = () => {
   return (
-    <div className='content'>
-      <Outlet />
-      <NotificationContainer/>
+    <div id="main-wrapper">
+      <FixedHeader />
+      <Header />
+      <SideMenu />
+      <SocialMedia />
+      {/* <PopUp /> */}
+      {/* <IntroVideo /> */}
+      <main>
+        <Outlet />
+      </main>
+      <FooterPart />
     </div>
   )
 }
