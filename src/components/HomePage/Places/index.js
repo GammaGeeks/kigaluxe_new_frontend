@@ -28,11 +28,11 @@ function Places() {
                                     <a href="https://serioestates.com/community/bel-air">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/aoe-img-1.jpg" alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload" src={require('../../../assets/location_one.png')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
-                                                <em className="ai-icon-logo-sm"></em>Bel Air </span>
+                                                <em className="ai-icon-logo-sm"></em>Kigali City </span>
                                         </div>
                                         <div className="aoe-hover-img">
                                             <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
@@ -43,7 +43,7 @@ function Places() {
                                     <a href="https://serioestates.com/community/beverly-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/uploads/2024/01/AOE-BeverlyHills.jpg" alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload"  src={require('../../../assets/location_two.png')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
