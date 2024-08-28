@@ -4,6 +4,7 @@ import React from 'react'
 // import logo1 from '../../../assets/images/site-logo-b.png'
 import logo2 from '../../../assets/images/site-logo.png'
 import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -48,7 +49,7 @@ function Header() {
                                     </ul>
                                 </li>
                                 <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                    <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Featured Listings</a>
+                                    <Link to='/listings' data-title="Featured Listings">Latest Listings</Link>
                                 </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
                                     <a href="/communities/" data-title="Communities">Communities</a>
@@ -101,7 +102,7 @@ function Header() {
                                 </li>
                             </Nav>
                             <Nav>
-                                <Navbar.Brand style={{paddingTop: 0, paddingBottom: 20}} href="#home">
+                                <Navbar.Brand style={{paddingTop: 0, paddingBottom: 20}} href="/">
                                     <img
                                     src={logo2}
                                     width="87"

@@ -14,9 +14,7 @@ const Layout = () => {
       <SocialMedia />
       {/* <PopUp /> */}
       {/* <IntroVideo /> */}
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <FooterPart />
     </div>
   )

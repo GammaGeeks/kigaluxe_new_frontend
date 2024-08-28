@@ -1,0 +1,1362 @@
+/*******************************************************
+
+ *
+
+ * Featured Listings
+
+ *
+
+ *******************************************************/
+
+.ip-banner {
+
+    display: none;
+
+}
+
+
+
+.ip-container #fixed-smi {
+
+    display: block;
+
+}
+
+
+
+.nav-active-section-ip-comm-content #fixed-smi ul li a {
+
+    color: #fff;
+
+    border-color: #000;
+
+    background-color: #000;
+
+}
+
+
+
+.nav-active-section-ip-comm-content .fixed-smi-label:before {
+
+    background-color: #000;
+
+}
+
+
+
+.nav-active-section-ip-comm-content .fixed-smi-label span {
+
+    color: #000;
+
+}
+
+
+
+.git-container {
+
+    margin-top: 100px;
+
+}
+
+
+
+.git-bg:before {
+
+    height: 35%;
+
+}
+
+
+
+.custom-ip-banner {
+
+    display: block;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+
+.custom-ip-banner canvas {
+
+    display: block;
+
+    width: 100%;
+
+    background-position: center bottom;
+
+    background-size: 100% auto;
+	background-repeat: no-repeat;
+
+    min-height: 350px;
+
+}
+
+
+
+.custom-ip-tagline {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 2;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -webkit-box-align: center;
+
+    -ms-flex-align: center;
+
+    align-items: center;
+
+    -webkit-box-pack: center;
+
+    -ms-flex-pack: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 60px;
+
+    letter-spacing: 0.025em;
+
+    line-height: 1;
+
+    color: #fff;
+
+    font-family: var(--title-font);
+
+    font-weight: 400;
+
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.35);
+
+}
+
+
+
+#inner-page-wrapper {
+
+    margin-bottom: 0;
+
+}
+
+
+
+#inner-page-wrapper>.container {
+
+    width: 100%;
+
+    padding: 0;
+
+}
+
+
+
+.custom-breadcrumbs {
+
+    padding-top: 90px;
+
+    z-index: 5;
+
+    position: relative;
+
+    padding-bottom: 145px;
+
+}
+
+
+
+.custom-breadcrumbs p#breadcrumbs {
+
+    font-size: 14px;
+
+    letter-spacing: 0.05em;
+
+    color: #999999;
+
+}
+
+
+
+#ip-featured-listings {
+
+    font-size: 0;
+
+    letter-spacing: normal;
+
+    line-height: 1;
+
+}
+
+
+
+.ip-fl-section, .ip-fl-container {
+
+    display: block;
+
+    position: relative;
+
+}
+
+
+
+/*Section 2*/
+
+.ip-fl-listing-container {
+
+    display: block;
+
+    position: relative;
+
+    padding: 0 0 80px;
+
+    margin-top: -60px;
+
+}
+
+
+
+.ip-fl-bg {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #fff;
+
+    pointer-events: none;
+
+}
+
+
+
+.ip-fl-bg canvas {
+
+    -webkit-filter: grayscale();
+
+    filter: grayscale();
+
+    opacity: 0.10;
+
+}
+
+
+
+.ip-fl-listing-caption {
+
+    text-align: center;
+
+    width: 100%;
+
+    max-width: 68.34%;
+
+    margin: 0 auto 50px;
+
+}
+
+
+
+.ip-fl-listing-caption p {
+
+    font-size: max(0.875vw, 11px);
+
+    line-height: 1.715;
+
+    letter-spacing: 0.030em;
+
+    color: #303030;
+
+}
+
+
+
+.ip-fl-listing-row {
+
+    margin: 0 -15px;
+
+}
+
+
+
+.ip-fl-listing-img {
+
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.35);
+
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.35);
+
+}
+
+
+
+.ip-fl-listing-item {
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    width: calc(100% / 3);
+
+    position: relative;
+
+    padding: 0 15px;
+
+    margin-bottom: 54px;
+
+}
+
+
+
+.ip-fl-listing-hover {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 2;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+
+    -webkit-box-orient: vertical;
+
+    -webkit-box-direction: normal;
+
+    -ms-flex-direction: column;
+
+    flex-direction: column;
+
+    -webkit-box-pack: center;
+
+    -ms-flex-pack: center;
+
+    justify-content: center;
+
+    -webkit-box-align: center;
+
+    -ms-flex-align: center;
+
+    align-items: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    text-align: center;
+
+    -webkit-transition: 0.3s all ease-in-out;
+
+    -o-transition: 0.3s all ease-in-out;
+
+    transition: 0.3s all ease-in-out;
+
+}
+
+
+
+.ip-fl-listing-main, .ip-fl-listing-caption, .ip-fl-listing-row, .ip-fl-listing-item a, .ip-fl-listing-img-holder, .ip-fl-listing-address, .ip-fl-listing-price, .ip-fl-listing-hover-address, .ip-fl-listing-hover-btn, .ip-fl-listing-info {
+
+    display: block;
+
+    position: relative;
+
+}
+
+
+
+.ip-fl-listing-hover-btn span {
+
+    margin: 0 auto;
+
+    width: 164px;
+
+    max-width: 100%;
+
+}
+
+
+
+.ip-fl-listing-address span {
+
+    font-size: 18px;
+
+    letter-spacing: 0.050em;
+
+    color: #303030;
+
+    line-height: 1.223;
+
+}
+
+
+
+.ip-fl-listing-price span {
+
+    font-size: 50px;
+
+    letter-spacing: 0.050em;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-family: var(--title-font);
+
+}
+
+
+
+.ip-fl-listing-hover-address span {
+
+    font-size: 30px;
+
+    letter-spacing: 0.050em;
+
+    color: #fff;
+
+    line-height: 1;
+
+    font-family: var(--title-font);
+
+}
+
+
+
+.ip-fl-listing-info span {
+
+    display: inline-block;
+
+    vertical-align: middle;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    letter-spacing: 0.050em;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    font-family: var(--title-font);
+
+    position: relative;
+
+    padding: 0 20px;
+
+    border-right: 1px solid rgba(255,255,255,.50);
+
+}
+
+
+
+.ip-fl-listing-info span em.ai-icon-bed {
+
+    background-image: url(../images/ai-icon-bed.png);
+
+    width: 26px;
+
+    height: 18px;
+
+    right: 20px;
+
+}
+
+
+
+.ip-fl-listing-info span em.ai-icon-bath {
+
+    background-image: url(../images/ai-icon-bath.png);
+
+    width: 23px;
+
+    height: 20px;
+
+}
+
+
+
+.ip-fl-listing-info span em.ai-icon-sqft {
+
+    background-image: url(../images/ai-icon-sqft.png);
+
+    width: 19px;
+
+    height: 18px;
+
+    left: 55px;
+
+}
+
+
+
+.ip-fl-listing-info span:first-child {
+
+    padding-left: 0;
+
+}
+
+
+
+.ip-fl-listing-info span:last-child {
+
+    padding-right: 0;
+
+    border: none;
+
+}
+
+
+
+.ip-fl-listing-main .custom-container {
+
+    padding: 0 38px;
+
+}
+
+
+
+.ip-fl-listing-price {
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.ip-fl-listing-hover-address {
+
+    margin-bottom: 30px;
+
+}
+
+
+
+.ip-fl-listing-info {
+
+    margin-bottom: 73px;
+
+}
+
+
+
+.ip-fl-listing-info span em[class*="ai-icon-"] {
+
+    position: absolute;
+
+    top: calc(100% + 10px);
+
+    left: 0;
+
+    right: 0;
+
+    margin: 0 auto;
+
+}
+
+
+
+.ip-fl-listing-address {
+
+    padding: 25px 0 0 28px;
+
+}
+
+
+
+.ip-fl-listing-main .global-title {
+
+    overflow: hidden;
+
+    padding-top: 9px;
+
+}
+
+
+
+.ip-fl-listing-main .global-logo-icon:after {
+
+    opacity: 0;
+
+}
+
+
+
+.ip-fl-listing-img, .ip-fl-listing-img canvas, .ip-fl-listing-img-holder, .ip-fl-listing-img img, .ip-fl-listing-hover, .ip-fl-listing-hover:before {
+
+    border-radius: 15px;
+
+}
+
+
+
+.ip-fl-listing-hover:before {
+
+    position: absolute;
+
+    content: '';
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#be912d+0,d5b34d+50,be912d+100 */
+
+    background: #be912d;
+
+    /* Old browsers */
+
+    /* FF3.6-15 */
+
+    /* Chrome10-25,Safari5.1-6 */
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#be912d),color-stop(50%, #d5b34d),to(#be912d));
+
+    background: -o-linear-gradient(top, #be912d 0%,#d5b34d 50%,#be912d 100%);
+
+    background: linear-gradient(to bottom, #be912d 0%,#d5b34d 50%,#be912d 100%);
+
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be912d', endColorstr='#be912d',GradientType=0 );
+
+    /* IE6-9 */
+
+    opacity: .90;
+
+}
+
+
+
+.ip-fl-listing-item a:hover .ip-fl-listing-hover {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+.ip-fl-listing-more-btn a {
+
+    margin: 0 auto;
+
+}
+
+
+
+.mls-logo-overlay {
+
+	display: block;
+
+position: absolute;
+
+bottom: 20px;
+
+right: 20px;
+
+}
+
+.mls-logo-overlay img {
+
+	max-width: 100px;
+
+height: auto;
+
+}
+
+.ip-fl-listing-item a:hover .mls-logo-overlay {
+
+	display: none;
+
+}
+
+
+
+/*******************************************************
+
+ *
+
+ * Mobile styles and other media queries
+
+ *
+
+ *******************************************************/
+
+@media only screen and (min-width: 992px) {
+
+    .custom-breadcrumbs .container, .custom-ip-tagline .container {
+
+        width: 71.250vw;
+
+        padding: 0 0.938vw;
+
+    }
+
+
+
+    .custom-ip-tagline {
+
+        padding: 5.7% 0 0;
+
+    }
+
+
+
+    .git-container {
+
+        margin-top: 6.25vw;
+
+    }
+
+
+
+    .custom-ip-banner canvas {
+
+        min-height: 25vw;
+
+    }
+
+
+
+    .custom-ip-tagline {
+
+        /*font-size: 3.75vw;*/
+
+    }
+
+
+
+    .custom-breadcrumbs {
+
+        padding-top: 5.625vw;
+
+        padding-bottom: 9.063vw;
+
+    }
+
+
+
+    .custom-breadcrumbs p#breadcrumbs {
+
+        font-size: 0.875vw;
+
+    }
+
+
+
+    /*Section 2*/
+
+    .ip-fl-listing-container {
+
+        padding: 0 0 5vw;
+
+        margin-top: -3.75vw;
+
+    }
+
+
+
+    .ip-fl-listing-caption {
+
+        margin: 0 auto 3.125vw;
+
+    }
+
+
+
+    .ip-fl-listing-caption p {
+
+        /* font-size: 0.875vw; */
+
+    }
+
+
+
+    .ip-fl-listing-row {
+
+        margin: 0 -0.938vw;
+
+    padding: 0 2.375vw;
+
+    }
+
+
+
+    .ip-fl-listing-img {
+
+        -webkit-box-shadow: 0.063vw 0.125vw 0.313vw 0vw rgba(0, 0, 0, 0.35);
+
+        box-shadow: 0.063vw 0.125vw 0.313vw 0vw rgba(0, 0, 0, 0.35);
+
+    }
+
+
+
+    .ip-fl-listing-item {
+
+        padding: 0 0.938vw;
+
+        margin-bottom: 3.375vw;
+
+    }
+
+
+
+    .ip-fl-listing-hover-btn span {
+
+        width: 10.25vw;
+
+    }
+
+
+
+    .ip-fl-listing-address span {
+
+        font-size: 1.125vw;
+
+    }
+
+
+
+    .ip-fl-listing-price span {
+
+        font-size: 3.125vw;
+
+    }
+
+
+
+    .ip-fl-listing-hover-address span {
+
+        font-size: 1.875vw;
+
+    }
+
+
+
+    .ip-fl-listing-info span {
+
+        font-size: 1.25vw;
+
+        padding: 0 1.25vw;
+
+        border-right: 0.063vw solid rgba(255,255,255,.50);
+
+    }
+
+
+
+    .ip-fl-listing-info span em.ai-icon-bed {
+
+        width: 1.625vw;
+
+        height: 1.125vw;
+
+        right: 1.250vw;
+
+    }
+
+
+
+    .ip-fl-listing-info span em.ai-icon-bath {
+
+        width: 1.438vw;
+
+        height: 1.25vw;
+
+    }
+
+
+
+    .ip-fl-listing-info span em.ai-icon-sqft {
+
+        width: 1.188vw;
+
+        height: 1.125vw;
+
+        left: 1.250vw;
+
+    }
+
+
+
+    .ip-fl-listing-main .custom-container {
+
+        padding: 0 2.375vw;
+
+        padding: 0 0;
+
+    }
+
+
+
+    .ip-fl-listing-price {
+
+        margin-bottom: 1.25vw;
+
+    }
+
+
+
+    .ip-fl-listing-hover-address {
+
+        margin-bottom: 1.875vw;
+
+    }
+
+
+
+    .ip-fl-listing-info {
+
+        margin-bottom: 4.563vw;
+
+    }
+
+
+
+    .ip-fl-listing-info span em[class*="ai-icon-"] {
+
+        top: calc(100% + 0.625vw);
+
+    }
+
+
+
+    .ip-fl-listing-address {
+
+        padding: 1.563vw 0 0 1.75vw;
+
+    }
+
+
+
+    .ip-fl-listing-main .global-title {
+
+        padding-top: 0.563vw;
+
+    }
+
+
+
+    .ip-fl-listing-img, .ip-fl-listing-img canvas, .ip-fl-listing-img-holder, .ip-fl-listing-img img, .ip-fl-listing-hover, .ip-fl-listing-hover:before {
+
+        border-radius: 0.938vw;
+
+    }
+
+}
+
+
+
+/* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */
+
+@media only screen and (max-width: 1199px) {
+
+    html #ip-featured-listings .attachment-fixed canvas {
+
+        background-position: top  center!important;
+
+        background-size: cover!important;
+
+    }
+
+}
+
+
+
+/* iPad(portrait) | Galaxy Tab 4(portrait)  */
+
+@media only screen and (max-width: 991px) {
+
+    .ip-container #fixed-smi {
+
+        display: none;
+
+    }
+
+
+
+    .custom-ip-tagline {
+
+        /*font-size: 40px;*/
+		font-size: 4.8vw;
+
+        padding: 40px 0 0;
+
+    }
+
+
+
+    .custom-breadcrumbs {
+
+        padding-bottom: 50px;
+
+        padding-top: 90px;
+
+    }
+
+
+
+    .ip-fl-listing-main .custom-container {
+
+        padding: 0 20px;
+
+    }
+
+
+
+    .ip-fl-listing-caption {
+
+        max-width: 100%;
+
+        margin: 0 auto 30px;
+
+    }
+
+
+
+    .ip-fl-listing-item {
+
+        width: 100%;
+
+        padding: 0;
+
+        display: block;
+
+        max-width: 480px;
+
+        margin: 0 auto;
+
+    }
+
+
+
+    .ip-fl-listing-row {
+
+        margin: 0 auto;
+
+    }
+
+
+
+    .ip-fl-listing-address {
+
+        padding: 20px 0 0;
+
+        text-align: center;
+
+    }
+
+
+
+    .ip-fl-listing-item:not(:last-child) {
+
+        margin-bottom: 40px;
+
+    }
+
+
+
+    .ip-fl-listing-more-btn {
+
+        margin: 40px auto 0;
+
+    }
+
+
+
+    .ip-fl-listing-container {
+
+        padding: 0 0 60px;
+
+    }
+
+
+
+    .git-container {
+
+        margin-top: 60px;
+
+    }
+
+
+
+    .ip-fl-listing-caption p{
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+
+@media only screen and (max-width: 767px) {
+
+    .ip-fl-listing-price span {
+
+        font-size: 40px;
+
+    }
+
+
+
+    .ip-fl-listing-hover-address span {
+
+        font-size: 25px;
+
+    }
+
+
+
+    .ip-fl-listing-info span {
+
+        font-size: 18px;
+
+        padding: 0 10px;
+
+    }
+
+
+
+    .ip-fl-listing-info span em[class*="ai-icon-"] {
+
+        width: 20px;
+
+        height: 20px;
+
+    }
+
+
+
+    .ip-fl-listing-info span em.ai-icon-sqft {
+
+        left: 15px;
+
+    }
+
+
+
+    .ip-fl-listing-info span em.ai-icon-bed {
+
+        right: 15px;
+
+    }
+
+
+
+    .ip-fl-listing-info {
+
+        margin-bottom: 60px;
+
+    }
+
+
+
+    .ip-fl-listing-hover-address {
+
+        margin-bottom: 20px;
+
+    }
+
+
+
+    .ip-fl-listing-img canvas {
+
+        min-height: 320px;
+
+    }
+
+
+
+    .custom-ip-tagline {
+
+        /*font-size: 35px;
+
+        padding: 71px 0 0;*/
+
+    }
+
+
+
+    .custom-breadcrumbs p#breadcrumbs {
+
+        font-size: 13px;
+
+    }
+
+
+
+    .ip-fl-listing-caption p {
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+    }
+
+
+
+    .ip-fl-listing-address span {
+
+        font-size: 16px;
+
+    }
+	.custom-ip-banner canvas {
+		min-height: 300px;
+	}
+
+}
+@media only screen and (max-width: 611px) {
+	.custom-ip-banner canvas {
+		min-height: 280px;
+	}
+}
+@media only screen and (max-width: 567px) {
+	.custom-ip-banner canvas {
+		min-height: 260px;
+	}
+}
+
+
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */
+
+@media only screen and (max-width: 480px) {
+
+    .ip-fl-listing-hover-address span {
+
+        font-size: 20px;
+
+    }
+
+
+
+    .ip-fl-listing-price {
+
+        margin-bottom: 15px;
+
+    }
+
+
+
+    .ip-fl-listing-price span {
+
+        font-size: 35px;
+
+    }
+
+
+
+    .ip-fl-listing-info span {
+
+        font-size: 15px;
+
+        letter-spacing: 0.010em;
+
+    }
+
+
+
+    .ip-fl-listing-info {
+
+        margin-bottom: 52px;
+
+    }
+
+
+
+    .ip-fl-listing-main .custom-container {
+
+        padding: 0 15px;
+
+    }
+
+
+
+    .custom-ip-tagline {
+
+        /*font-size: 30px;*/
+
+    }
+	
+	.custom-ip-banner canvas {
+		min-height: 190px;
+	}
+	  .custom-ip-tagline {
+		padding-top: 80px;
+	  }
+
+}
+
+
+
+
+
+#ihf-board-detail-disclaimer, #ihf-board-disclaimers, .ip-lr-disclaimer{
+
+    font-size: 12px;
+
+    line-height: 1.715;
+
+    margin-bottom: 10px;
+
+}
+
+
+
+.ihf-board-disclaimer-text
+
+{
+
+    padding: 0 2.375vw;
+
+}
+
+span.error-msg {
+    font-size: 18px;
+}
+
+.error-container.aos-init.aos-animate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

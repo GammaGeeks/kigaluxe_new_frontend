@@ -299,6 +299,52 @@
             }, false);
         },
 
+        initAjaxLoadMore: function(){
+            $('#properties-load-more').on('click', function() {
+
+            	var $btnLoadMore = $(this); 
+
+                var listing_url = $(this).data('listing-url');
+                var listing_max = $(this).data('listing-max');
+
+                var href = new URL(listing_url);
+
+				href.searchParams.set('pg', inc);
+
+				inc += 1;
+
+				var data = {
+					'action': 'fetch_the_listings',
+					'next_page_url': href.toString(),
+				}
+
+				$btnLoadMore.hide();
+		
+				$.ajax({
+					url: listing_params.ajax_url,
+					data: data,
+					type: 'POST',
+					beforeSend : function ( xhr ) {
+						$('.ip-fl-listing-main .ip-fl-listing-row').append('<div class="loading"><img src="'+ listing_params.stylesheet_url +'/images/rotation-loading.gif" style="background-position: center center;width: 3%;display: block;filter: sepia(1);margin: 0 auto 20px auto;"></div>');
+					},
+					success: function (response) {
+						$('.loading').remove();
+						$('.ip-fl-listing-main .ip-fl-listing-row').append(response);
+
+						if(listing_max == inc) {
+							$('#properties-load-more').hide();
+						}else{
+							$btnLoadMore.show();
+						}
+
+					}
+				});
+                
+            });
+			
+                
+		}
+
     }
 
     $(document).ready(function () {
@@ -306,10 +352,21 @@
         app.init();
     });
 
+    $(document).ready( function() {
+        
+		app.initAjaxLoadMore();
+
+	});
+	
+	$(window).on('load', function() {
+
+	});
+
+
     /** 
      *
      * Please do add your custom script functions similar to the current file structure.
      * You may also add your uncategorized script functions inside the `app.others` function.
      *
      */
-})(jQuery, window, document, 'html', 'body');
+})($, window, document, 'html', 'body');

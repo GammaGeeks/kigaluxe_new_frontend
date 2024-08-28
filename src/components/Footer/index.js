@@ -11,7 +11,7 @@
 function FooterPart() {
   return (
     <footer className="footer">
-    <div id="get-in-touch" className="aios-scroll-section" data-aios-scroll-title="Get in Touch">
+    <div id="get-in-touch" className="aios-scroll-section">
         <div className="textwidget custom-html-widget">
         <div className="git-container">
             <div className="git-bg attachment-fixed">
@@ -22,7 +22,7 @@ function FooterPart() {
                 <div className="git-row">
                 <div className="git-col">
                     <div className="git-content-container">
-                    <div className="global-title is-centered" data-aos-once="true" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <div className="global-title is-centered">
                         <h2>
                         <small>
                             <em className="global-logo-icon">
@@ -31,10 +31,10 @@ function FooterPart() {
                         <span>With Us</span>
                         </h2>
                     </div>
-                    <div className="git-caption" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div className="git-caption">
                         <p>To inquire about a property or event, <br /> please fill out the form below. </p>
                     </div>
-                    <div className="git-form-widget" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div className="git-form-widget">
                         <div className="wpcf7 no-js" id="wpcf7-f21-o2" lang="en-US" dir="ltr">
                         <div className="screen-reader-response">
                             <p role="status" aria-live="polite" aria-atomic="true"></p>

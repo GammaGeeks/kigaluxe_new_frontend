@@ -17,9 +17,9 @@ import Welcome from '../../components/HomePage/Welcome';
 import Insta from '../../components/HomePage/Insta';
 import ListingOfTheDay from '../../components/HomePage/ListOfTheDay';
 import Listings from '../../components/HomePage/Listings';
-import CallToAction from '../../components/HomePage/CallToAction';
+// import CallToAction from '../../components/HomePage/CallToAction';
 import Hero from '../../components/HomePage/Hero';
-import QuickSearch from '../../components/HomePage/QuickSearch';
+// import QuickSearch from '../../components/HomePage/QuickSearch';
 // import IntroVideo from './components/IntroVideo';
 // import PopUp from './components/Navigation/PopUp';
 // import Waypoint from 'waypoints/lib/noframework.waypoints';
@@ -400,10 +400,10 @@ const d = Array.from(p).reduce((e, t) => {
   // }, [navRef]);
 
   return (
-  <div id="main-wrapper">
+    <main>
         <Hero />
         {/* <!-- Quick Search --> */}
-        <QuickSearch />
+        {/* <QuickSearch /> */}
         {/* <!-- Welcome --> */}
         <Welcome />
         {/* <!-- Social Media --> */}
@@ -415,10 +415,10 @@ const d = Array.from(p).reduce((e, t) => {
         {/* <!-- Featured Listings --> */}
         <Listings />
         {/* <!-- Call to Action --> */}
-        <CallToAction />
+        {/* <CallToAction /> */}
         {/* <!-- Testimonials --> */}
         <Testimonials />
-</div>
+    </main>
   );
 }
 
