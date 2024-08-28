@@ -3,8 +3,8 @@
 /* eslint-disable react/style-prop-object */
 import React, { useEffect } from 'react'
 
-import slideImgOne from '../../assets/images/slide-img-1.jpg'
-import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
+// import slideImgOne from '../../assets/images/slide-img-1.jpg'
+// import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
 import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllProperties } from '../../redux/actions/properties'
@@ -23,24 +23,24 @@ function Listings() {
   return (
     <main>
   {/* <!-- ip banner goes here --> */}
-  <div className="textwidget custom-html-widget">
+  {/* <div className="textwidget custom-html-widget">
     <div className="ip-banner" data-type="page" data-id="54">
       <canvas width="1600" height="350" style={{ backgroundImage: `url(${slideImgOne})` }}></canvas>
     </div>
-  </div>
+  </div> */}
   {/* <!-- ip banner goes here --> */}
   <div id="inner-page-wrapper">
     <div className="container">
       <div id="ip-featured-listings">
         <div className="ip-fl-container">
-          <div className="ip-fl-section">
+          {/* <div className="ip-fl-section">
             <div id="ip-comm-banner" className="custom-ip-banner aios-scroll-section">
               <canvas width="1530" height="581" style={{ backgroundImage: `url(${bannerWithBorderA})` }}></canvas>
               <div className="custom-ip-tagline">
                 <div className="container">Respected. Loyal. Relentless. Discreet.</div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="ip-fl-section">
             <div id="ip-comm-content" className="ip-fl-listing-container aios-scroll-section">
               <div className="ip-fl-bg attachment-fixed">
