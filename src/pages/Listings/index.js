@@ -82,7 +82,7 @@ function Listings() {
                     properties && listOfProperties ? listOfProperties.map((item, index) => {
                       return (
                         <div key={index} className="ip-fl-listing-item">
-                          <a href="https://serioestates.com/homes-for-sale-details/729-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24386575/306/">
+                          <a href="#">
                             <div className="ip-fl-listing-img-holder">
                               <div className="ip-fl-listing-img site-img">
                                 <canvas width="488" height="484"></canvas>
@@ -90,7 +90,7 @@ function Listings() {
                                 {/* <!-- <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1073249848/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNjA3MDMyOQ/ko-C9oWmTFpGo0aAiWal2LYmZoOdVEe01d3lW5x1XV0" alt="Featured Listings" width="488" height="484"> --> */}
                               </div>
                               <div className="mls-logo-overlay">
-                                <img src="images/mls-logo.png" alt="Featured Listings" width="170" height="101" />
+                                <img src={require('../../assets/images/site-logo.png')} alt="Featured Listings" width="170" height="101" />
                               </div>
                               <div className="ip-fl-listing-hover">
                                 <div className="ip-fl-listing-price">
@@ -129,7 +129,7 @@ function Listings() {
                   {/* <div className="row">
                     <div className="ip-lr-disclaimer" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                       <div className="ihf-board-disclaimer-text">
-                        <img src="images/mls-logo.png" alt="Featured Listings" width="100" height="72"/>
+                        <img src={require('../../assets/images/site-logo.png')} alt="Featured Listings" width="100" height="72"/>
                       </div>
                       <p>
                         <img src="images/shim.gif"/>
