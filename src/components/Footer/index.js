@@ -203,7 +203,7 @@ function FooterPart() {
                             <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
                             </li>
                             <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                            <a href='/listings' data-title="Featured Listings">Featured Listings</a>
+                            <Link href='/listings' data-title="Featured Listings">Featured Listings</Link>
                             </li>
                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-233">
                             <a href="/communities/" data-title="Communities">Communities</a>
