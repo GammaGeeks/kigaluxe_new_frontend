@@ -105,7 +105,7 @@ function Listings() {
                                   <span>
                                     <span>{item.bathrooms} Baths <em className="ai-icon-bath"></em>
                                     </span>
-                                    <span> {item.property_size} Sq.ft. <em className="ai-icon-sqft"></em>
+                                    <span> {item.property_size} Sq.m. <em className="ai-icon-sqft"></em>
                                     </span>
                                   </span>
                                 </div>

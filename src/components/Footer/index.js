@@ -6,6 +6,8 @@
 // import { Container, Row } from 'react-bootstrap'
 // import moment from 'moment'
 
+import { Link } from "react-router-dom"
+
 // import './index.scss'
 
 function FooterPart() {
@@ -138,9 +140,9 @@ function FooterPart() {
                     <div className="footer-logos">
                     <div className="textwidget custom-html-widget">
                         <div className="footer-logo">
-                        <a href="https://serioestates.com/" className="site-name">
-                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/site-logo-c.png" alt="Serio Group" width="109" height="180"/>
-                        </a>
+                        <Link to='/' className="site-name">
+                            <img className="lazyload" src={require('../../assets/images/site-logo.png')} alt="Serio Group" width="109" height="180"/>
+                        </Link>
                         </div>
                         <div className="footer-logo">
                         <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/uploads/2023/03/CB-Lux-Logo.png" alt="Coldwell Banker Logo" width="167" height="208"/>
@@ -201,7 +203,7 @@ function FooterPart() {
                             <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
                             </li>
                             <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                            <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Featured Listings</a>
+                            <a href='/listings' data-title="Featured Listings">Featured Listings</a>
                             </li>
                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-233">
                             <a href="/communities/" data-title="Communities">Communities</a>
