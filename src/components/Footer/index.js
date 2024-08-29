@@ -141,7 +141,7 @@ function FooterPart() {
                     <div className="textwidget custom-html-widget">
                         <div className="footer-logo">
                         <Link to='/' className="site-name">
-                            <img className="lazyload" src={require('../../assets/images/site-logo.png')} alt="Serio Group" width="109" height="180"/>
+                            <img className="lazyload" src={require('../../assets/images/site-logo.png')} alt="Serio Group" width="120" height="180"/>
                         </Link>
                         </div>
                         <div className="footer-logo">

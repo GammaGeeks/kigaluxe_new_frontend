@@ -28,14 +28,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/bel-air">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload" src={require('../../../assets/nu/popular_places/akagera.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload" src={require('../../../assets/nu/popular_places/vision_city.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
                                                 <em className="ai-icon-logo-sm"></em>Gahanga </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
@@ -43,14 +43,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/beverly-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/golf.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/rebero.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
-                                                <em className="ai-icon-logo-sm"></em>Kicukiro </span>
+                                                <em className="ai-icon-logo-sm"></em>Rebero </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
@@ -58,14 +58,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/beverly-hills-post-office/">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload" src={require('../../../assets/nu/popular_places/Untitled-9.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload" src={require('../../../assets/nu/popular_places/nyarutarama.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
                                                 <em className="ai-icon-logo-sm"></em>Nyarutarama </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
@@ -73,14 +73,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/brentwood">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/nyamirambo.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/gacuriro1.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
                                                 <em className="ai-icon-logo-sm"></em>Gacuriro </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
@@ -88,14 +88,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/hollywood-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/gorilla_trekking.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/kacyiru1.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
-                                                <em className="ai-icon-logo-sm"></em>Kabuga </span>
+                                                <em className="ai-icon-logo-sm"></em>Kacyiru </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
@@ -103,14 +103,14 @@ function Places() {
                                     <a href="https://serioestates.com/community/holmby-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/art_center.jpg')} alt="Areas of Expertise" width="360" height="277"/>
+                                            <img className="lazyload"  src={require('../../../assets/nu/popular_places/kibagabaga.jpg')} alt="Areas of Expertise" width="360" height="277"/>
                                         </div>
                                         <div className="aoe-title">
                                             <span>
                                                 <em className="ai-icon-logo-sm"></em>Kibagabaga </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/accent-logo-b.png" alt="Serio Group Logo" width="195" height="197"/>
+                                            <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
