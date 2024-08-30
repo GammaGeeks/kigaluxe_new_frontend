@@ -17,7 +17,7 @@ function FooterPart() {
         <div className="textwidget custom-html-widget">
         <div className="git-container">
             <div className="git-bg attachment-fixed">
-            <canvas width="1600" height="841" className="lazyload" data-bgset="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/git-bg.jpg"></canvas>
+            <canvas width="1600" height="841" className="lazyload" data-bgset={require('../../assets/logo/getInTouchBg.jpg')}></canvas>
             </div>
             <div className="custom-container">
             <div className="git-main">
@@ -118,7 +118,7 @@ function FooterPart() {
                 </div>
                 <div className="git-col">
                     <div className="git-team-photo">
-                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/team-photo-b.png" alt="Agent Photo" width="583" height="705"/>
+                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src={require('../../assets/logo/couple.jpg')} alt="Agent Photo" width="583" height="705"/>
                     </div>
                 </div>
                 </div>

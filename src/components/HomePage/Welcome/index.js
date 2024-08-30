@@ -7,7 +7,7 @@ function Welcome() {
             <div className="textwidget custom-html-widget">
                 <div className="welc-container">
                     <div className="welc-bg attachment-fixed">
-                        <canvas width="1600" height="780" className="lazyload" data-bgset="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/welc-bg.jpg"></canvas>
+                        <canvas width="1600" height="780" className="lazyload" data-bgset={require('../../../assets/logo/welcomeBg.jpg')}></canvas>
                     </div>
                     <div className="welc-main">
                         <div className="welc-row">
