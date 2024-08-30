@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
-// import logo1 from '../../../assets/images/site-logo-b.png'
-import logo2 from '../../../assets/images/site-logo.png'
+import logo1 from '../../../assets/logo/k_201x69.png'
+import logo2 from '../../../assets/logo/k_87x87.png'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
@@ -19,15 +19,15 @@ function Header() {
                             </a>
                         </div>
                     </div> */}
-                    {/* <div className="mob-logo visible-sm visible-xs">
+                    <div className="mob-logo visible-sm visible-xs">
                         <div className="textwidget custom-html-widget">
                             <a href="https://serioestates.com">
                                 <img className="skip-lazyload" src={logo1} alt="Serio Group" width="201" height="69"/>
                             </a>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
-                <div className="header-nav">
+                <div className="header-nav hidden-sm hidden-xs">
                     <Navbar className="navigation justify-content-between">
                         <Container className="menu-primary-menu-container">
                             <Nav id="main-nav" className="main-nav mt-3">
@@ -102,7 +102,7 @@ function Header() {
                                 </li>
                             </Nav>
                             <Nav>
-                                <Navbar.Brand style={{paddingTop: 0, paddingBottom: 20}} href="/">
+                                <Navbar.Brand className='hidden-sm hidden-xs' style={{paddingTop: 0, paddingBottom: 20}} href="/">
                                     <img
                                     src={logo2}
                                     width="87"

@@ -753,7 +753,7 @@ textarea {
     right: calc(100% + 20px);
     width: 30px;
     height: 30px;
-    background-image: url(../images/accent-logo.png);
+    background-image: url(../images/logo/k_30x30.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* outline-offset: 2px; */
@@ -1228,7 +1228,7 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-    padding-bottom: 13px !important;
+    padding-bottom: 22px !important;
     z-index: 1028;
     width: 100%;
     font-size: 0;
