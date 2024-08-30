@@ -18,11 +18,11 @@ function Welcome() {
                                             <small>
                                                 <em className="global-logo-icon">
                                                     <i className="global-outline"></i>
-                                                </em>Waruka </small>
-                                            <span>Serio</span>
+                                                </em>Welcome to</small>
+                                            <span>Kigaluxe</span>
                                         </h2>
                                     </div>
-                                    <div className="welc-content" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                                    <div className="welc-content">
                                         <p>It seems that from an early age, Waruka was destined to sell luxury real estate. As a young girl in Thailand, Waruka used to accompany her mother on real estate appointments, where she would listen intently to the negotiations. She was a quick study and loved everything about the process, and soon her mom had her negotiating deals on her own! Waruka Serio became a young entrepreneur starting her own business at the age of 14, all the while working with her mom in real estate. Waruka later immigrated to the United States, eventually meeting her future husband Ron Serio. She decided to parlay her 15 years of experience, with Ron’s own expertise to form the Serio Group, specializing in luxury real estate.</p>
                                     </div>
                                     <div className="welc-content-btn" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -47,8 +47,8 @@ function Welcome() {
                                             <small>
                                                 <em className="global-logo-icon">
                                                     <i className="global-outline"></i>
-                                                </em>Ron </small>
-                                            <span>Serio</span>
+                                                </em>Your Gateway to </small>
+                                            <span>Dream Homes</span>
                                         </h2>
                                     </div>
                                     <div className="welc-content" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">

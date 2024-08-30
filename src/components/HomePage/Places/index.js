@@ -24,7 +24,7 @@ function Places() {
                                 </h2>
                             </div>
                             <div className="aoe-list">
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/bel-air">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -35,11 +35,11 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Gahanga </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/beverly-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -50,11 +50,11 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Rebero </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/beverly-hills-post-office/">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -65,11 +65,11 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Nyarutarama </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/brentwood">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -80,11 +80,11 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Gacuriro </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/hollywood-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -95,11 +95,11 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Kacyiru </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
-                                <div className="aoe-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+                                <div className="aoe-item">
                                     <a href="https://serioestates.com/community/holmby-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -110,7 +110,7 @@ function Places() {
                                                 <em className="ai-icon-logo-sm"></em>Kibagabaga </span>
                                         </div>
                                         <div className="aoe-hover-img">
-                                            <img className="lazyload" src={require('../../../assets/images/accent-logo-b.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                            <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
                                 </div>
