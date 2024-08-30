@@ -90,7 +90,7 @@ function Listings() {
                                 {/* <!-- <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1073249848/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNjA3MDMyOQ/ko-C9oWmTFpGo0aAiWal2LYmZoOdVEe01d3lW5x1XV0" alt="Featured Listings" width="488" height="484"> --> */}
                               </div>
                               <div className="mls-logo-overlay">
-                                <img src={require('../../assets/images/site-logo.png')} alt="Featured Listings" width="170" height="101" />
+                                <img src={require('../../assets/logo/k_87x87.png')} alt="Featured Listings" width="170" height="101" />
                               </div>
                               <div className="ip-fl-listing-hover">
                                 <div className="ip-fl-listing-price">
