@@ -52,7 +52,7 @@ function Header() {
                                     <Link to='/listings' data-title="Featured Listings">Latest Listings</Link>
                                 </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
-                                    <a href="/communities/" data-title="Communities">Communities</a>
+                                    <Link to="/animation" data-title="Communities">Communities</Link>
                                     <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194">
                                             <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>

@@ -141,12 +141,12 @@ function FooterPart() {
                     <div className="textwidget custom-html-widget">
                         <div className="footer-logo">
                         <Link to='/' className="site-name">
-                            <img className="lazyload" src={require(`../../assets/logo/k_87x87.png`)} alt="Serio Group" width="120" height="180"/>
+                            <img className="lazyload" src={require(`../../assets/logo/k_109x180.png`)} alt="Serio Group" width="120" height="180"/>
                         </Link>
                         </div>
-                        <div className="footer-logo">
+                        {/* <div className="footer-logo">
                         <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/uploads/2023/03/CB-Lux-Logo.png" alt="Coldwell Banker Logo" width="167" height="208"/>
-                        </div>
+                        </div> */}
                     </div>
                     </div>
                     <div className="footer-smi">
@@ -293,19 +293,9 @@ function FooterPart() {
                 </div>
                 </div>
                 <div className="footer-disclaimer">
-                <div className="textwidget custom-html-widget">
-                    <p>The Serio Group is committed to providing an accessible website. If you have difficulty accessing content, have difficulty viewing a file on the website, or notice any accessibility problems, please contact us at <em className="ai-mobile-phone">
-                        <a href="tel:+1.310.975.9172" className="aios-ai-phone " aria-label="+1.310.975.9172">310.975.9172</a>
-                    </em> to specify the nature of the accessibility issue and any assistive technology you use. <br /> We strive to provide the content you need in the format you require. </p>
                 </div>
+                    <div className="copyright"> Copyright © 2024 <span>KigaluXe Group</span>. All Rights Reserved. <a href="#">Privacy Policy</a>. 
                 </div>
-                <div className="copyright"> Copyright © 2024 <span>Serio Group</span>. All Rights Reserved. <a href="https://serioestates.com/privacy-policy/">Privacy Policy</a>. <a href="https://serioestates.com/sitemap/">Sitemap</a>. Real Estate Internet Marketing by <a className="footer-copyright" target="_blank" href="https://www.agentimage.com" style={{textDecoration:'underline',fontWeight:'bold'}}>Agent Image</a>
-                </div>
-                <div className="mls-logo">
-                <span className="ai-font-eho"></span>
-                <span className="ai-font-realtor-mls"></span>
-                </div>
-                <div className="cb-disclaimer"> Affiliated real estate agents are independent contractor sales associates, not employees. ©2024 Coldwell Banker. All Rights Reserved. Coldwell Banker and the Coldwell Banker logos are trademarks of Coldwell Banker Real Estate LLC. The Coldwell Banker® System is comprised of company owned offices which are owned by a subsidiary of Anywhere Advisors LLC and franchised offices which are independently owned and operated. The Coldwell Banker System fully supports the principles of the Fair Housing Act and the Equal Opportunity Act. CalRE #00616212 </div>
             </div>
             </div>
         </div>

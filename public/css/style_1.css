@@ -706,6 +706,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 42px !important;
 }
 
 .global-title h2 small {
