@@ -96,7 +96,7 @@ function ListingOfTheDay() {
                                             console.log('INDEX', item);
                                             return(
                                             <animated.div style={{...styles}}>
-                                              <Col className='ld-grid-col'>
+                                              <Col xs={12} sm={6} md='8'>
                                               <Link className="ld-grid-main">
                                                 <div style={{
                                                   width: '750px',
@@ -136,7 +136,7 @@ function ListingOfTheDay() {
                                                 </div>
                                             </Link>
                                         </div> */}
-                                        <Col className="ld-grid-col ld-ajax-images" data-url="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/">
+                                        <Col xs={12} sm={6} md='4' className="ld-ajax-images" data-url="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/">
                                             {
                                               property && property.urls.map((img, index) => {
                                                 console.log('Image: ' + img);
