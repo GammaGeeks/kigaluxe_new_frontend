@@ -25,13 +25,13 @@ function ListingOfTheDay() {
 
   
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((active) => (active + 1) % imgs.length)
-    }, 5000)
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex((active) => (active + 1) % imgs.length)
+  //   }, 5000)
 
-    return () => clearInterval(interval)
-  }, [])
+  //   return () => clearInterval(interval)
+  // }, [])
 
   const transitions = useTransition([activeIndex], {
     from: { opacity: 0, transform: 'scale(0)', display: 'none' },
