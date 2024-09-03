@@ -31,7 +31,7 @@ export default (state = property, { type, payload }) => {
       // };
       return produce(state, (draft) => {
         draft.loading = false;
-        draft.property = {...payload.data}
+        draft.property = {...payload.property}
         draft.getProperty.loading = false
         draft.getProperty.message = payload.message
         draft.getProperty.error = ''

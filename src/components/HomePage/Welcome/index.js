@@ -33,7 +33,7 @@ function Welcome() {
                             <div className="welc-col">
                                 <div className="welc-img-holder">
                                     <div className="welc-img" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                                        <img className="lazyload" src={require('../../../assets/images/welcomeImg.png')} alt="Serio Group Photo" width="495" height="610" />
+                                        {/* <img className="lazyload" src={require('../../../assets/images/welcomeImg.png')} alt="Serio Group Photo" width="495" height="610" /> */}
                                     </div>
                                     <div style={{background: 'white'}} className="welc-img-accent-bg">
                                         <canvas width="542" height="872" className="lazyload" data-bgset="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/welc-accent-logo.png"></canvas>

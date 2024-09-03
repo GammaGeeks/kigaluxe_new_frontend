@@ -1,7 +1,48 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useTransition, animated } from '@react-spring/web'
+import { fetchPropertyAction } from '../../../redux/actions/property'
+import { Link } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
 
 function ListingOfTheDay() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchPropertyAction(1))
+  }, [dispatch])
+
+  const data = useSelector(state => state.property)
+
+  const { loading, property, getProperty, message } = data
+
+  const imgs = property && property.urls ? property.urls : []
+
+  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((active) => (active + 1) % imgs.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const transitions = useTransition([activeIndex], {
+    from: { opacity: 0, transform: 'scale(0)', display: 'none' },
+    enter: { opacity: 1, transform: 'scale(1)', display: 'block' },
+    leave: { opacity: 0, transform: 'scale(0)', display: 'none' },
+  })
+
+  const handleClick = (index) => {
+    setActiveIndex(index)
+  }
+
   return (
     <section id="listing-of-the-day" className="aios-scroll-section" data-aios-scroll-title="Listing of the Day">
             <div className="textwidget custom-html-widget">
@@ -27,61 +68,90 @@ function ListingOfTheDay() {
                             </div>
                             <div className="ld-list">
                                 <div className="ld-list-item" id="listing-24404087">
-                                    <div className="ld-list-title" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                        <span>3268 Serra Road, Malibu, CA 90265</span>
+                                    <div className="ld-list-title">
+                                        <span>{property.title} - {property.location}</span>
                                     </div>
-                                    <div className="ld-list-details" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                                    <div className="ld-list-details">
                                         <div className="ld-list-info">
                                             <span>
-                                                <em className="ai-icon-bed-w"></em>5 <i>Beds</i>
+                                                <em className="ai-icon-bed-w"></em>{property.bedrooms} <i>Beds</i>
                                             </span>
                                             <span>
-                                                <em className="ai-icon-bath-w"></em>5 <i>Baths</i>
+                                                <em className="ai-icon-bath-w"></em>{property.bathrooms} <i>Baths</i>
                                             </span>
                                             <span>
-                                                <em className="ai-icon-sqft-w"></em>5,226 <i>Sq.ft.</i>
+                                                <em className="ai-icon-sqft-w"></em>{property.property_size} <i>Sq.m.</i>
                                             </span>
-                                            <span>
+                                            {/* <span>
                                                 <em className="ai-icon-acres"></em>1.79 <i>Acres</i>
-                                            </span>
+                                            </span> */}
                                         </div>
                                         <div className="ld-list-btn">
                                             <a href="https://serioestates.com/featured-listings/" className="global-btn">See More</a>
                                         </div>
                                     </div>
-                                    <div className="ld-grid-row" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                        <div className="ld-grid-col">
-                                            <a href="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/" className="ld-grid-main">
-                                                <div className="ld-grid-img site-img">
-                                                    <canvas width="750" height="652"></canvas>
-                                                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-class="lazyload" data-src="https://imageproxy.agentimage.com/750x652/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1076543361/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxODY1NDA4MA/JWeuq1PuhrVFZs1RPPC7wVDTC4CfRCWA2ap4GAkpT3Y" alt="Listing Image" width="750" height="652"/>
+                                    <Row className="ld-grid-row" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                        {
+                                          transitions((styles, item) => {
+                                            console.log('INDEX', item);
+                                            return(
+                                            <animated.div style={{...styles}}>
+                                              <Col className='ld-grid-col'>
+                                              <Link className="ld-grid-main">
+                                                <div style={{
+                                                  width: '750px',
+                                                  height: '652px',
+                                                  position: 'relative',
+                                                  overflow: 'hidden'
+                                                }}>
+                                                  <canvas style={{
+                                                    position: 'absolute',
+                                                    top: 0,
+                                                    left: 0,
+                                                    width: '750px',
+                                                    height: '652px',
+                                                  }} width="750" height="652"></canvas>
+                                                  <img style={{position: 'absolute', borderRadius: '10px'}} className="lazyload main-img" src={imgs && imgs[item]} alt="Listing Image" width="750" height="652"/>
                                                 </div>
                                                 <div className="ld-grid-price">
-                                                    <span>$9,950,000</span>
+                                                    <span>RWF {property.price}</span>
                                                 </div>
-                                            </a>
-                                        </div>
-                                        <div className="ld-grid-col ld-ajax-images" data-url="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/">
-                                            <a href="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-2.jpg" className="ld-grid-thumb">
-                                                <div className="ld-grid-img site-img">
-                                                    <canvas width="360" height="197"></canvas>
-                                                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-2b.jpg" alt="Listing Image" width="360" height="197"/>
+                                              </Link>
+                                              </Col>
+                                            </animated.div>
+                                          )})
+                                        }
+                                        {/* <div className="ld-grid-col">
+                                            <Link className="ld-grid-main">
+                                              {
+                                                transitions((styles, item) => (
+                                                  <animated.div style={styles}>
+                                                    <canvas width="750" height="652"></canvas>
+                                                    <img className="lazyload" src={imgs && imgs[item]} alt="Listing Image" width="750" height="652"/>
+                                                  </animated.div>
+                                                ))
+                                              }
+                                                <div className="ld-grid-price">
+                                                    <span>RWF {property.price}</span>
                                                 </div>
-                                            </a>
-                                            <a href="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-3.jpg" className="ld-grid-thumb">
-                                                <div className="ld-grid-img site-img">
-                                                    <canvas width="360" height="197"></canvas>
-                                                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-3.jpg" alt="Listing Image" width="360" height="197"/>
-                                                </div>
-                                            </a>
-                                            <a href="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-4.jpg" className="ld-grid-thumb">
-                                                <div className="ld-grid-img site-img">
-                                                    <canvas width="360" height="197"></canvas>
-                                                    <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/ld-img-4b.jpg" alt="Listing Image" width="360" height="197"/>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                            </Link>
+                                        </div> */}
+                                        <Col className="ld-grid-col ld-ajax-images" data-url="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/">
+                                            {
+                                              property && property.urls.map((img, index) => {
+                                                console.log('Image: ' + img);
+                                                console.log('Index: ' + index);
+                                                return (
+                                                <a key={img || index} className="ld-grid-thumb">
+                                                    <div onClick={() => handleClick(index)} className="ld-grid-img site-img">
+                                                        <canvas width="360" height="197"></canvas>
+                                                        <img className="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src={img} alt="Listing Image" width="360" height="197"/>
+                                                    </div>
+                                                </a>
+                                              )})
+                                            }
+                                        </Col>
+                                    </Row>
                                 </div>
                             </div>
                         </div>

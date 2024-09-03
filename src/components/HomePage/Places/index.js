@@ -7,10 +7,10 @@ function Places() {
             <div className="textwidget custom-html-widget">
                 <div className="aoe-container">
                     <div className="aoe-bg attachment-fixed">
-                        <canvas width="1600" height="1077" className="lazyload" data-bgset="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/aoe-bg.jpg"></canvas>
+                        <canvas width="1600" height="1077" className="lazyload" data-bgset={`${require('../../../assets/images/darkbluebackground.png')}`}></canvas>
                     </div>
                     <div className="global-accent-letter">
-                        <span>A</span>
+                        <span>K</span>
                     </div>
                     <div className="custom-container">
                         <div className="aoe-main">

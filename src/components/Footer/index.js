@@ -131,7 +131,7 @@ function FooterPart() {
             <div className="footer-container">
             <div className="footer-bg">
                 <div className="textwidget custom-html-widget">
-                <canvas className="bg-main lazyload" width="1600" height="637" data-bgset="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/footer-bg.png"></canvas>
+                <canvas className="bg-main lazyload" width="1600" height="637" data-bgset={require('../../assets/logo/footer.png')}></canvas>
                 </div>
             </div>
             <div className="footer-main">
