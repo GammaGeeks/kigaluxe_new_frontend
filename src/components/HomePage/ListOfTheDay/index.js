@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useTransition, animated } from '@react-spring/web'
+import { useTransition, useSpring, animated } from '@react-spring/web'
 import { fetchPropertyAction } from '../../../redux/actions/property'
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
@@ -39,9 +39,29 @@ function ListingOfTheDay() {
     leave: { opacity: 0, transform: 'scale(0)', display: 'none' },
   })
 
+  const [springs, api] = useSpring(() => ({
+    from: { opacity: 1 },
+    config: { duration: 1000 }
+  }))
+
   const handleClick = (index) => {
     setActiveIndex(index)
   }
+
+  const handleMouseEnter = () => {
+    api.start({
+      from: { opacity: 1 },
+      to: { opacity: .65 }
+    })
+  }
+
+  const handleMouseLeave = () => {
+    api.start({
+      from: { opacity: .65 },
+      to: { opacity: 1 }
+    })
+  }
+  
 
   return (
     <section id="listing-of-the-day" className="aios-scroll-section" data-aios-scroll-title="Listing of the Day">
@@ -92,9 +112,7 @@ function ListingOfTheDay() {
                                     </div>
                                     <Row className="ld-grid-row" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                         {
-                                          transitions((styles, item) => {
-                                            console.log('INDEX', item);
-                                            return(
+                                          transitions((styles, item) => (
                                             <animated.div style={{...styles}}>
                                               <Col xs={12} sm={6} md='8'>
                                               <Link className="ld-grid-main">
@@ -111,7 +129,7 @@ function ListingOfTheDay() {
                                                     width: '750px',
                                                     height: '652px',
                                                   }} width="750" height="652"></canvas>
-                                                  <img style={{position: 'absolute', borderRadius: '10px'}} className="lazyload main-img" src={imgs && imgs[item]} alt="Listing Image" width="750" height="652"/>
+                                                  <animated.img onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  style={{position: 'absolute', borderRadius: '20px', ...springs}} className="lazyload main-img" src={imgs && imgs[item]} alt="Listing Image" width="750" height="652"/>
                                                 </div>
                                                 <div className="ld-grid-price">
                                                     <span>RWF {property.price}</span>
@@ -119,7 +137,7 @@ function ListingOfTheDay() {
                                               </Link>
                                               </Col>
                                             </animated.div>
-                                          )})
+                                          ))
                                         }
                                         {/* <div className="ld-grid-col">
                                             <Link className="ld-grid-main">

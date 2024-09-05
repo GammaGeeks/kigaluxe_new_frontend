@@ -61,7 +61,7 @@ import Hero from '../../components/HomePage/Hero';
 
       for (let i = 0; i < items.length; i += splitCount) {
         const end = (options.splitCount !== 0 && options.splitCountEqual === false && r === 2) ? 99 : i + splitCount;
-        items.slice(i, end).wrapAll(`<ul class="aios-split-nav ${id} ${options.navClasses}"></ul>`);
+        items.slice(i, end).wrapAll(`<ul className="aios-split-nav ${id} ${options.navClasses}"></ul>`);
         if (options.splitCount !== 0 && options.splitCountEqual === false && r === 2) break;
         r++;
       }
@@ -390,7 +390,7 @@ const d = Array.from(p).reduce((e, t) => {
   //       sectionAttrTitle: "data-aios-scroll-title",
   //       skipSectionId: "",
   //       navSectionClass: "aios-section-nav",
-  //       navSectionAppend: '<li class="{{scroll-id}}"><span class="scroll-section-title">{{scroll-title}}</span><a href="{{scroll-id}}" class="scroll-section-dot"><em style="font-size: 0 !important;">{{scroll-title}}</em></a></li>',
+  //       navSectionAppend: '<li className="{{scroll-id}}"><span className="scroll-section-title">{{scroll-title}}</span><a href="{{scroll-id}}" className="scroll-section-dot"><em style="font-size: 0 !important;">{{scroll-title}}</em></a></li>',
   //       navLinkId: "aios-scroll-id-",
   //       navArrow: false,
   //       scrollSpeed: 1500,

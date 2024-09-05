@@ -4,7 +4,7 @@ import React from 'react'
 
 import logo1 from '../../../assets/images/site-logo.png'
 
-function FixedHeader() {
+function FixedHeader({setIsAsideActive}) {
   return (
 <div id="fixed-header">
     <div className="container">
@@ -133,7 +133,7 @@ function FixedHeader() {
                         </span>
                     </div>
                 </div>
-                <div className="burger-menu-wrap">
+                <div onClick={() => setIsAsideActive(false)} className="burger-menu-wrap">
                     <div className="burger-menu-icon" data-side-menu="open">
                         <div className="bm-lines">
                             <span></span>

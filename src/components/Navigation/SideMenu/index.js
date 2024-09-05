@@ -1,9 +1,9 @@
 import React from 'react'
 
 import backgroundImage from '../../../assets/images/side-menu-bg.jpg'
-function SideMenu() {
+function SideMenu({isAsideActive, setIsAsideActive}) {
   return (
-    <div id="side-menu" className="side-menu">
+    <div id="side-menu" className={`side-menu ${isAsideActive? 'active': ''}`}>
         <div className="side-menu-overlay" data-side-menu="close"></div>
         <div className="side-menu-bg">
             <div className="side-menu-bg-holder">
@@ -14,11 +14,11 @@ function SideMenu() {
             <div className="side-menu-bar">
                 <div className="side-menu-container">
                     <div className="side-menu-wrapper">
-                        <button className="side-menu-close ai-font-close-b" aria-label="Close" data-side-menu="close"></button>
+                        <button onClick={() => setIsAsideActive(false)} className="side-menu-close ai-font-close-b" aria-label="Close" data-side-menu="close"></button>
                         <div className="side-menu-logo">
                             <div className="textwidget custom-html-widget">
                                 <a href="https://serioestates.com">
-                                    <img data-src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/site-logo-a.png" className="lazyload" alt="Serio Group" width="263" height="106"/>
+                                    <img data-src={require('../../../assets/logo/k_201x69.png')} className="lazyload" alt="Serio Group" width="263" height="106"/>
                                 </a>
                             </div>
                         </div>

@@ -8,8 +8,10 @@ import React, { useEffect } from 'react'
 import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllProperties } from '../../redux/actions/properties'
+import { useNavigate } from 'react-router-dom'
 
 function Listings() {
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchAllProperties(1, 12))
@@ -110,7 +112,7 @@ function Listings() {
                                   </span>
                                 </div>
                                 <div className="ip-fl-listing-hover-btn">
-                                  <span className="global-btn">Read More</span>
+                                  <span className="global-btn" onClick={() => navigate(`/property/${item.id}`)}>Read More</span>
                                 </div>
                               </div>
                             </div>

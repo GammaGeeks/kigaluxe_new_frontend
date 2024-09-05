@@ -6,7 +6,7 @@ import logo2 from '../../../assets/logo/k_87x87.png'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
-function Header() {
+function Header({setIsAsideActive}) {
   return (
     <header className="header-wrapper">
         <div className="container">
@@ -30,7 +30,7 @@ function Header() {
                 <div className="header-nav hidden-sm hidden-xs">
                     <Navbar className="navigation justify-content-between">
                         <Container className="menu-primary-menu-container">
-                            <Nav id="main-nav" className="main-nav mt-3">
+                            <Nav className="main-nav mt-3">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46">
                                     <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
                                     <ul className="sub-menu">
@@ -157,7 +157,7 @@ function Header() {
                             </span>
                         </div>
                     </div>
-                    <div className="burger-menu-wrap">
+                    <div onClick={() => setIsAsideActive(true)} className="burger-menu-wrap">
                         <div className="burger-menu-icon" data-side-menu="open">
                             <div className="bm-lines">
                                 <span></span>

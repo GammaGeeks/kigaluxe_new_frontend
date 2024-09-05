@@ -38,14 +38,14 @@ function Insta() {
                                     </div>
                                     <div className="sm-follow-btn">
                                         <span>@seriogroup</span>
-                                        <a href="https://www.instagram.com/seriogroup/" className="global-btn" target="_blank" rel="noopener">Follow <em className="ai-font-instagram"></em>
+                                        <a href="https://www.instagram.com/kigaluxe/" className="global-btn" target="_blank" rel="noopener">Follow <em className="ai-font-instagram"></em>
                                         </a>
                                     </div>
                                 </div>
                                 <div className="sm-follow-smi-holder">
                                     <span>Check Us Out On Other Social Media Platforms:</span>
                                     <div className="sm-follow-smi">
-                                        <a href="https://www.instagram.com/seriogroup/" target="_blank" rel="noopener">
+                                        <a href="https://www.instagram.com/kigaluxe/" target="_blank" rel="noopener">
                                             <span className="ai-font-instagram">
                                                 <em className="hidden">Instagram</em>
                                             </span>
