@@ -1,5 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Welcome() {
   return (
@@ -23,10 +25,10 @@ function Welcome() {
                                         </h2>
                                     </div>
                                     <div className="welc-content">
-                                        <p>It seems that from an early age, Waruka was destined to sell luxury real estate. As a young girl in Thailand, Waruka used to accompany her mother on real estate appointments, where she would listen intently to the negotiations. She was a quick study and loved everything about the process, and soon her mom had her negotiating deals on her own! Waruka Serio became a young entrepreneur starting her own business at the age of 14, all the while working with her mom in real estate. Waruka later immigrated to the United States, eventually meeting her future husband Ron Serio. She decided to parlay her 15 years of experience, with Ron’s own expertise to form the Serio Group, specializing in luxury real estate.</p>
+                                        <p>Welcome to Kigaluxe, your gateway to luxury real estate in the heart of Africa. Whether you're looking for a stunning residential property, a premium commercial space, or expansive land, Kigaluxe combines the vibrant allure of Kigali with the finest in upscale living. We are dedicated to offering exclusive properties that exemplify elegance, comfort, and modernity, ensuring that you experience the pinnacle of luxury in every transaction. Experience the Kigaluxe difference – where your real estate aspirations become reality. Contact us today to embark on a journey of exceptional service, unwavering commitment, and transformative results.</p>
                                     </div>
                                     <div className="welc-content-btn" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                        <a href="/meet-waruka-serio/" className="global-btn">Read More</a>
+                                        <Link to="/listings" className="global-btn">Read More</Link>
                                     </div>
                                 </div>
                             </div>
@@ -47,15 +49,19 @@ function Welcome() {
                                             <small>
                                                 <em className="global-logo-icon">
                                                     <i className="global-outline"></i>
-                                                </em>Your Gateway to </small>
-                                            <span>Dream Homes</span>
+                                                </em>Why Choose Us </small>
+                                            <span>KigaluXe</span>
                                         </h2>
                                     </div>
                                     <div className="welc-content" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                                        <p>Over his highly successful 35 plus year career, Ron has developed a keen acumen for sales and marketing, and is particularly skilled at complex negotiations. For the past 20 years, Ron has been an avid real estate investor, parlaying this passion to create the Serio Group with his wife Waruka Serio. His enthusiasm and energy relating to all things real estate, along with his deep commitment to his clients, are just some of the reasons Ron Serio excels at developing long-term relationships with all those that he works with. Ron also excels at helping his clients build generational wealth, through the acquisition of real estate.</p>
+                                        <p><b>Free Property Visits:</b> Book in advance, and enjoy complimentary visits to your preferred properties, ensuring you make an informed decision. In Kigali we arrange free ride if the client finds it difficult to reach to the site.</p>
+                                        <p><b>Direct Seller Interaction:</b> We connect you directly with property sellers, allowing for transparent and efficient negotiations without intermediaries.</p>
+                                        <p><b>Exclusive Listings:</b> Gain access to some of the most sought-after luxury residential and commercial properties in Kigali and beyond.</p>
+                                        <p><b>Personalized Service:</b> Our team provides tailored assistance, ensuring every client finds the perfect match for their real estate needs.</p>
+                                        <p><b>Commitment to Quality:</b> Every property in our portfolio meets the highest standards of luxury, comfort, and modern living.</p>
                                     </div>
                                     <div className="welc-content-btn" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                        <a href="/meet-ron-serio/" className="global-btn">Read More</a>
+                                        <Link to="/listings" className="global-btn">Read More</Link>
                                     </div>
                                 </div>
                             </div>
