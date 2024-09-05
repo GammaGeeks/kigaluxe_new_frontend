@@ -11,7 +11,7 @@ function Hero() {
                         <div className="cycloneslider-slides" data-cycle-allow-wrap="true" data-cycle-dynamic-height="off" data-cycle-auto-height="1600:819" data-cycle-auto-height-easing="null" data-cycle-auto-height-speed="250" data-cycle-delay="0" data-cycle-easing="" data-cycle-fx="fade" data-cycle-hide-non-active="true" data-cycle-log="false" data-cycle-next="#cycloneslider-hp-video-1 .cycloneslider-next" data-cycle-pager="#cycloneslider-hp-video-1 .cycloneslider-pager" data-cycle-pause-on-hover="false" data-cycle-prev="#cycloneslider-hp-video-1 .cycloneslider-prev" data-cycle-slides="> div" data-cycle-speed="1000" data-cycle-swipe="1" data-cycle-tile-count="7" data-cycle-tile-delay="100" data-cycle-tile-vertical="true" data-cycle-timeout="4000">
                             <div className="cycloneslider-slide cycloneslider-slide-custom">
                                 <video id="slide-video" preload="none" poster={require('../../../assets/home.jpg')} style={{ width: '100%', height: 'auto' }} autoPlay muted playsInline loop onContextMenu={() => false} className="hp-vid">
-                                    <source src={require('../../../assets/new.mp4')} type="video/mp4" />
+                                    <source src={require('../../../assets/new_2.mp4')} type="video/mp4" />
                                 </video>
                             </div>
                         </div>
