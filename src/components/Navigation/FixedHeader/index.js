@@ -2,11 +2,11 @@
 import React from 'react'
 
 
-import logo1 from '../../../assets/images/site-logo.png'
+import logo1 from '../../../assets/logo/k_201x69.png'
 
-function FixedHeader({setIsAsideActive}) {
+function FixedHeader({setIsAsideActive, navbar}) {
   return (
-<div id="fixed-header">
+<div id="fixed-header" className={navbar ? 'active' : ''}>
     <div className="container">
         <div className="fixed-header-wrap">
             <div className="fixed-logo">

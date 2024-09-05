@@ -5,11 +5,22 @@ import SideMenu from './SideMenu'
 
 function Navigation() {
   const [isAsideActive, setIsAsideActive] = useState(false)
+  const [navbar, setNavbar] = useState(false)
+
+  const changeNavBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true)
+    } else {
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeNavBackground)
 
   return (
     <>
-      <FixedHeader setIsAsideActive={setIsAsideActive}/>
-      <Header setIsAsideActive={setIsAsideActive}/>
+      <FixedHeader setIsAsideActive={setIsAsideActive} navbar={navbar}/>
+      <Header setIsAsideActive={setIsAsideActive} navbar={navbar}/>
       <SideMenu isAsideActive={isAsideActive}  setIsAsideActive={setIsAsideActive}/>
     </>
   )
