@@ -41,6 +41,14 @@ function SingleProperty() {
     return () => clearInterval(interval)
   }, [])
 
+  const nextSlide = () => {
+    setActiveIndex((activeIndex + 1) % imgs.length);
+  };
+
+  const previousSlide = () => {
+    setActiveIndex((activeIndex - 1 + imgs.length) % imgs.length);
+  };
+
   return (
 <main>
 <h2 className="aios-starter-theme-hide-title">Main Content</h2>
@@ -76,8 +84,8 @@ function SingleProperty() {
                     <h2>729 Bel Air Road, <br/>Los Angeles, CA 90077</h2>
                   </div>
                   <div className="ip-ld-hero-controls">
-                    <button className="ip-ld-hero-prev" aria-label="Prev"><em className="ai-icon-prev"></em></button>
-                    <button className="ip-ld-hero-next" aria-label="Next"><em className="ai-icon-next"></em></button>
+                    <button onClick={previousSlide} className="ip-ld-hero-prev" aria-label="Prev"><em className="ai-icon-prev"></em></button>
+                    <button onClick={nextSlide} className="ip-ld-hero-next" aria-label="Next"><em className="ai-icon-next"></em></button>
                   </div>
                 </div>
               </div>
