@@ -31,8 +31,11 @@ function Header({setIsAsideActive}) {
                     <Navbar className="navigation justify-content-between">
                         <Container className="menu-primary-menu-container">
                             <Nav className="main-nav mt-3">
+                                <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
+                                    <Link to='/listings' data-title="Featured Listings">Featured Listings</Link>
+                                </li>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46">
-                                    <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
+                                    <a href="https://serioestates.com/about-us/" data-title="Services">Services</a>
                                     <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
                                             <a href="https://serioestates.com/meet-ron-serio/" data-title="Meet Ron Serio">Meet Ron Serio</a>
@@ -48,11 +51,8 @@ function Header({setIsAsideActive}) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                    <Link to='/listings' data-title="Featured Listings">Latest Listings</Link>
-                                </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
-                                    <Link to="/animation" data-title="Communities">Communities</Link>
+                                    <Link to="/animation" data-title="Sell Your Property">Sell Your Property</Link>
                                     <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194">
                                             <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>
@@ -102,14 +102,16 @@ function Header({setIsAsideActive}) {
                                 </li>
                             </Nav>
                             <Nav>
-                                <Navbar.Brand className='hidden-sm hidden-xs' style={{paddingTop: 0, paddingBottom: 20}} href="/">
-                                    <img
-                                    src={logo2}
-                                    width="87"
-                                    height="87"
-                                    className="d-inline-block align-top mb-4"
-                                    alt="React Bootstrap logo"
-                                    />
+                                <Navbar.Brand className='hidden-sm hidden-xs' style={{paddingTop: 0, paddingBottom: 20}}>
+                                    <Link to="/">
+                                        <img
+                                        src={logo2}
+                                        width="87"
+                                        height="87"
+                                        className="d-inline-block align-top mb-4"
+                                        alt="React Bootstrap logo"
+                                        />
+                                    </Link>
                                 </Navbar.Brand>
                             </Nav>
                             <Nav className="main-nav">
@@ -122,7 +124,7 @@ function Header({setIsAsideActive}) {
                                     </ul>
                                 </li>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                                    <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
+                                    <a href="https://serioestates.com/sellers/" data-title=">About Us">About Us</a>
                                     <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
                                             <a href="https://serioestates.com/home-valuation/" data-title="Home Valuation">Home Valuation</a>
@@ -130,7 +132,7 @@ function Header({setIsAsideActive}) {
                                     </ul>
                                 </li>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                    <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
+                                    <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Blog</a>
                                 </li>
                             </Nav>
                         </Container>

@@ -20,7 +20,7 @@ function Navigation() {
   return (
     <>
       <FixedHeader setIsAsideActive={setIsAsideActive} navbar={navbar}/>
-      <Header setIsAsideActive={setIsAsideActive} navbar={navbar}/>
+      <Header setIsAsideActive={setIsAsideActive}/>
       <SideMenu isAsideActive={isAsideActive}  setIsAsideActive={setIsAsideActive}/>
     </>
   )

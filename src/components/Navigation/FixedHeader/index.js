@@ -3,6 +3,7 @@ import React from 'react'
 
 
 import logo1 from '../../../assets/logo/k_201x69.png'
+import { Link } from 'react-router-dom'
 
 function FixedHeader({setIsAsideActive, navbar}) {
   return (
@@ -11,9 +12,9 @@ function FixedHeader({setIsAsideActive, navbar}) {
         <div className="fixed-header-wrap">
             <div className="fixed-logo">
                 <div className="textwidget custom-html-widget">
-                    <a href="https://serioestates.com">
+                    <Link to="/">
                         <img className="skip-lazyload" src={logo1} alt="Serio Group" width="201" height="69"/>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="fixed-header-nav">
@@ -21,8 +22,8 @@ function FixedHeader({setIsAsideActive, navbar}) {
                     <div className="menu-primary-menu-container">
                         <ul id="fixed-nav" className="fixed-nav">
                             <li id="menu-item-46" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46">
-                                <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
-                                <ul className="sub-menu">
+                                <Link to='/listings' data-title="Featured Listings">Featured Listings</Link>
+                                {/* <ul className="sub-menu">
                                     <li id="menu-item-116" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
                                         <a href="https://serioestates.com/meet-ron-serio/" data-title="Meet Ron Serio">Meet Ron Serio</a>
                                     </li>
@@ -35,13 +36,13 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                     <li id="menu-item-207" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-207">
                                         <a href="/category/blog/" data-title="Blog">Blog</a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
                             <li id="menu-item-71" className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Featured Listings</a>
+                                <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Services</a>
                             </li>
                             <li id="menu-item-233" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
-                                <a href="/communities/" data-title="Communities">Communities</a>
+                                <a href="/communities/" data-title="Communities">Sell Your Property</a>
                                 <ul className="sub-menu">
                                     <li id="menu-item-1194" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194">
                                         <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>
@@ -98,7 +99,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                 </ul>
                             </li>
                             <li id="menu-item-41" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                                <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
+                                <a href="https://serioestates.com/sellers/" data-title="Sellers">About Us</a>
                                 <ul className="sub-menu">
                                     <li id="menu-item-40" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
                                         <a href="https://serioestates.com/home-valuation/" data-title="Home Valuation">Home Valuation</a>
@@ -106,7 +107,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                 </ul>
                             </li>
                             <li id="menu-item-47" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
+                                <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Blog</a>
                             </li>
                         </ul>
                     </div>

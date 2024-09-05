@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Navigation from '../../Navigation';
 import SocialMedia from '../../Navigation/SocialMedia'
+// import PopUp from '../../Navigation/PopUp'
 import FooterPart from '../../Footer';
 
 const Layout = () => {
