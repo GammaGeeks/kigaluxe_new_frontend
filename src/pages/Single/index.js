@@ -7,12 +7,13 @@ import React, { useEffect, useState } from 'react'
 import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPropertyAction } from '../../redux/actions/property'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import imageOne from '../../assets/images/ld-bg-2.png'
 
 function SingleProperty() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex2, setActiveIndex2] = useState(0);
   const { id } = useParams()
   const dispatch = useDispatch()
 
@@ -33,12 +34,25 @@ function SingleProperty() {
     config: { duration: 1000 },
   })
 
+  const transitions1 = useTransition([activeIndex2], {
+    from: { opacity: 0, display: 'none' },
+    enter: { opacity: 1, display: 'block' },
+    leave: { opacity: 0, display: 'none' },
+  })
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((active) => (active + 1) % imgs.length)
     }, 10000)
 
-    return () => clearInterval(interval)
+    const interval2 = setInterval(() => {
+      setActiveIndex2((active) => (active + 1) % imgs.length)
+    }, 10000)
+
+    return () => {
+      clearInterval(interval)
+      clearInterval(interval2)
+    }
   }, [])
 
   const nextSlide = () => {
@@ -102,7 +116,7 @@ function SingleProperty() {
                 <p id="breadcrumbs">
                   <span>
                     <span property="itemListElement" typeof="ListItem">
-                      <a property="item" typeof="WebPage" href="https://serioestates.com"><span property="name">Home</span></a>
+                      <Link property="item" typeof="WebPage" to='/'><span property="name">Home</span></Link>
                     </span> » <span className="breadcrumb_last" property="itemListElement" typeof="ListItem">
                       <span property="name">{property.title}</span>
                     </span>
@@ -123,7 +137,19 @@ function SingleProperty() {
                   <div className="ip-ld-content-col idx-gallery">
                     <div className="ip-ld-gallery-container">
                       <div className="ip-ld-gallery-row">
-                        {property && imgs.map((item, index) => (
+                        {
+                          transitions1((styles, item) => (
+                            <animated.div style={styles} className="ip-ld-gallery-col">
+                              <a href={item} className="ip-ld-gallery-popup">
+                                <div className="ip-ld-gallery-img site-img">
+                                  <canvas width="355" height="465"></canvas>
+                                  <img src={imgs && imgs[item]} alt="Gallery Image"/>
+                                </div>
+                              </a>
+                            </animated.div>
+                          ))
+                        }
+                        {/* {property && imgs.map((item, index) => (
                         <div key={index} className="ip-ld-gallery-col">
                           <a href={item} className="ip-ld-gallery-popup">
                             <div className="ip-ld-gallery-img site-img">
@@ -132,7 +158,7 @@ function SingleProperty() {
                             </div>
                           </a>
                         </div>
-                        ))}
+                        ))} */}
                       </div>
                     </div>
                   </div>

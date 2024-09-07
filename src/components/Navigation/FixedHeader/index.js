@@ -134,7 +134,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                         </span>
                     </div>
                 </div>
-                <div onClick={() => setIsAsideActive(false)} className="burger-menu-wrap">
+                <div onClick={() => setIsAsideActive(true)} className="burger-menu-wrap">
                     <div className="burger-menu-icon" data-side-menu="open">
                         <div className="bm-lines">
                             <span></span>

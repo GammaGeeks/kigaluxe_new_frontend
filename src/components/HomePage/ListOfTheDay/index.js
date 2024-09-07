@@ -107,7 +107,7 @@ function ListingOfTheDay() {
                                             </span> */}
                                         </div>
                                         <div className="ld-list-btn">
-                                            <a href="https://serioestates.com/featured-listings/" className="global-btn">See More</a>
+                                            <Link to='/listings' className="global-btn">See More</Link>
                                         </div>
                                     </div>
                                     <Row className="ld-grid-row" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
