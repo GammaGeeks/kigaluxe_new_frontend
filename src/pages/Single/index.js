@@ -8,12 +8,20 @@ import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPropertyAction } from '../../redux/actions/property'
 import { Link, useParams } from 'react-router-dom'
+import { Modal, Button } from 'react-bootstrap'
 
 import imageOne from '../../assets/images/ld-bg-2.png'
 
 function SingleProperty() {
+  // Modal
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeIndex2, setActiveIndex2] = useState(0);
+  // const [activeIndex2, setActiveIndex2] = useState(0);
   const { id } = useParams()
   const dispatch = useDispatch()
 
@@ -34,24 +42,24 @@ function SingleProperty() {
     config: { duration: 1000 },
   })
 
-  const transitions1 = useTransition([activeIndex2], {
-    from: { opacity: 0, display: 'none' },
-    enter: { opacity: 1, display: 'block' },
-    leave: { opacity: 0, display: 'none' },
-  })
+  // const transitions1 = useTransition([activeIndex2], {
+  //   from: { opacity: 0, display: 'none' },
+  //   enter: { opacity: 1, display: 'block' },
+  //   leave: { opacity: 0, display: 'none' },
+  // })
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((active) => (active + 1) % imgs.length)
     }, 10000)
 
-    const interval2 = setInterval(() => {
-      setActiveIndex2((active) => (active + 1) % imgs.length)
-    }, 10000)
+    // const interval2 = setInterval(() => {
+    //   setActiveIndex2((active) => (active + 1) % imgs.length)
+    // }, 10000)
 
     return () => {
       clearInterval(interval)
-      clearInterval(interval2)
+      // clearInterval(interval2)
     }
   }, [])
 
@@ -64,6 +72,9 @@ function SingleProperty() {
   };
 
   return (
+    
+
+  <>
 <main>
 <h2 className="aios-starter-theme-hide-title">Main Content</h2>
 {/* <!-- ip banner goes here --> */}
@@ -95,7 +106,7 @@ function SingleProperty() {
               <div className="container">
                 <div className="ip-ld-hero-content-inner">
                   <div className="ip-ld-hero-title">
-                    <h2>729 Bel Air Road, <br/>Los Angeles, CA 90077</h2>
+                    <h2>{property.title}</h2>
                   </div>
                   <div className="ip-ld-hero-controls">
                     <button onClick={previousSlide} className="ip-ld-hero-prev" aria-label="Prev"><em className="ai-icon-prev"></em></button>
@@ -137,19 +148,7 @@ function SingleProperty() {
                   <div className="ip-ld-content-col idx-gallery">
                     <div className="ip-ld-gallery-container">
                       <div className="ip-ld-gallery-row">
-                        {
-                          transitions1((styles, item) => (
-                            <animated.div style={styles} className="ip-ld-gallery-col">
-                              <a href={item} className="ip-ld-gallery-popup">
-                                <div className="ip-ld-gallery-img site-img">
-                                  <canvas width="355" height="465"></canvas>
-                                  <img src={imgs && imgs[item]} alt="Gallery Image"/>
-                                </div>
-                              </a>
-                            </animated.div>
-                          ))
-                        }
-                        {/* {property && imgs.map((item, index) => (
+                        {property && imgs.map((item, index) => (
                         <div key={index} className="ip-ld-gallery-col">
                           <a href={item} className="ip-ld-gallery-popup">
                             <div className="ip-ld-gallery-img site-img">
@@ -158,7 +157,7 @@ function SingleProperty() {
                             </div>
                           </a>
                         </div>
-                        ))} */}
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -917,7 +916,27 @@ function SingleProperty() {
   </script> */}
   <div className="clearfix"></div>
 </div>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+
+      
     </main>
+  <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+  </>
   )
 }
 

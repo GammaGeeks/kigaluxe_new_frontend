@@ -180,7 +180,7 @@
     display: inline-block;
     vertical-align: bottom;
     position: relative;
-    opacity: 0;
+    opacity: 1;
 }
 
 .ip-ld-hero-controls button [class*="ai-icon-"] {

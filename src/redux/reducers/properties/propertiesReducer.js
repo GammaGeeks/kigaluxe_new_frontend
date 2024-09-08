@@ -18,26 +18,12 @@ export default (state = properties, { type, payload }) => {
         draft.getProperties.error = '';
       })
     case propertiesTypes.FETCH_PROPERTIES_SUCCESS:
-      // console.log([]...payload.data.paginate])
-      // return {
-      //   ...state,
-      //   listOfProperties: [...payload.data.paginate],
-      //   loading: false,
-      //   Next: { ...payload.data.Next },
-      //   Previous: { ...payload.data.Previous },
-      //   getProperties: {
-      //     ...state.getProperties,
-      //     loading: false,
-      //     message: payload.message,
-      //     error: {}
-      //   }
-      // };
       return produce(state, (draft) => {
         draft.loading = false;
         draft.listOfProperties = [...payload.data.paginate]
-        draft.Next = {...payload.data.Next }
-        draft.Prev = {...payload.data.Previous }
-        draft.getProperties.loading = false;
+        draft.next = payload.data.next
+        draft.currentPage = payload.data.currentPage
+        draft.getProperties.loading = false
         draft.getProperties.message = payload.message;
         draft.getProperties.error = '';
       })

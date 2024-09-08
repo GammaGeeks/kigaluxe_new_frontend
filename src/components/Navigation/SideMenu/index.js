@@ -1,6 +1,7 @@
 import React from 'react'
 
 import backgroundImage from '../../../assets/images/side-menu-bg.jpg'
+import { Link } from 'react-router-dom'
 function SideMenu({isAsideActive, setIsAsideActive}) {
   return (
     <div id="side-menu" className={`side-menu ${isAsideActive? 'active': ''}`}>
@@ -17,9 +18,9 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                         <button onClick={() => setIsAsideActive(false)} className="side-menu-close ai-font-close-b" aria-label="Close" data-side-menu="close"></button>
                         <div className="side-menu-logo">
                             <div className="textwidget custom-html-widget">
-                                <a href="https://serioestates.com">
+                                <Link onClick={() => setIsAsideActive(false)} to="/">
                                     <img data-src={require('../../../assets/logo/k_201x69.png')} className="lazyload" alt="Serio Group" width="263" height="106"/>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="side-menu-nav">
@@ -43,7 +44,7 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                         </ul>
                                     </li>
                                     <li id="menu-item-24912" className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-24912">
-                                        <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Featured Listings</a>
+                                        <Link onClick={() => setIsAsideActive(false)} to='/listings' data-title="Featured Listings">Featured Listings</Link>
                                     </li>
                                     <li id="menu-item-24913" className="inline-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-24913">
                                         <a href="/communities/" data-title="Communities">Communities</a>

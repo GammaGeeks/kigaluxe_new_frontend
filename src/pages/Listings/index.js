@@ -20,7 +20,21 @@ function Listings() {
   const properties = useSelector(state => state.properties)
 
   // eslint-disable-next-line no-unused-vars
-  const { listOfProperties, Next, Prev, getProperties } = properties
+  const { listOfProperties, next, currentPage, getProperties } = properties
+
+  
+  const nextPagination = () => {
+    const nextPage = next
+    console.log("Next Page: " + nextPage);
+    if(nextPage) dispatch(fetchAllProperties(nextPage % listOfProperties.length, 12));
+  };
+
+  const prevPagination = (e) => {
+    const prevPage = currentPage - 1;
+    console.log("Prev Page: " + prevPage);
+    if(prevPage) dispatch(fetchAllProperties(prevPage % listOfProperties.length, 12))
+  };
+
 
   return (
     <main>
@@ -124,6 +138,17 @@ function Listings() {
                       )
                     }) : ''
                   }
+                  <div className="ip-fl-listing-pagination" style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: '30px'
+                  }}>
+                    <div className="ip-ld-hero-controls">
+                      <button onClick={prevPagination} className="ip-ld-hero-prev" aria-label="Prev"><em className="ai-icon-prev"></em></button>
+                      <button onClick={nextPagination} className="ip-ld-hero-next" aria-label="Next"><em className="ai-icon-next"></em></button>
+                    </div>
+                  </div>
                   </div>
                   </div>
                 </div>
