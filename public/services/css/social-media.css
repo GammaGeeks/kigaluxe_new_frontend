@@ -1,0 +1,794 @@
+/*******************************************************
+ *
+ * Social Media
+ *
+ *******************************************************/
+ .ip-banner {
+    display: none;
+}
+
+.custom-ip-banner {
+    position: relative;
+}
+
+.custom-ip-banner canvas {
+    display: block;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.custom-ip-banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+    background: url(../images/banner-accent.png) center bottom/100% auto no-repeat;
+}
+
+.custom-ip-tagline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    color: #fff;
+    font-family: var(--title-font);
+    font-weight: 400;
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+ #inner-page-wrapper {
+    margin-bottom: 0;
+}
+
+#inner-page-wrapper > .container {
+    padding: 0;
+    width: 100%;
+}
+
+#ip-social-feed {
+    font-size: 0;
+    letter-spacing: normal;
+    line-height: 1;
+}
+
+.ip-sf-group-item, .ip-sf-group-container, .ip-sf-group-gallery, .ip-sf-group-gallery-item a, .ip-sf-group-content-container, .ip-sf-group-content, .ip-sf-group-content-btn, .ip-sf-container, .ip-sf-main, .ip-sf-header, .ip-sf-main-title, .ip-sf-icon-list, .ip-sf-group {
+    display: block;
+    position: relative;
+}
+
+.ip-sf-main-title h1 {
+    font-size: 75px;
+    line-height: 1;
+    color: #000;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+}
+
+.ip-sf-main-title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.ip-sf-container {
+    padding: 80px 0 290px;
+}
+
+.ip-sf-container > .custom-container {
+    padding: 0 15px;
+    max-width: 1235px;
+    margin: 0 auto;
+}
+
+.ip-sf-icon-item {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 104px;
+}
+
+.ip-sf-icon-item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.ip-sf-icon-item a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 104px;
+    font-size: 15px;
+    color: #000;
+    line-height: 1;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    position: relative;
+}
+
+.ip-sf-icon-item a:hover span {
+    opacity: 1;
+    color: #000;
+}
+
+.ip-sf-icon-item a span {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 5;
+}
+
+.ip-sf-icon-item a span em[class^=ai-font] {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.ip-sf-icon-item a:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: -webkit-gradient(linear, left top, right top, from(#be912d),color-stop(54%, #d5b34d),to(#be912d));
+    background: -o-linear-gradient(left, #be912d 0%,#d5b34d 54%,#be912d 100%);
+    background: linear-gradient(to right, #be912d 0%,#d5b34d 54%,#be912d 100%);
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ip-sf-icon-item a:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    border: 1px solid #000;
+}
+
+.ip-sf-icon-item a:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ip-sf-icon-item a:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ip-sf-icon-list {
+    text-align: center;
+}
+
+.ip-sf-filter-list .ip-sf-filter-option {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 15px;
+    line-height: 1;
+    letter-spacing: 0.100em;
+    color: #aeaeae;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+}
+
+.ip-sf-filter-list .ip-sf-filter-option.active, .ip-sf-filter-list .ip-sf-filter-option:hover {
+    color: #000;
+}
+
+.ip-sf-filter-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+}
+
+.ip-sf-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    margin: 65px auto 0;
+}
+
+.ip-sf-group-holder.active {
+    display: block;
+}
+
+.ip-sf-group-holder {
+    display: none;
+    position: relative;
+}
+
+.ip-sf-group-col {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 50%;
+    position: relative;
+}
+
+.ip-sf-group-row {
+    z-index: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    position: relative;
+    margin-top: 50px;
+}
+
+.ip-sf-group-gradient {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 39.42%;
+    height: calc(100% - 70px);
+    pointer-events: none;
+}
+
+.ip-sf-group-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60.58%;
+    height: calc(100% + 70px);
+    pointer-events: none;
+    background-color: #343a40;
+}
+
+.ip-sf-group-gallery-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    position: relative;
+    padding: 3px;
+}
+
+.ip-sf-group-gallery-item a,
+.ip-sf-group-img,
+.ip-sf-group-img canvas,
+.ip-sf-group-img img{
+    border-radius: 10px;
+}
+
+.ip-sf-group-container {
+    padding: 120px 100px 70px;
+}
+
+.ip-sf-group-bg canvas {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    opacity: .25;
+}
+
+.ip-sf-group {
+    margin-top: 75px;
+}
+
+.ip-sf-group-content p {
+    font-size: 17px;
+    line-height: 1.471;
+    letter-spacing: 0.100em;
+    color: #fff;
+}
+
+.ip-sf-group-content-btn a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 59px;
+    font-size: 15px;
+    letter-spacing: 0.200em;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+    width: 189px;
+    max-width: 100%;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    position: relative;
+}
+
+.ip-sf-group-content-btn a em[class^=ai-font] {
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.ip-sf-group-content-btn a:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: -webkit-gradient(linear, left top, right top, from(#be912d), color-stop(54%, #d5b34d), to(#be912d));
+    background: -o-linear-gradient(left, #be912d 0%, #d5b34d 54%, #be912d 100%);
+    background: linear-gradient(to right, #be912d 0%, #d5b34d 54%, #be912d 100%);
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.ip-sf-group-content-btn a:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ip-sf-group-content-btn a:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border: 1px solid #fff;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.ip-sf-group-content-btn a:hover:after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ip-sf-group-content-btn a:hover {
+    color: #000;
+}
+
+.ip-sf-group-content {
+    margin-bottom: 33px;
+}
+
+.ip-sf-group-content-container {
+    margin-left: 60px;
+    margin-bottom: 15px;
+}
+
+.ip-sf-group-img {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.ip-sf-group-gallery-item a:hover .ip-sf-group-img img {
+    opacity: 0.5;
+}
+
+[data-filter="All"] .ip-sf-group-item .ip-sf-group-bg {
+    height: calc(100% + 140px);
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse;
+            flex-flow: row-reverse;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-content-container {
+    margin-left: 0;
+    margin-right: 39px;
+    margin-bottom: 0;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-bg {
+    right: auto;
+    left: 0;
+    background-color: #fff;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-bg canvas {
+    opacity: .10;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-gradient {
+    left: auto;
+    right: 0;
+    top: 138px;
+    height: calc(100% - 138px);
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-content p {
+    color: #000;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-content-btn a {
+    color: #000;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-content-btn a:after {
+    border-color: #000;
+}
+
+.ip-sf-group-item:nth-child(even) .ip-sf-group-container {
+    padding-top: 138px;
+    padding-bottom: 98px;
+}
+
+.ip-sf-group-item:first-child .ip-sf-group-container {
+    padding-top: 145px;
+}
+
+.ip-sf-group-item:last-child:not(:first-child) .ip-sf-group-bg {
+    height: 100%;
+}
+
+.ip-sf-group-item:last-child:not(:first-child) .ip-sf-group-gradient {
+    top: 120px;
+    height: 100%;
+    width: 100%;
+}
+
+.return-text {
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    display: block;
+    line-height: 1;
+}
+
+/*******************************************************
+ *
+ * Mobile styles and other media queries
+ *
+ *******************************************************/
+@media only screen and (min-width: 992px) {
+    .custom-ip-tagline {
+        padding: 5.7% 0 0;
+    }
+    
+    .ip-sf-main-title h1 {
+        font-size: 4.688vw;
+    }
+
+    .ip-sf-main-title {
+        margin-bottom: 3.125vw;
+    }
+
+    .ip-sf-container {
+        padding: 5vw 0 18.125vw;
+    }
+
+    .ip-sf-container > .custom-container {
+        padding: 0 0.938vw;
+        max-width: 77.188vw;
+    }
+
+    .ip-sf-icon-item {
+        width: 6.500vw;
+    }
+
+    .ip-sf-icon-item:not(:last-child) {
+        margin-right: 1.563vw;
+    }
+
+    .ip-sf-icon-item a {
+        height: 6.500vw;
+        font-size: 0.938vw;
+    }
+
+    .ip-sf-icon-item a span em[class^=ai-font] {
+        margin-bottom: 0.500vw;
+        font-size: 1.563vw;
+    }
+
+    .ip-sf-filter-list .ip-sf-filter-option {
+        font-size: 0.938vw;
+    }
+
+    .ip-sf-filter {
+        max-width: 34.375vw;
+        margin: 4.063vw auto 0;
+    }
+
+    .ip-sf-group-gradient {
+        top: 4.375vw;
+        height: calc(100% - 4.375vw);
+    }
+
+    .ip-sf-group-bg {
+        height: calc(100% + 4.375vw);
+    }
+
+    .ip-sf-group-container {
+        padding: 7.500vw 6.250vw 4.375vw;
+    }
+
+    .ip-sf-group {
+        margin-top: 4.688vw;
+    }
+
+    .ip-sf-group-content p {
+        font-size: 1.063vw;
+    }
+
+    .ip-sf-group-content-btn a {
+        height: 3.688vw;
+        font-size: 0.938vw;
+        width: 11.813vw;
+    }
+
+    .ip-sf-group-content-btn a em[class^=ai-font] {
+        margin-right: 1.250vw;
+        font-size: 1.375vw;
+    }
+
+    .ip-sf-group-content {
+        margin-bottom: 2.063vw;
+    }
+
+    .ip-sf-group-content-container {
+        margin-left: 3.750vw;
+        margin-bottom: 0.938vw;
+    }
+
+    [data-filter="All"] .ip-sf-group-item .ip-sf-group-bg {
+        height: calc(100% + 8.750vw);
+    }
+
+    .ip-sf-group-item:nth-child(even) .ip-sf-group-content-container {
+        margin-right: 2.438vw;
+    }
+
+    .ip-sf-group-item:nth-child(even) .ip-sf-group-gradient {
+        top: 8.625vw;
+        height: calc(100% - 8.625vw);
+    }
+
+    .ip-sf-group-item:nth-child(even) .ip-sf-group-container {
+        padding-top: 8.625vw;
+        padding-bottom: 6.125vw;
+    }
+
+    .ip-sf-group-item:first-child .ip-sf-group-container {
+        padding-top: 9.063vw;
+    }
+
+    .ip-sf-group-item:last-child:not(:first-child) .ip-sf-group-gradient {
+        top: 7.500vw;
+    }
+
+    .return-text {
+        font-size: 0.938vw;
+    }
+
+     .ip-sf-group-gallery-item {
+        padding: 0.188vw;
+    }
+    
+    .ip-sf-group-gallery-item a,
+    .ip-sf-group-img,
+    .ip-sf-group-img canvas,
+    .ip-sf-group-img img{
+        border-radius: 0.625vw;
+    }
+}
+
+/* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */
+@media only screen and (max-width: 1199px) {
+}
+
+/* iPad(portrait) | Galaxy Tab 4(portrait)  */
+@media only screen and (max-width: 991px) {
+    .ip-sf-icon-item {
+        width: calc(100% / 2);
+        margin: 0!important;
+        padding: 5px;
+    }
+
+    .ip-sf-icon-list {
+        width: 100%;
+        max-width: 256px;
+        margin: 0 auto;
+    }
+
+    .ip-sf-main-title {
+        margin-bottom: 40px;
+    }
+
+    .ip-sf-main-title h1 {
+        font-size: 45px;
+    }
+
+    .ip-sf-container {
+        padding: 70px 0 50px;
+    }
+
+    .ip-sf-filter-list .ip-sf-filter-option {
+        letter-spacing: 0.050em;
+    }
+
+    .ip-sf-group-container {
+        padding: 70px 40px!important;
+    }
+
+    .ip-sf-group-row {
+        display: block;
+    }
+
+    .ip-sf-group-col {
+        display: block;
+        width: 100%;
+    }
+
+    .ip-sf-group-gallery {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .ip-sf-group-col:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .ip-sf-group-bg {
+        width: 100%;
+        height: 100%!important;
+    }
+
+    .ip-sf-group-content-container {
+        margin: 0!important;
+    }
+
+    .ip-sf-group-gradient {
+        display: none;
+    }
+
+    .ip-sf-group-content p {
+        font-size: 15px;
+    }
+
+    .ip-sf-group-content {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .ip-sf-group-content-btn a {
+        margin: 0 auto;
+    }
+
+    .ip-sf-container > .custom-container {
+        max-width: 768px;
+    }
+
+    .ip-sf-group-item {
+        margin-bottom: 30px;
+    }
+
+    .ip-sf-filter-list {
+        display: block;
+        text-align: center;
+    }
+
+    .ip-sf-filter-list .ip-sf-filter-option {
+        padding: 10px 15px;
+    }
+
+    .ip-sf-filter {
+        display: block;
+        text-align: center;
+        margin: 35px auto 0;
+    }
+
+    .ip-sf-group {
+        margin-top: 40px;
+    }
+
+    .custom-ip-tagline {
+        font-size: 40px;
+        padding: 40px 0 0;
+    }
+}
+
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+@media only screen and (max-width: 767px) {
+    .ip-sf-group-container {
+        padding: 50px 15px !important;
+    }
+
+    .ip-sf-group-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .ip-sf-group-content-btn a {
+        font-size: 14px;
+        letter-spacing: 0.100em;
+        width: 170px;
+        height: 54px;
+    }
+
+    .ip-sf-icon-item a {
+        height: 100px;
+        font-size: 14px;
+    }
+
+    .ip-sf-main-title h1 {
+        font-size: 40px;
+    }
+
+    .ip-sf-container {
+        padding: 50px 0 50px;
+    }
+
+    .ip-sf-main-title {
+        margin-bottom: 30px;
+    }
+}
+
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */
+@media only screen and (max-width: 480px) {
+}

@@ -35,8 +35,8 @@ function Header({setIsAsideActive}) {
                                     <Link to='/listings' data-title="Featured Listings">Featured Listings</Link>
                                 </li>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-46">
-                                    <a href="https://serioestates.com/about-us/" data-title="Services">Services</a>
-                                    <ul className="sub-menu">
+                                    <Link to="/services" data-title="Services">Services</Link>
+                                    {/* <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-116">
                                             <a href="https://serioestates.com/meet-ron-serio/" data-title="Meet Ron Serio">Meet Ron Serio</a>
                                         </li>
@@ -49,7 +49,7 @@ function Header({setIsAsideActive}) {
                                         <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-207">
                                             <a href="/category/blog/" data-title="Blog">Blog</a>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
                                     <Link to="/animation" data-title="Sell Your Property">Sell Your Property</Link>

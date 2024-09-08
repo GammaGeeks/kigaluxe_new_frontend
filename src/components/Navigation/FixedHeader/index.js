@@ -39,7 +39,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                 </ul> */}
                             </li>
                             <li id="menu-item-71" className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                                <a href="https://serioestates.com/featured-listings/" data-title="Featured Listings">Services</a>
+                                <Link to="/services" data-title="Featured Listings">Services</Link>
                             </li>
                             <li id="menu-item-233" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
                                 <a href="/communities/" data-title="Communities">Sell Your Property</a>

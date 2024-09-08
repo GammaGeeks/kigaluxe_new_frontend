@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 
 import backgroundImage from '../../../assets/images/side-menu-bg.jpg'
@@ -27,19 +28,25 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                             <div className="menu-side-menu-container">
                                 <ul id="sidemenu-nav" className="sidemenu-nav">
                                     <li id="menu-item-24908" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24908">
-                                        <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
+                                        <Link to='/services' data-title="Services">Services</Link>
                                         <ul className="sub-menu">
                                             <li id="menu-item-24909" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24909">
-                                                <a href="https://serioestates.com/meet-ron-serio/" data-title="Meet Ron Serio">Meet Ron Serio</a>
+                                                <a data-title="Property Listings">Property Listings</a>
                                             </li>
                                             <li id="menu-item-24910" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24910">
-                                                <a href="https://serioestates.com/meet-waruka-serio/" data-title="Meet Waruka Serio">Meet Waruka Serio</a>
+                                                <a data-title="Property Management">Property Management</a>
                                             </li>
                                             <li id="menu-item-25887" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-25887">
-                                                <a href="https://serioestates.com/social-media/" data-title="Social Media Wall">Social Media Wall</a>
+                                                <a data-title="Land Partitioning">Land Partitioning</a>
                                             </li>
                                             <li id="menu-item-24911" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-24911">
-                                                <a href="/category/blog/" data-title="Blog">Blog</a>
+                                                <a data-title="House Renovation">House Renovation</a>
+                                            </li>
+                                            <li id="menu-item-25887" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-25887">
+                                                <a data-title="Interior Design">Interior Design</a>
+                                            </li>
+                                            <li id="menu-item-24911" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-24911">
+                                                <a data-title="Property Evaluation">Property Evaluation</a>
                                             </li>
                                         </ul>
                                     </li>
