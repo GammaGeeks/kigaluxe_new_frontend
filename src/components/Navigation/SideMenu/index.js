@@ -28,7 +28,7 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                             <div className="menu-side-menu-container">
                                 <ul id="sidemenu-nav" className="sidemenu-nav">
                                     <li id="menu-item-24908" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24908">
-                                        <Link to='/services' data-title="Services">Services</Link>
+                                        <Link onClick={() => setIsAsideActive(false)} to='/services' data-title="Services">Services</Link>
                                         <ul className="sub-menu">
                                             <li id="menu-item-24909" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24909">
                                                 <a data-title="Property Listings">Property Listings</a>
