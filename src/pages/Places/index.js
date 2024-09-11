@@ -44,26 +44,26 @@ function Places() {
       <div className="textwidget custom-html-widget">
         {/* <!--<div className="ip-banner" data-type="page" data-id="35"><canvas width="1600" height="350" style="background-image: url(https://serioestates.com/wp-content/uploads/2023/01/slide-img-1.jpg)"></canvas></div>
     --> */}
-        <div className="custom-ip-banner">
+        {/* <div className="custom-ip-banner">
           <canvas width="1530" height="568" style={{backgroundImage: `url(images/banner-meet.jpg)`}}></canvas>
           <div className="custom-ip-tagline">
             <div className="container">Respected. Loyal. Relentless. Discreet.</div>
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <!-- ip banner goes here --> */}
       <div id="inner-page-wrapper">
         <div className="container">
           <div id="ip-communities">
             <div className="ip-comm-container">
-              <div className="ip-comm-section">
+              {/* <div className="ip-comm-section">
                 <div id="ip-comm-banner" className="custom-ip-banner aios-scroll-section" data-aios-scroll-title="Banner">
                   <canvas width="1530" height="581" style={{backgroundImage: `url(images/banner-with-border-a.png)`}}></canvas>
                   <div className="custom-ip-tagline">
                     <div className="container">Respected. Loyal. Relentless. Discreet.</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="ip-comm-section">
                 <div id="ip-comm-content" className="ip-comm-content-container aios-scroll-section" data-aios-scroll-title="Communities">
                   <div className="ip-comm-bg attachment-fixed">
@@ -111,7 +111,7 @@ function Places() {
                                 <Link to={`/places/${item.id}`}>
                                   <div className="ip-comm-img site-img">
                                     <canvas width="488" height="484"></canvas>
-                                    <img src={item.img} width="488" height="484"/>
+                                    <img src={item.url} width="488" height="484"/>
                                   </div>
                                   <div className="ip-comm-title">
                                     <span>

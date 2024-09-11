@@ -1,8 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchAllPlaces } from '../../../redux/actions/places'
 
 function Places() {
+    // eslint-disable-next-line no-unused-vars
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    useEffect(() => {
+      dispatch(fetchAllPlaces(1, 12))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+    const places = useSelector(state => state.places)
+  
+    // eslint-disable-next-line no-unused-vars
+    const { listOfPlaces, next, currentPage, getPlaces } = places
   return (
     <section id="area-of-expertise" className="aios-scroll-section" data-aios-scroll-title="Area of Expertise">
             <div className="textwidget custom-html-widget">
@@ -25,22 +38,25 @@ function Places() {
                                 </h2>
                             </div>
                             <div className="aoe-list">
-                                <div className="aoe-item">
-                                    <a href="https://serioestates.com/community/bel-air">
-                                        <div className="aoe-img site-img">
-                                            <canvas width="360" height="277"></canvas>
-                                            <img className="lazyload" src={require('../../../assets/nu/popular_places/vision_city.jpg')} alt="Areas of Expertise" width="360" height="277"/>
-                                        </div>
-                                        <div className="aoe-title">
-                                            <span>
-                                                <em className="ai-icon-logo-sm"></em>Gahanga </span>
-                                        </div>
-                                        <div className="aoe-hover-img">
-                                        <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div className="aoe-item">
+                            {
+                                places && listOfPlaces ? listOfPlaces.map((item, index) => (
+                                    <div key={index} className="aoe-item">
+                                        <a href="#">
+                                            <div className="aoe-img site-img">
+                                                <canvas width="360" height="277"></canvas>
+                                                <img className="lazyload" src={item.url} alt="Areas of Expertise" width="360" height="277"/>
+                                            </div>
+                                            <div className="aoe-title">
+                                                <span>
+                                                    <em className="ai-icon-logo-sm"></em>{item.knownName} </span>
+                                            </div>
+                                            <div className="aoe-hover-img">
+                                            <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
+                                            </div>
+                                        </a>
+                                    </div>)) : ''
+                            }
+                                {/* <div className="aoe-item">
                                     <a href="https://serioestates.com/community/beverly-hills">
                                         <div className="aoe-img site-img">
                                             <canvas width="360" height="277"></canvas>
@@ -114,7 +130,7 @@ function Places() {
                                             <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                         </div>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="aoe-more-btn" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 <Link to='/places' className="global-btn is-white">See More</Link>
