@@ -7,6 +7,7 @@ import SingleProperty from './pages/Single';
 import Search from './pages/Search';
 import AboutUs from './pages/AboutUs';
 import Places from './pages/Places';
+import Blogs from './pages/Blogs';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='search' element={<Search />} />
           <Route path='property/:id' element={<SingleProperty />} />
           <Route path='places' element={<Places />} />
+          <Route path='blogs' element={<Blogs />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

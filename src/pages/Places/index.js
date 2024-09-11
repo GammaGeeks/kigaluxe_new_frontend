@@ -111,7 +111,7 @@ function Places() {
                                 <Link to={`/places/${item.id}`}>
                                   <div className="ip-comm-img site-img">
                                     <canvas width="488" height="484"></canvas>
-                                    <img src={item.url} bel="" width="488" height="484"/>
+                                    <img src={item.img} width="488" height="484"/>
                                   </div>
                                   <div className="ip-comm-title">
                                     <span>
