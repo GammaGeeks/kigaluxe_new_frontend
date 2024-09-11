@@ -114,7 +114,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-3.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img9.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -122,7 +122,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-2.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img10.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -130,7 +130,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-1.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img11.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -138,7 +138,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-4.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img12.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
