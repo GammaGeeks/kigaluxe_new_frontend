@@ -3,7 +3,7 @@ import { blogActionTypes as blogTypes } from '../../actionTypes';
 import { REACT_APP_LOCAL_URL, REACT_APP_BASIC_URL } from '../../helpers/backendURLs';
 import { apiAction } from '../../helpers';
 
-const getSingleProperty = (id) => (dispatch) => dispatch(apiAction({
+const getSingleBlog = (id) => (dispatch) => dispatch(apiAction({
   method: 'get',
   // httpOptions: { token: localStorage.token },
   url: `${REACT_APP_BASIC_URL}/${id}/blog/single`,
@@ -13,4 +13,4 @@ const getSingleProperty = (id) => (dispatch) => dispatch(apiAction({
   onFailure: blogTypes.FETCH_BLOG_FAILURE
 }));
 
-export default getSingleProperty
+export default getSingleBlog

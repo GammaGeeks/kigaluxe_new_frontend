@@ -1,0 +1,615 @@
+/*******************************************************
+ *
+ * Communities
+ *
+ *******************************************************/
+.ip-banner {
+    display: none;
+}
+
+.ip-container #fixed-smi {
+    display: block;
+}
+
+.nav-active-section-ip-comm-content #fixed-smi ul li a {
+    color: #fff;
+    border-color: #000;
+    background-color: #000;
+}
+
+.nav-active-section-ip-comm-content .fixed-smi-label:before {
+    background-color: #000;
+}
+
+.nav-active-section-ip-comm-content .fixed-smi-label span {
+    color: #000;
+}
+
+.git-container {
+    margin-top: 100px;
+}
+
+.git-bg:before {
+    height: 35%;
+}
+
+.custom-ip-banner {
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+.custom-ip-banner canvas {
+    display: block;
+    width: 100%;
+    background-position: center bottom;
+    background-size: 100% auto;
+  /*min-height: 350px;*/
+  background-repeat: no-repeat;
+}
+
+.custom-ip-tagline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    color: #fff;
+    font-family: var(--title-font);
+    font-weight: 400;
+    text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+#inner-page-wrapper {
+    margin-bottom: 0;
+}
+
+#inner-page-wrapper>.container {
+    width: 100%;
+    padding: 0;
+}
+
+.custom-breadcrumbs {
+    padding-top: 90px;
+    z-index: 5;
+    position: relative;
+    padding-bottom: 145px;
+}
+
+.custom-breadcrumbs p#breadcrumbs {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #999999;
+}
+
+#ip-communities {
+    font-size: 0;
+    letter-spacing: normal;
+    line-height: 1;
+}
+
+.ip-comm-section, .ip-comm-container {
+    display: block;
+    position: relative;
+}
+
+.ip-comm-content-main .custom-container {
+    padding: 0 38px;
+}
+
+.ip-comm-content-main .global-logo-icon:after {
+    opacity: 0;
+}
+
+/*Section 2*/
+.ip-comm-content-container {
+    display: block;
+    position: relative;
+    padding: 0 0 80px;
+    margin-top: -60px;
+}
+
+.ip-comm-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    pointer-events: none;
+}
+
+.ip-comm-bg canvas {
+    -webkit-filter: grayscale();
+    filter: grayscale();
+    opacity: 0.10;
+}
+
+.ip-comm-content-caption {
+    text-align: center;
+    width: 100%;
+    max-width: 68.34%;
+    margin: 0 auto 40px;
+}
+
+.ip-comm-content-caption p {
+    font-size: max(0.875vw, 12px);
+    line-height: 1.715;
+    letter-spacing: 0.030em;
+    color: #303030;
+    margin: 20px 0 0 0;
+}
+.ip-comm-content-caption p:first-child{
+    margin: 0 0 0 0;
+}
+.ip-comm-content-row {
+    margin: 0 -15px;
+}
+
+.ip-comm-content-img {
+    -webkit-box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+.ip-comm-hover-main-title, .ip-comm-hover-btn, .ip-comm-hover-title, .ip-comm-item a, .ip-comm-content-row, .ip-comm-content-caption {
+    display: block;
+    position: relative;
+}
+
+.ip-comm-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% / 3);
+    position: relative;
+    padding: 15px;
+}
+
+.ip-comm-content-more-btn a {
+    margin: 0 auto;
+}
+
+.ip-comm-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px 40px;
+    z-index: 5;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    text-align: center;
+}
+
+.ip-comm-hover-title, .ip-comm-hover-title:before, .ip-comm-hover-title, .ip-comm-item a, .ip-comm-img, .ip-comm-img canvas, .ip-comm-img img {
+    border-radius: 15px;
+}
+
+.ip-comm-title span {
+    display: inline-block;
+    position: relative;
+    padding-left: 60px;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    font-size: 44px;
+    letter-spacing: 0.025em;
+    line-height: 1;
+    color: #fff;
+    font-family: var(--title-font);
+    text-transform: uppercase;
+}
+
+.ip-comm-title span em.ai-icon-logo {
+    background-image: url(file:///E|/images/accent-logo-b.png);
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+.ip-comm-hover-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out;
+    z-index: 5;
+    /* transform: scale(0.9); */
+}
+
+.ip-comm-hover-title:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#be912d+0,d5b34d+50,be912d+100 */
+    background: #be912d;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(top, #be912d 0%,#d5b34d 50%,#be912d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#be912d),color-stop(50%, #d5b34d),to(#be912d));
+    background: linear-gradient(to bottom, #be912d 0%,#d5b34d 50%,#be912d 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#be912d', endColorstr='#be912d',GradientType=0 );
+    /* IE6-9 */
+    opacity: .90;
+}
+
+.ip-comm-hover-main-title {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.ip-comm-hover-main-title span {
+    font-size: 50px;
+    letter-spacing: 0.050em;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+}
+
+.ip-comm-hover-btn span {
+    width: 164px;
+    max-width: 100%;
+    max-width: 0 auto;
+}
+
+.ip-comm-content-more-btn {
+    margin: 35px auto 0;
+}
+
+.ip-comm-img {
+    /* background-color: #000; */
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.ip-comm-img:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    bottom: 0;
+}
+
+.ip-comm-img img {
+    opacity: .80;
+    -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+            transform: scale(1.01);
+}
+
+.ip-comm-item a:hover .ip-comm-hover-title {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ip-comm-item a:hover .ip-comm-title {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ip-comm-item.comm-126 {
+    /*display: none;*/
+}
+
+.ip-comm-content-main {
+	z-index: 2;
+	position: relative;
+}
+.ip-comm-bg.attachment-fixed::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	display: block;
+	background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,rgba(255,255,255,0) 70%);
+	z-index: 1;
+}
+
+
+
+/*******************************************************
+ *
+ * Mobile styles and other media queries
+ *
+ *******************************************************/
+@media only screen and (min-width: 992px) {
+    .custom-breadcrumbs .container, .custom-ip-tagline .container {
+        width: 71.250vw;
+        padding: 0 0.938vw;
+    }
+
+    .custom-ip-tagline {
+        padding: 5.7% 0 0;
+    }
+
+    .git-container {
+        margin-top: 6.25vw;
+    }
+
+    .custom-ip-banner canvas {
+        min-height: 21.875vw;
+    }
+
+    .custom-ip-tagline {
+        font-size: 3.75vw;
+        text-shadow: 0.125vw 0.188vw 0.438vw rgba(0, 0, 0, 0.35);
+    }
+
+    .custom-breadcrumbs {
+        padding-top: 5.625vw;
+        padding-bottom: 9.063vw;
+    }
+
+    .custom-breadcrumbs p#breadcrumbs {
+        font-size: 0.875vw;
+    }
+
+    .ip-comm-content-main .custom-container {
+        padding: 0 2.375vw;
+    }
+
+    /*Section 2*/
+    .ip-comm-content-container {
+        padding: 0 0 5vw;
+        margin-top: -3.75vw;
+    }
+
+    .ip-comm-content-caption {
+        margin: 0 auto 2.5vw;
+    }
+
+    .ip-comm-content-caption p {
+        /* font-size: 0.875vw; */
+    }
+
+    .ip-comm-content-row {
+        margin: 0 -0.938vw;
+    }
+
+    .ip-comm-content-img {
+        -webkit-box-shadow: 0.063vw 0.125vw 0.313vw 0vw rgba(0, 0, 0, 0.35);
+                box-shadow: 0.063vw 0.125vw 0.313vw 0vw rgba(0, 0, 0, 0.35);
+    }
+
+    .ip-comm-item {
+        padding: 0.938vw;
+    }
+
+    .ip-comm-title {
+        padding: 0 1.25vw 2.5vw;
+    }
+
+    .ip-comm-hover-title, .ip-comm-hover-title:before, .ip-comm-hover-title, .ip-comm-item a, .ip-comm-img, .ip-comm-img canvas, .ip-comm-img img, .ip-comm-img:before, .ip-comm-img:before {
+        border-radius: 0.938vw;
+    }
+
+    .ip-comm-title span {
+        /*font-size: min(2.375vw,38px);*/
+        font-size: min(2vw,32px);
+        padding-left: 3.750vw;
+    }
+    /*.ip-comm-item.comm-119 .ip-comm-title span{
+        font-size: min(2.375vw,38px);
+    }*/
+    .ip-comm-title span em.ai-icon-logo {
+        width: 2.438vw;
+        height: 2.438vw;
+    }
+
+    .ip-comm-hover-title {
+        padding: 0 1.25vw;
+    }
+
+    .ip-comm-hover-main-title {
+        margin-bottom: 1.563vw;
+    }
+
+    .ip-comm-hover-main-title span {
+        /*font-size: 3.125vw;*/
+        font-size: min(2.625vw,42px);
+    }
+
+    .ip-comm-hover-btn span {
+        width: 10.25vw;
+    }
+
+    .ip-comm-content-more-btn {
+        margin: 2.188vw auto 0;
+    }
+}
+
+/* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */
+@media only screen and (max-width: 1199px) {
+    html #ip-communities .attachment-fixed canvas {
+        background-position: top  center!important;
+        background-size: cover!important;
+    }
+
+     .ip-comm-content-caption p {
+       font-size: 12px;
+    }
+
+    .ip-comm-content-caption {
+        max-width: 86%;
+    }
+}
+
+/* iPad(portrait) | Galaxy Tab 4(portrait)  */
+@media only screen and (max-width: 991px) {
+    .ip-container #fixed-smi {
+        display: none;
+    }
+
+    .custom-ip-tagline {
+        font-size: 40px;
+        padding: 40px 0 0;
+    }
+
+    .custom-breadcrumbs {
+        padding-bottom: 50px;
+        padding-top: 90px;
+    }
+
+    .ip-comm-content-main .custom-container {
+        padding: 0 20px;
+    }
+
+    .ip-comm-content-more-btn {
+        margin: 40px auto 0;
+    }
+
+    .ip-comm-content-container {
+        padding: 0 0 60px;
+    }
+
+    .ip-comm-content-caption {
+        max-width: 100%;
+        margin: 0 auto 25px;
+    }
+
+    .ip-comm-item {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 510px;
+        padding: 0;
+    }
+
+    .ip-comm-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .ip-comm-content-row {
+        margin: 0;
+    }
+
+    .ip-comm-hover-main-title span {
+        font-size: 40px;
+    }
+
+    .ip-comm-title span {
+        font-size: 34px;
+        padding-left: 50px;
+    }
+
+    .ip-comm-title span em.ai-icon-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .git-container {
+        margin-top: 60px;
+    }
+
+    .ip-comm-content-caption p{
+        font-size: 14px;
+    }
+}
+
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+@media only screen and (max-width: 767px) {
+    .custom-ip-tagline {
+        font-size: 4.8vw;
+        padding: 41px 0 0;
+    }
+
+    .custom-breadcrumbs p#breadcrumbs {
+        font-size: 13px;
+    }
+
+    .ip-comm-title {
+        padding: 0 20px 30px;
+    }
+}
+@media only screen and (max-width: 567px) {
+    .ip-comm-title span {
+        font-size: min(5.8vw,34px);
+    }
+}
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */
+@media only screen and (max-width: 480px) {
+    .custom-ip-tagline {
+        /*font-size: 30px;*/
+    }
+
+    .ip-comm-content-main .custom-container {
+        padding: 0 15px;
+    }
+
+    .ip-comm-hover-main-title span {
+        font-size: 28px;
+    }
+
+    .ip-comm-hover-main-title {
+        margin-bottom: 20px;
+    }
+
+    .ip-comm-title span {
+        /*font-size: 25px;*/
+        padding-left: 30px;
+    }
+
+    .ip-comm-title span em.ai-icon-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .ip-comm-item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+	
+	.custom-ip-banner canvas {
+		min-height: 190px;
+	}
+	 .custom-ip-tagline {
+    padding: 81px 0 0;
+  }
+}

@@ -200,23 +200,23 @@ function FooterPart() {
                         <div className="menu-primary-menu-container">
                         <ul id="footer-nav" className="footernav">
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-46">
-                            <a href="https://serioestates.com/about-us/" data-title="About Us">About Us</a>
+                                <Link to='about_us' data-title="About Us">About Us</Link>
                             </li>
                             <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
-                            <Link href='/listings' data-title="Featured Listings">Featured Listings</Link>
+                                <Link href='/listings' data-title="Featured Listings">Featured Listings</Link>
                             </li>
                             <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-233">
-                            <a href="/communities/" data-title="Communities">Communities</a>
+                                <Link to='places' data-title="Communities">Communities</Link>
                             </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
-                            <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
+                            {/* <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-43">
+                                <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
                             </li>
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-41">
-                            <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                            <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
-                            </li>
+                                <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
+                            </li> */}
+                            {/* <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
+                                <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
+                            </li> */}
                         </ul>
                         </div>
                     </div>
