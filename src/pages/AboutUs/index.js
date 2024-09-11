@@ -43,42 +43,37 @@ function AboutUs() {
                       <div className="ai-modern-about-entry">
                         <div className="container">
                           <div className="ai-modern-about-photo">
-                            <canvas width="550" height="825" style={{backgroundImage: "url(images/IMG_0116.jpg)"}}></canvas>
+                            <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/images/b.jpg')})`}}></canvas>
                           </div>
                           <div className="ai-modern-about-main">
                             <div className="ai-modern-about-title">
                               <div className="global-title">
                                 <h2>
-                                  <small>The Serio Group</small>
-                                  <span>Live your best life!</span>
+                                  <small>Welcome to Kigaluxe:</small>
+                                  <span>Your Gateway to Exceptional Real Estate Services</span>
                                 </h2>
                               </div>
                             </div>
                             <div className="ai-modern-about-content">
-                              <p>Respected. Loyal. Relentless. Discrete.</p>
-                              <p>These are powerful words in their own right. For Ron Serio and Waruka Serio, founders of the Serio Group, they are a collective of attributes that, to our clients, represent a way of doing business that is unparalleled. Our enthusiasm and energy relating to all things real estate, is just one of the reasons we excel at developing long-term relationships with all those that we work with.</p>
-                              <p>The Serio Group has a combined 50 years of experience. We are highly knowledgeable in the sales and marketing of all things luxury, as well as complex negotiations, making us a particularly valued resource to our clients who include a diverse collective including global and Hollywood elite, fashionistas, musicians, athletes and the corporate world. </p>
-                              <p>Our knowledge of the luxury market extends well beyond real estate, and includes luxury travel, exotic cars, luxury yachts, private jets and haute couture fashion. Through our collaborative style, innovative marketing, expert negotiation skills, attention to detail and unwavering integrity, we deliver maximum satisfaction to our valued clients.</p>
-                              <p>24/7 VIP white glove service is the hallmark of the Serio Group. We are skilled at consistently delivering results in the most challenging of environments, and endeavor to provide our clients with the best possible return on their luxury real estate investment, through our steady handed approach, and expert in-depth analysis of past, current and future housing trends. We excel at meeting the goals of discriminating clientele; Sellers and Buyers who expect superior representation for their luxury real estate investment. We will help you to envision and realize the full potential of your property. </p>
-                              <p>Our goal is a simple one; to understand clients’ goals and needs and put them at ease, while providing an exceptional personalized luxury real estate selling or buying experience. Live your best life!</p>
+                              <p>At Kigaluxe, we pride ourselves on being more than just a real estate company – we are your trusted partner in creating, managing, and enhancing your property investments. Established with a vision to redefine the real estate experience in Kigali and beyond, Kigaluxe brings together a team of dedicated professionals committed to delivering unparalleled services across various facets of the real estate industry.</p>
                             </div>
                             <div className="ai-modern-about-info">
                               <div>
                                 <ul className="ai-modern-about-contact">
                                   <li>
                                     <span className="ai-font-phone-alt phone"></span>
-                                    <a href="tel:+1.310.975.9172" className="aios-ai-phone " aria-label="+1.310.975.9172">310.975.9172</a>
+                                    <a href="tel:+250788501505" className="aios-ai-phone " aria-label="+250788501505">+250788501505</a>
                                   </li>
                                   <li>
                                     <span className="ai-font-envelope envelope"></span>
-                                    <a className="asis-mailto-obfuscated-email " data-value="info(at)serioestates(dotted)com" href="#" aria-label="info(at)serioestates(dotted)com">info(at)serioestates(dotted)com</a>
+                                    <a className="asis-mailto-obfuscated-email " data-value="musangamfuravincent@gmail.com" href="#" aria-label="musangamfuravincent@gmail.com">musangamfuravincent@gmail.com</a>
                                   </li>
                                 </ul>
                               </div>
                               <div>
                                 <ul className="ai-modern-about-smi">
                                   <li>
-                                    <a href="https://www.facebook.com//" target="_blank" rel="nofollow noopener" className="ai-font-facebook">
+                                    <a href="https://www.facebook.com/" target="_blank" rel="nofollow noopener" className="ai-font-facebook">
                                       <span className="hidden">facebook</span>
                                     </a>
                                   </li>
@@ -178,7 +173,7 @@ function AboutUs() {
                           </div>
                         </div>
                       </div>
-                      <ul className="ai-modern-about-cta">
+                      {/* <ul className="ai-modern-about-cta">
                         <li>
                           <a href="https://serioestates.com/featured-listings/">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/Luxury-Properties.jpg')"}}></canvas>
@@ -206,15 +201,14 @@ function AboutUs() {
                             </div>
                           </a>
                         </li>
-                      </ul>
-                      <div className="ai-modern-about-testi">
+                      </ul> */}
+                      {/* <div className="ai-modern-about-testi">
                         <div className="ai-modern-about-testi-slider">
                           <div className="ai-modern-about-testi-item">
                             <a href="/testimonials/">
                               <h3>Heather S.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“We were excited to work with Ron and Weiky, and the Serio Group, who helped us find an amazing house. The experience was incredible, and flawless from start to finish! Most of all we really enjoyed working with both of them. They’re incredible people, and anyone would be lucky to work with them!”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -222,7 +216,6 @@ function AboutUs() {
                               <h3>Robbie K.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“What was a great experience! Ron and Weiky expertly helped us through the home buying process. We had a short escrow, and they were able to get everything done in a timely manner. They helped us get into a house that we really wanted, and made it happen. We’re very happy, and really enjoyed working with them!”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -230,7 +223,6 @@ function AboutUs() {
                               <h3>Marc P.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“I cannot thank you enough for your expertise and the most respectful, patient and considered way you dealt with me and my family. That is not always the case in this kind of sales job, but you were exceptional and we are most appreciative.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -238,7 +230,6 @@ function AboutUs() {
                               <h3>Kevin V.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“I recently worked with Ron and Waruka Serio from the Serio Group for my real estate transaction and was beyond impressed. Their commitment to excellence and attention to detail were outstanding. Ron and Waruka are warm and thoughtful, always putting their clients' needs first. Their expertise and dedication to customer satisfaction truly set them apart. They demonstrated unparalleled professionalism and genuine concern for my personal and financial well-being. I highly recommend Ron and Waruka Serio to anyone looking for top-notch real estate representation.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -246,7 +237,6 @@ function AboutUs() {
                               <h3>Bella S.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“Ron and Waruka Serio are unparalleled in their expertise and commitment to excellence, making our home search in Beverly Hills extraordinary. Their seamless process, articulate communication, and genuine care for our family's needs set them apart. They possess a deep understanding of the housing market and are invested in ensuring the real estate journey is successful and enjoyable. I wholeheartedly recommend the Serio Group for their blend of professionalism, expertise, and genuine care that creates an unparalleled experience.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -254,7 +244,6 @@ function AboutUs() {
                               <h3>Chris R.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“I had the pleasure of working with the Serio Group for my real estate needs in Beverly Hills, and I can't stress enough their professionalism, responsiveness, and knowledge. Ron and Waruka Serio proved to be reliable and absolutely committed to their clients' best interests, making sure I was well-informed and comfortable every step of the way. Their extensive market knowledge and ethical standards set them apart, ensuring a smooth and efficient real estate experience. I highly recommend the Serio Group for any real estate needs in Beverly Hills, and I am deeply grateful for their exceptional service.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -262,7 +251,6 @@ function AboutUs() {
                               <h3>Chris D.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“I had a seamless and stress-free experience working with Ron and Waruka Serio of the Serio Group. From the start, they demonstrated their deep knowledge and dedication to my needs, always prioritizing my best interests. Their exceptional communication kept me informed throughout every step of the process. I highly recommend Ron and Waruka to anyone needing real estate services—they truly go above and beyond for their clients.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -270,7 +258,6 @@ function AboutUs() {
                               <h3>Joshua G.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“Working with Waruka and Ron Serio of the Serio Group at Coldwell Banker Realty in Beverly Hills was a fantastic experience. They demonstrated exceptional knowledge and professionalism, ensuring a smooth transaction from start to finish. Their attention to detail and proactive communication truly stood out, and they leveraged their extensive network to provide access to exclusive properties. I highly recommend Waruka and Ron for anyone in need of dedicated and skilled real estate professionals.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -278,7 +265,6 @@ function AboutUs() {
                               <h3>John K. &amp; Emily B.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“Ron and Waruka surpassed our expectations. Ron’s expert negotiation skills and market knowledge secured us the best deal. They are true professionals, and their commitment to excellence is unmatched.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                           <div className="ai-modern-about-testi-item">
@@ -286,7 +272,6 @@ function AboutUs() {
                               <h3>Jennifer C.</h3>
                               <img src="images/about-modern-testimonial-quote.png" alt="Quote Icon"/>
                               <p>“Choosing The Serio Group to sell our home was the best decision we made. Their strategic approach and attention to detail set our home apart. Their marketing prowess is evident. Trust Ron and Waruka for a seamless, top-dollar sale.”</p>
-                              {/* <!--<canvas width="178" height="178" style="background-image: url();"></canvas>--> */}
                             </a>
                           </div>
                         </div>
@@ -294,7 +279,7 @@ function AboutUs() {
                           <span className="ai-modern-about-testi-arrow ai-modern-about-testi-prev ai-font-arrow-b-p"></span>
                           <span className="ai-modern-about-testi-arrow ai-modern-about-testi-next ai-font-arrow-b-n"></span>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="comments-template"></div>
