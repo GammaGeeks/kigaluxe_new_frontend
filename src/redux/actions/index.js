@@ -6,6 +6,8 @@ import * as blogsAction from './blogs'
 import * as blogAction from './blog'
 import * as commentsAction from './comments'
 import * as commentAction from './comment'
+import * as placeAction from './place'
+import * as placesAction from './places'
 
 export {
   userAction,
@@ -16,4 +18,6 @@ export {
   blogAction,
   commentsAction,
   commentAction,
+  placeAction,
+  placesAction
 }

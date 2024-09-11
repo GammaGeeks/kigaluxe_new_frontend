@@ -55,9 +55,9 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                     </li>
                                     <li id="menu-item-24913" className="inline-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-24913">
                                         <a href="/communities/" data-title="Communities">Communities</a>
-                                        <ul className="sub-menu">
+                                        {/* <ul className="sub-menu">
                                             <li id="menu-item-24914" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24914">
-                                                <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>
+                                                <a href="#" data-title="Interactive Map">Interactive Map</a>
                                             </li>
                                             <li id="menu-item-24915" className="menu-item menu-item-type-post_type menu-item-object-aios-communities menu-item-24915">
                                                 <a href="https://serioestates.com/community/bel-air/" data-title="Bel Air">Bel Air</a>
@@ -100,18 +100,18 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                             <li id="menu-item-24927" className="menu-item menu-item-type-post_type menu-item-object-aios-communities menu-item-24927">
                                                 <a href="https://serioestates.com/community/westwood/" data-title="Westwood">Westwood</a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
                                     <li id="menu-item-24928" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24928">
-                                        <a href="https://serioestates.com/social-media/" data-title="Social Media">Social Media</a>
+                                        <Link onClick={() => setIsAsideActive(false)} to="/about_us" data-title="About Us">About Us</Link>
                                     </li>
                                     <li id="menu-item-24929" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24929">
-                                        <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
-                                        <ul className="sub-menu">
+                                        <a href="#" data-title="Buyers">Buyers</a>
+                                        {/* <ul className="sub-menu">
                                             <li id="menu-item-24930" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24930">
                                                 <a href="https://serioestates.com/property-search/" data-title="Property Search">Property Search</a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
                                     <li id="menu-item-24931" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24931">
                                         <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
@@ -122,7 +122,7 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                         </ul>
                                     </li>
                                     <li id="menu-item-24933" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24933">
-                                        <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Contact Us</a>
+                                        <Link to='/about_us' data-title="About Us">About Us</Link>
                                     </li>
                                 </ul>
                             </div>

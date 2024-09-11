@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Places() {
@@ -116,7 +117,7 @@ function Places() {
                                 </div>
                             </div>
                             <div className="aoe-more-btn" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                <a href="/communities/" className="global-btn is-white">See More</a>
+                                <Link to='/places' className="global-btn is-white">See More</Link>
                             </div>
                         </div>
                     </div>

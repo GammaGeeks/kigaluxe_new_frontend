@@ -6,6 +6,8 @@ import * as blogActionTypes from './blogActionTypes';
 import * as blogsActionTypes from './blogsActionTypes'
 import * as commentActionTypes from './commentActionTypes'
 import * as commentsActionTypes from './commentsActionTypes'
+import * as placeActionTypes from './placeActionTypes'
+import * as placesActionTypes from './placesActionTypes'
 
 
 export {
@@ -17,4 +19,6 @@ export {
   blogsActionTypes,
   commentActionTypes,
   commentsActionTypes,
+  placeActionTypes,
+  placesActionTypes
 }

@@ -43,7 +43,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                             </li>
                             <li id="menu-item-233" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
                                 <a href="/communities/" data-title="Communities">Sell Your Property</a>
-                                <ul className="sub-menu">
+                                {/* <ul className="sub-menu">
                                     <li id="menu-item-1194" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194">
                                         <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>
                                     </li>
@@ -88,26 +88,26 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                     <li id="menu-item-137" className="menu-item menu-item-type-post_type menu-item-object-aios-communities menu-item-137">
                                         <a href="https://serioestates.com/community/westwood/" data-title="Westwood">Westwood</a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
                             <li id="menu-item-43" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
-                                <a href="https://serioestates.com/buyers/" data-title="Buyers">Buyers</a>
-                                <ul className="sub-menu">
+                                <a href="#" data-title="Buyers">Buyers</a>
+                                {/* <ul className="sub-menu">
                                     <li id="menu-item-42" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
-                                        <a href="https://serioestates.com/property-search/" data-title="Property Search">Property Search</a>
+                                        <a href="#" data-title="Property Search">Property Search</a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
                             <li id="menu-item-41" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
-                                <a href="https://serioestates.com/sellers/" data-title="Sellers">About Us</a>
-                                <ul className="sub-menu">
+                                <Link to="/about_us" data-title="Sellers">About Us</Link>
+                                {/* <ul className="sub-menu">
                                     <li id="menu-item-40" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-40">
                                         <a href="https://serioestates.com/home-valuation/" data-title="Home Valuation">Home Valuation</a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </li>
                             <li id="menu-item-47" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                <a href="https://serioestates.com/contact-us/" data-title="Contact Us">Blog</a>
+                                <a href="#" data-title="Contact Us">Blog</a>
                             </li>
                         </ul>
                     </div>
@@ -118,17 +118,17 @@ function FixedHeader({setIsAsideActive, navbar}) {
                     <div className="textwidget custom-html-widget">
                         <span>
                             <em className="ai-mobile-phone">
-                                <a href="tel:+1.310.975.9172" className="aios-ai-phone " aria-label="+1.310.975.9172">
+                                <a href="tel:+250788501505" className="aios-ai-phone " aria-label="+250788501505">
                                     <em className="ai-font-phone">
-                                        <i className="hidden">310.975.9172</i>
+                                        <i className="hidden">+250788501505</i>
                                     </em>
                                 </a>
                             </em>
                         </span>
                         <span>
-                            <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="info(at)serioestates(dotted)com" data-value="info(at)serioestates(dotted)com">
+                            <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="musangamfuravincent(at)gmail(dotted)com" data-value="musangamfuravincent(at)gmail(dotted)com">
                                 <em className="ai-font-envelope-f">
-                                    <i className="hidden">info(at)serioestates(dotted)com</i>
+                                    <i className="hidden">musangamfuravincent(at)gmail(dotted)com</i>
                                 </em>
                             </a>
                         </span>

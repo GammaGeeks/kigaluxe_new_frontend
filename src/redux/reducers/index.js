@@ -7,6 +7,8 @@ import blog from './blog';
 import blogs from './blogs';
 import comment from './comment';
 import comments from './comments';
+import place from './place';
+import places from './places';
 
 export default {
   user,
@@ -17,4 +19,6 @@ export default {
   blogs,
   comment,
   comments,
+  place,
+  places,
 }
