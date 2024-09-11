@@ -78,27 +78,27 @@ function AboutUs() {
                               <div>
                                 <ul className="ai-modern-about-smi">
                                   <li>
-                                    <a href="https://www.facebook.com/SerioEstates/" target="_blank" rel="nofollow noopener" className="ai-font-facebook">
+                                    <a href="https://www.facebook.com//" target="_blank" rel="nofollow noopener" className="ai-font-facebook">
                                       <span className="hidden">facebook</span>
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="https://twitter.com/SerioGroup" target="_blank" rel="nofollow noopener" className="ai-font-twitter">
+                                    <a href="https://twitter.com/" target="_blank" rel="nofollow noopener" className="ai-font-twitter">
                                       <span className="hidden">twitter</span>
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="https://www.linkedin.com/company/serio-estates-group?trk=public_profile_topcard-current-company" target="_blank" rel="nofollow noopener" className="ai-font-linkedin">
+                                    <a href="https://www.linkedin.com/" target="_blank" rel="nofollow noopener" className="ai-font-linkedin">
                                       <span className="hidden">linkedin</span>
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="https://www.youtube.com/@seriogroup" target="_blank" rel="nofollow noopener" className="ai-font-youtube">
+                                    <a href="https://www.youtube.com/" target="_blank" rel="nofollow noopener" className="ai-font-youtube">
                                       <span className="hidden">youtube</span>
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="https://instagram.com/seriogroup" target="_blank" rel="nofollow noopener" className="ai-font-instagram">
+                                    <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" className="ai-font-instagram">
                                       <span className="hidden">instagram</span>
                                     </a>
                                   </li>

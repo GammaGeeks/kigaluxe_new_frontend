@@ -171,12 +171,12 @@ function Services() {
                       </div>
                       <div className="ip-sf-group-row">
                         <div className="ip-sf-group-col">
-                          <div className="ip-sf-group-gallery">
+                        <div className="ip-sf-group-gallery">
                             <div className="ip-sf-group-gallery-item">
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-7.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img1.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -184,7 +184,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-5.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img2.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -192,7 +192,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-6.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img3.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -200,7 +200,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-8.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img4.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -239,7 +239,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-9.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img5.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -247,7 +247,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-10.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img6.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -255,7 +255,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-11.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img7.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
@@ -263,7 +263,7 @@ function Services() {
                               <a href="#" target="_blank">
                                 <div className="ip-sf-group-img site-img">
                                   <canvas width="253" height="253"></canvas>
-                                  <img src={require('../../assets/images/ig-img-12.jpg')} alt="Social Media" width="253" height="253"/>
+                                  <img src={require('../../assets/images/about/img8.jpg')} alt="Social Media" width="253" height="253"/>
                                 </div>
                               </a>
                             </div>
