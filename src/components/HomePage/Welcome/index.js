@@ -38,7 +38,7 @@ function Welcome() {
                                         <img className="lazyload" src={require('../../../assets/images/welcomImg.png')} alt="Serio Group Photo" width="495" height="610" />
                                     </div>
                                     <div className="welc-img-accent-bg">
-                                        <canvas width="542" height="872" className="lazyload" data-bgset={require('../../../assets/k_transparent1.png')}></canvas>
+                                        <canvas width="542" height="1000" className="lazyload" data-bgset={require('../../../assets/k_transparent1.png')}></canvas>
                                     </div>
                                 </div>
                             </div>

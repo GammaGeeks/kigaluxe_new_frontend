@@ -3403,15 +3403,16 @@ span.ai-icon-dollar {
     width: 100%;
     padding: 0 50px 40px;
     z-index: 5;
-    font-size: 42px;
+    font-size: 42px !important;
     line-height: 1;
     letter-spacing: 0.050em;
-    color: #fff;
+    color: #FFDC73;
     font-weight: 400;
     font-family: var(--title-font);
     -webkit-transition: 0.3s all ease-in-out;
     transition: 0.3s all ease-in-out;
     transform-origin: left;
+    text-shadow: -2px 1px 0 #0a0e27;
 }
 
 .ld-grid-img:before {

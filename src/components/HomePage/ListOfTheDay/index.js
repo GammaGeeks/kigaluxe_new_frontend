@@ -110,11 +110,10 @@ function ListingOfTheDay() {
                                             <Link to='/listings' className="global-btn">See More</Link>
                                         </div>
                                     </div>
-                                    <Row className="ld-grid-row" data-aos-once="true" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                    <Row className='d-flex flex-row'>
                                         {
                                           transitions((styles, item) => (
-                                            <animated.div style={{...styles}}>
-                                              <Col xs={12} sm={6} md='8'>
+                                            <animated.div style={{...styles}} className='col-8'>
                                               <Link className="ld-grid-main">
                                                 <div style={{
                                                   width: '750px',
@@ -126,16 +125,15 @@ function ListingOfTheDay() {
                                                     position: 'absolute',
                                                     top: 0,
                                                     left: 0,
-                                                    width: '750px',
-                                                    height: '652px',
-                                                  }} width="750" height="652"></canvas>
-                                                  <animated.img onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  style={{position: 'absolute', borderRadius: '20px', ...springs}} className="lazyload main-img" src={imgs && imgs[item]} alt="Listing Image" width="750" height="652"/>
+                                                    width: '100%',
+                                                    height: '100%',
+                                                  }}></canvas>
+                                                  <animated.img onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}  style={{width: '100%', height: '100%',position: 'absolute', borderRadius: '20px', ...springs}} className="lazyload main-img" src={imgs && imgs[item]} alt="Listing Image"/>
                                                 </div>
                                                 <div className="ld-grid-price">
                                                     <span>RWF {property.price}</span>
                                                 </div>
                                               </Link>
-                                              </Col>
                                             </animated.div>
                                           ))
                                         }
@@ -154,11 +152,11 @@ function ListingOfTheDay() {
                                                 </div>
                                             </Link>
                                         </div> */}
-                                        <Col xs={12} sm={6} md='4' className="ld-ajax-images" data-url="https://serioestates.com/homes-for-sale-details/3268-SERRA-ROAD-MALIBU-CA-90265/24404087/306/">
+                                        <Col xs={4} className='mt-2' data-url="#">
                                             {
                                               property && property.urls.map((img, index) => {
-                                                console.log('Image: ' + img);
-                                                console.log('Index: ' + index);
+                                                // console.log('Image: ' + img);
+                                                // console.log('Index: ' + index);
                                                 return (
                                                 <a key={img || index} className="ld-grid-thumb">
                                                     <div onClick={() => handleClick(index)} className="ld-grid-img site-img">
