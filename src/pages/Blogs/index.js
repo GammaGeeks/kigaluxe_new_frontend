@@ -1,13 +1,19 @@
-import React from 'react'
-
+import React, { useEffect, useRef } from 'react'
 import img1 from '../../assets/images/demo-blog-1.jpg'
 import img2 from '../../assets/images/demo-blog-2.jpg'
 import img3 from '../../assets/images/demo-blog-3.jpg'
 import { Container } from 'react-bootstrap'
 
 function Blogs() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
   return (
     <main>
+      <div ref={topOfPageRef}></div>
       <h2 className="aios-starter-theme-hide-title">Main Content</h2>
       {/* <!-- ip banner goes here --> */}
       <div className="textwidget custom-html-widget">

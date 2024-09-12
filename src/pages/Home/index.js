@@ -399,8 +399,17 @@ const d = Array.from(p).reduce((e, t) => {
   //   }
   // }, [navRef]);
 
+
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
+
   return (
     <main>
+      <div ref={topOfPageRef}></div>
         <Hero />
         {/* <!-- Quick Search --> */}
         {/* <QuickSearch /> */}

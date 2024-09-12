@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 // import { useSpring, animated } from '@react-spring/web'
 
 import bg1 from '../../assets/images/accent-gradient.jpg'
@@ -8,6 +8,12 @@ import bg2 from '../../assets/images/sm-bg.jpg'
 // import bg3 from '../../assets/images/banner-meet.jpg'
 
 function Services() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
   // const springs = useSpring({
   //   from: { x: 0 },
   //   to: { x: 800 },
@@ -33,6 +39,7 @@ function Services() {
 
   return (
     <main>
+      <div ref={topOfPageRef}></div>
   {/* <h2 className="aios-starter-theme-hide-title">Main Content</h2>
   <div className="textwidget custom-html-widget">
     <div className="ip-banner" data-type="page" data-id="94"><canvas width="1600" height="350" style={{backgroundImage: 'url(https://serioestates.com/wp-content/uploads/2023/01/slide-img-1.jpg)'}}></canvas></div>

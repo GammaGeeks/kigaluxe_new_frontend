@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/style-prop-object */
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 // import slideImgOne from '../../assets/images/slide-img-1.jpg'
 // import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
@@ -11,6 +11,12 @@ import { fetchAllPlaces } from '../../redux/actions/places'
 import { Link, useNavigate } from 'react-router-dom'
 
 function Places() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
   // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -39,6 +45,7 @@ function Places() {
 
   return (
     <main>
+      <div ref={topOfPageRef}></div>
       <h2 className="aios-starter-theme-hide-title">Main Content</h2>
       {/* <!-- ip banner goes here --> */}
       <div className="textwidget custom-html-widget">
@@ -98,8 +105,8 @@ function Places() {
                         </h2>
                       </div>
                       <div className="ip-comm-content-caption">
-                        <p>Looking for a contemporary home on the Bird Streets in the Hollywood Hills, a mid-century modern in Trousdale Estates in Beverly Hills, a French château in ultra-exclusive Beverly Park in Beverly Hills Post Office, or a Cape Cod-inspired beach house in Malibu? We have you covered!</p>
-                        <p>Whether you’re looking to sell or buy, we’re here to expertly guide you through the complex array of communities, neighborhoods and streets in order to help you find the home of your dreams, or expertly market your current home. Here are just some of the areas we cover.</p>
+                        <p>Looking for a modern home in Kigali's upscale neighborhoods like Nyarutarama, a serene mid-century residence in Gacuriro, a luxurious villa in Kiyovu, or a charming, beachfront-inspired property by Lake Kivu? We’ve got you covered!</p>
+                        <p>Whether you're looking to buy or sell, we’re here to expertly navigate the diverse range of communities and properties throughout Rwanda to help you find your dream home or effectively market your current one. Here are just a few of the areas we serve.</p>
                       </div>
                       <div className="ip-comm-content-row">
                         {/* <!--<div className="ip-comm-item" data-aos-once="true" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"><a href="https://serioestates.com/community/bel-air/"><div className="ip-comm-img site-img"><canvas width="488" height="484"></canvas><img src="https://serioestates.com/wp-content/themes/rwserio-pending.com/images/communities/comm-img-1.png" alt="Communities" width="488" height="484"></div><div className="ip-comm-title"><span><em className="ai-icon-logo"></em>Bel Air</span></div><div className="ip-comm-hover-title"><div className="ip-comm-hover-main-title"><span>Bel Air</span></div><div className="ip-comm-hover-btn"><span className="global-btn">Explore Area</span></div></div></a></div>--> */}

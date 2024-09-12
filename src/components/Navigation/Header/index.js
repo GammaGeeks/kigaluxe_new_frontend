@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 function Header({setIsAsideActive}) {
   return (
     <header className="header-wrapper">
-        <div className="container">
+        <div style={{padding: '0 30px', margin: 0}} className="container-fluid">
             <div className="header-wrap">
                 <div className="logo">
                     {/* <div className="desktop hidden-sm hidden-xs">
@@ -29,7 +29,7 @@ function Header({setIsAsideActive}) {
                 </div>
                 <div className="header-nav hidden-sm hidden-xs">
                     <Navbar className="navigation justify-content-between">
-                        <Container className="menu-primary-menu-container">
+                        <Container style={{padding: 0, margin: 0}} className="menu-primary-menu-container" fluid>
                             <Nav className="main-nav mt-3">
                                 <li className="gradient-fix menu-item menu-item-type-post_type menu-item-object-page menu-item-71">
                                     <Link to='/listings' data-title="Featured Listings">Featured Listings</Link>
@@ -108,7 +108,7 @@ function Header({setIsAsideActive}) {
                                         src={logo2}
                                         width="87"
                                         height="87"
-                                        className="d-inline-block align-top mb-4"
+                                        className='img-fluid'
                                         alt="React Bootstrap logo"
                                         />
                                     </Link>
@@ -132,7 +132,7 @@ function Header({setIsAsideActive}) {
                                     </ul> */}
                                 </li>
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                    <a href="#" data-title="Contact Us">Blog</a>
+                                    <Link to='/blog' data-title="Blog">Blog</Link>
                                 </li>
                             </Nav>
                         </Container>
@@ -143,17 +143,17 @@ function Header({setIsAsideActive}) {
                         <div className="textwidget custom-html-widget">
                             <span>
                                 <em className="ai-mobile-phone">
-                                    <a href="tel:+250.788.501.505" className="aios-ai-phone " aria-label="+250.788.501.505">
+                                    <a href="tel:+250788501505" className="aios-ai-phone " aria-label="+250788501505">
                                         <em className="ai-font-phone">
-                                            <i className="hidden">+250.788.501.505</i>
+                                            <i className="hidden">+250788501505</i>
                                         </em>
                                     </a>
                                 </em>
                             </span>
                             <span>
-                                <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="musangamfuravincent(at)gmail(dotted)com" data-value="musangamfuravincent(at)gmail(dotted)com">
+                                <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="musangamfuravincent@gmail.com" data-value="musangamfuravincent@gmail.com">
                                     <em className="ai-font-envelope-f">
-                                        <i className="hidden">musangamfuravincent(at)gmail(dotted)com</i>
+                                        <i className="hidden">musangamfuravincent@gmail.com</i>
                                     </em>
                                 </a>
                             </span>

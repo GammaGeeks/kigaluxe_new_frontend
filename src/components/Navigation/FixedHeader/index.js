@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 function FixedHeader({setIsAsideActive, navbar}) {
   return (
 <div id="fixed-header" className={navbar ? 'active' : ''}>
-    <div className="container">
+    <div style={{padding: '0 30px', margin: 0}} className="container-fluid">
         <div className="fixed-header-wrap">
             <div className="fixed-logo">
                 <div className="textwidget custom-html-widget">
@@ -107,7 +107,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                 </ul> */}
                             </li>
                             <li id="menu-item-47" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-47">
-                                <a href="#" data-title="Contact Us">Blog</a>
+                                <Link to='/blog' data-title="Blog">Blog</Link>
                             </li>
                         </ul>
                     </div>
@@ -126,9 +126,9 @@ function FixedHeader({setIsAsideActive, navbar}) {
                             </em>
                         </span>
                         <span>
-                            <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="musangamfuravincent(at)gmail(dotted)com" data-value="musangamfuravincent(at)gmail(dotted)com">
+                            <a className="asis-mailto-obfuscated-email-hidden asis-mailto-obfuscated-email " aria-label="musangamfuravincent@gmail.com" data-value="musangamfuravincent@gmail.com">
                                 <em className="ai-font-envelope-f">
-                                    <i className="hidden">musangamfuravincent(at)gmail(dotted)com</i>
+                                    <i className="hidden">musangamfuravincent@gmail.com</i>
                                 </em>
                             </a>
                         </span>

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/style-prop-object */
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 // import slideImgOne from '../../assets/images/slide-img-1.jpg'
 // import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
@@ -11,6 +11,14 @@ import { fetchAllProperties } from '../../redux/actions/properties'
 import { useNavigate } from 'react-router-dom'
 
 function Listings() {
+
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
+
   const navigate = useNavigate()
   const dispatch = useDispatch()
   useEffect(() => {
@@ -38,6 +46,7 @@ function Listings() {
 
   return (
     <main>
+      <div ref={topOfPageRef}></div>
   {/* <!-- ip banner goes here --> */}
   {/* <div className="textwidget custom-html-widget">
     <div className="ip-banner" data-type="page" data-id="54">
@@ -46,7 +55,7 @@ function Listings() {
   </div> */}
   {/* <!-- ip banner goes here --> */}
   <div id="inner-page-wrapper">
-    <div className="container">
+    <div style={{padding: 0, margin: 0}} className="container-fluid">
       <div id="ip-featured-listings">
         <div className="ip-fl-container">
           {/* <div className="ip-fl-section">

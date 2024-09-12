@@ -1,10 +1,18 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+
 
 function AboutUs() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
   return (
     <main>
+      <div ref={topOfPageRef}></div>
       <h2 className="aios-starter-theme-hide-title">Main Content</h2>
       {/* <!-- ip banner goes here --> */}
       <div className="textwidget custom-html-widget">
@@ -41,7 +49,7 @@ function AboutUs() {
                   <div className="entry entry-content">
                     <div id="ai-modern-about" className="ai-modern-about">
                       <div className="ai-modern-about-entry">
-                        <div className="container">
+                        <div className="container-fluid">
                           <div className="ai-modern-about-photo">
                             <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/images/b.jpg')})`}}></canvas>
                           </div>
@@ -55,7 +63,11 @@ function AboutUs() {
                               </div>
                             </div>
                             <div className="ai-modern-about-content">
-                              <p>At Kigaluxe, we pride ourselves on being more than just a real estate company – we are your trusted partner in creating, managing, and enhancing your property investments. Established with a vision to redefine the real estate experience in Kigali and beyond, Kigaluxe brings together a team of dedicated professionals committed to delivering unparalleled services across various facets of the real estate industry.</p>
+                              <p>
+                                At Kigaluxe, we are more than a real estate company – we are a trusted partner in facilitating, managing, and optimizing your property investments. With an in-depth understanding of Rwanda’s evolving real estate landscape, we are committed to delivering excellence across all facets of the property market.
+                                <br/><br/>
+                                Established with the objective of redefining the real estate experience in Kigali and beyond, Kigaluxe brings together a team of highly skilled professionals dedicated to providing comprehensive services, ranging from property sales and acquisitions to investment consulting and asset management. Whether you are a prospective homeowner or an experienced investor, we offer tailored solutions designed to meet your specific needs, ensuring a seamless and sophisticated real estate journey.
+                              </p>
                             </div>
                             <div className="ai-modern-about-info">
                               <div>
@@ -103,7 +115,7 @@ function AboutUs() {
                           </div>
                         </div>
                       </div>
-                      <div className="ai-template-form-wrap">
+                      {/* <div className="ai-template-form-wrap">
                         <div className="container">
                           <div className="ai-template-form">
                             <div className="ai-template-form-title">
@@ -126,7 +138,7 @@ function AboutUs() {
                                     <input type="hidden" name="_wpcf7_container_post" value="33"/>
                                     <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
                                   </div>
-                                  {/* <div id="wpcf7-66de972749f2f" style={{display:"none !important", visibility:"hidden !important"}}>
+                                  <div id="wpcf7-66de972749f2f" style={{display:"none !important", visibility:"hidden !important"}}>
                                     <input type="hidden" name="form-page-source" className="form-page-source" value="https://serioestates.com/about-us/"/>
                                     <input type="hidden" name="queen-bee-id" value="wpcf7-66de972749f2f"/>
                                     <input type="hidden" name="wpcf7-66de972749f2f-website-remote-address" value="127.0.0.1"/>
@@ -142,7 +154,7 @@ function AboutUs() {
                                     <input type="hidden" name="wpcf7-66de972749f18-website-time-check" value="5"/>
                                     <label for="wpcf7-66de972749f18-website" className="hp-message">Choose Side:</label>
                                     <input type="text" name="wpcf7-66de972749f18-website" id="wpcf7-66de972749f18-website" tabindex="-1" autocomplete="false"/>
-                                  </div> */}
+                                  </div>
                                   <div className="ai-template-form-row ai-template-form-col-2">
                                     <div className="ai-template-form-col">
                                       <label for="ai-form-name">Full Name</label>
@@ -172,8 +184,8 @@ function AboutUs() {
                             </div>
                           </div>
                         </div>
-                      </div>
-                      {/* <ul className="ai-modern-about-cta">
+                      </div> */}
+                      <ul className="ai-modern-about-cta">
                         <li>
                           <a href="https://serioestates.com/featured-listings/">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/Luxury-Properties.jpg')"}}></canvas>
@@ -201,7 +213,7 @@ function AboutUs() {
                             </div>
                           </a>
                         </li>
-                      </ul> */}
+                      </ul>
                       {/* <div className="ai-modern-about-testi">
                         <div className="ai-modern-about-testi-slider">
                           <div className="ai-modern-about-testi-item">

@@ -1229,7 +1229,7 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-    padding-bottom: 22px !important;
+    padding-bottom: 20px !important;
     z-index: 1028;
     width: 100%;
     font-size: 0;

@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPropertyAction } from '../../redux/actions/property'
@@ -13,6 +13,13 @@ import { Modal, Button } from 'react-bootstrap'
 import imageOne from '../../assets/images/ld-bg-2.png'
 
 function SingleProperty() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
+
   // Modal
   const [show, setShow] = useState(false);
 
@@ -76,6 +83,7 @@ function SingleProperty() {
 
   <>
 <main>
+<div ref={topOfPageRef}></div>
 <h2 className="aios-starter-theme-hide-title">Main Content</h2>
 {/* <!-- ip banner goes here --> */}
 <div className="textwidget custom-html-widget">
@@ -85,7 +93,7 @@ function SingleProperty() {
 </div>
 {/* <!-- ip banner goes here --> */}
 <div id="inner-page-wrapper">
-  <div className="container">
+  <div style={{padding: 0, margin: 0}} className="container-fluid">
     <div id="ip-listing-details">
       <div className="ip-ld-container">
         <div className="ip-ld-section">

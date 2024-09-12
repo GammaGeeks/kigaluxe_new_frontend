@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 function Search() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
+
   return (
 <main>
+  <div ref={topOfPageRef}></div>
   <h2 className="aios-starter-theme-hide-title">Main Content</h2>
   {/* <!-- ip banner goes here --> */}
   <div className="textwidget custom-html-widget">
