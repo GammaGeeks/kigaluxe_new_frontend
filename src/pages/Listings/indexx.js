@@ -251,7 +251,7 @@ function Listings() {
                           <div className="ip-fl-listing-img site-img">
                             <canvas width="488" height="484"></canvas>
                             <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1074997584/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNTIwNTgzNw/GWKijs-_oLceepZYVRD2PivttTAWys0RWa81CJGh81k" alt="Featured Listings" width="488" height="484" id="24388903" />
-                            {/* <!-- <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1074997584/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNTIwNTgzNw/GWKijs-_oLceepZYVRD2PivttTAWys0RWa81CJGh81k" alt="Featured Listings" width="488" height="484"> --> */}
+                            {/* {/* <!-- <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1074997584/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNTIwNTgzNw/GWKijs-_oLceepZYVRD2PivttTAWys0RWa81CJGh81k" alt="Featured Listings" width="488" height="484"> --> */} */}
                           </div>
                           <div className="mls-logo-overlay">
                             <img src="images/mls-logo.png" alt="Featured Listings" width="170" height="101" />

@@ -60,7 +60,7 @@ function Places() {
       </div>
       {/* <!-- ip banner goes here --> */}
       <div id="inner-page-wrapper">
-        <div className="container">
+        <div style={{padding: 0, margin: 0}} className="container-fluid">
           <div id="ip-communities">
             <div className="ip-comm-container">
               {/* <div className="ip-comm-section">

@@ -6,7 +6,7 @@ import { apiAction } from '../../helpers';
 const getSinglePlace = (id) => (dispatch) => dispatch(apiAction({
   method: 'get',
   // httpOptions: { token: localStorage.token },
-  url: `${REACT_APP_BASIC_URL}/place/${id}`,
+  url: `${REACT_APP_BASIC_URL}/api/place/${id}`,
   onStart: placeTypes.FETCH_PLACE_START,
   onEnd: placeTypes.FETCH_PLACE_END,
   onSuccess: placeTypes.FETCH_PLACE_SUCCESS,
