@@ -41,7 +41,7 @@ function Places() {
                             {
                                 places && listOfPlaces ? listOfPlaces.map((item, index) => (
                                     <div key={index} className="aoe-item">
-                                        <a href="#">
+                                        <Link to={`/places/${item.id}`}>
                                             <div className="aoe-img site-img">
                                                 <canvas width="360" height="277"></canvas>
                                                 <img className="lazyload" src={item.url} alt="Areas of Expertise" width="360" height="277"/>
@@ -53,7 +53,7 @@ function Places() {
                                             <div className="aoe-hover-img">
                                             <img className="lazyload" src={require('../../../assets/logo/k_294x296_2.png')} alt="Serio Group Logo" width="195" height="197"/>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>)) : ''
                             }
                                 {/* <div className="aoe-item">
