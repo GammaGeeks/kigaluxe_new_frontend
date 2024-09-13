@@ -31,7 +31,7 @@ export default (state = blog, { type, payload }) => {
       // };
       return produce(state, (draft) => {
         draft.loading = false;
-        draft.blog = {...payload.data}
+        draft.blog = {...payload.blog}
         draft.getBlog.loading = false
         draft.getBlog.message = payload.message
         draft.getBlog.error = ''

@@ -16,6 +16,8 @@ function SingleBlog() {
   // eslint-disable-next-line no-unused-vars
   const { loading, blog, getBlog, message } = data
 
+  console.log(data);
+
   const topOfPageRef = useRef(null)
   useEffect(() => {
     if (topOfPageRef.current) {
@@ -57,7 +59,14 @@ function SingleBlog() {
           <div id="post-204" className="post-204 post type-post status-publish format-standard has-post-thumbnail hentry category-blog">
             <h1 className="entry-title">{blog && blog.title}</h1>
             <div className="entry-thumbnail">
-              <img width="1254" height="836" src={blog && blog.url} className="attachment-full size-full wp-post-image" alt=""/>
+              <img
+                width="768"
+                height="836"
+                src={blog && blog.url}
+                className="attachment-full size-full wp-post-image"
+                alt=""
+                srcset={`${blog && blog.url} 1254w, ${blog && blog.url} 400w, ${blog && blog.url} 1024w, ${blog && blog.url} 768w, ${blog && blog.url} 150w`}
+              />
             </div>
             <div className="entry entry-content">
               <p>{blog && blog.content}</p>
