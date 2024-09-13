@@ -76,8 +76,8 @@ function Search() {
                                       </div>
                                       <div className="col-xs-12">
                                         <span id="ihf-selectedAreasLabel" style={{display: "none"}}></span>
-                                        <div id="autocompleteMatch">
-                                          <div id="autocompleteMatchValues"></div>
+                                        <div id="autoCompleteMatch">
+                                          <div id="autoCompleteMatchValues"></div>
                                           <div className="areaPickerExpandAllButtonClass">
                                             <button type="button" className="btn-link"> View All </button>
                                           </div>
@@ -112,7 +112,7 @@ function Search() {
                           </div>
                           <div className="row mt-25">
                             <div className="col-xs-12 col-sm-6 mb-10">
-                              <label for="ihf-select-property-type" className="field-label ihf-select-property-type-label"> Property Type </label>
+                              <label htmlFor="ihf-select-property-type" className="field-label ihf-select-property-type-label"> Property Type </label>
                               <select id="ihf-select-property-type" name="propertyType" className="form-control ihf-chosen-select-width">
                                 <option value="SFR,CND">House / Condo</option>
                                 <option value="SFR">House</option>
@@ -121,7 +121,7 @@ function Search() {
                             </div>
                             <div className="col-xs-12 col-sm-6 pt-5 mb-10">
                               <span id="ihf-status-fields">
-                                <label for="ihf-status" className="field-label ihf-status-label"> Status </label>
+                                <label htmlFor="ihf-status" className="field-label ihf-status-label"> Status </label>
                                 <div>
                                   <label className="radio-inline">
                                     <input className="radio" name="status" value="active" type="radio" checked="checked"/> For Sale </label>
@@ -136,28 +136,28 @@ function Search() {
                           <div id="ihf-house-condo-search-fields" className="hide">
                             <div className="row mt-25 ihf-home-search-fields">
                               <div className="col-xs-12 col-sm-3">
-                                <label for="ihf-minprice-homes" className="field-label ihf-minprice-label"> Min. Price </label>
+                                <label htmlFor="ihf-minprice-homes" className="field-label ihf-minprice-label"> Min. Price </label>
                                 <div className="" style={{position: "relative"}}>
                                   <div className="ihf-label-overlay-money"> $ </div>
                                   <input id="ihf-minprice-homes" name="minListPrice" placeholder="No min" type="text" className="form-control ihf-search-form-input" aria-label="Min Price " value=""/>
                                 </div>
-                                <label className="error" for="ihf-minprice-homes" style={{display: "none"}}></label>
+                                <label className="error" htmlFor="ihf-minprice-homes" style={{display: "none"}}></label>
                               </div>
                               <div className="col-xs-12 col-sm-3">
-                                <label for="ihf-maxprice-homes" className="field-label ihf-maxprice-label"> Max. Price </label>
+                                <label htmlFor="ihf-maxprice-homes" className="field-label ihf-maxprice-label"> Max. Price </label>
                                 <div className="" style={{position: "relative"}}>
                                   <div className="ihf-label-overlay-money"> $ </div>
                                   <input id="ihf-maxprice-homes" name="maxListPrice" placeholder="No max" type="text" className="form-control ihf-search-form-input" aria-label="Max Price" value=""/>
                                 </div>
-                                <label className="error" for="ihf-maxprice-homes" style={{display: "none"}}></label>
+                                <label className="error" htmlFor="ihf-maxprice-homes" style={{display: "none"}}></label>
                               </div>
                               <div className="col-xs-12 col-sm-2">
-                                <label for="ihf-sqft-homes" className="field-label ihf-sqft-label"> Min. SqFt. </label>
+                                <label htmlFor="ihf-sqft-homes" className="field-label ihf-sqft-label"> Min. SqFt. </label>
                                 <input id="ihf-sqft-homes" name="squareFeet" placeholder="Any" type="text" className="form-control ihf-search-form-input" aria-label="Square Feet" value=""/>
-                                <label className="error" for="ihf-sqft-homes" style={{display: "none"}}></label>
+                                <label className="error" htmlFor="ihf-sqft-homes" style={{display: "none"}}></label>
                               </div>
                               <div className="col-xs-12 col-sm-2">
-                                <label for="ihf-select-bedrooms-homes" className="field-label ihf-select-bedrooms-label"> Beds </label>
+                                <label htmlFor="ihf-select-bedrooms-homes" className="field-label ihf-select-bedrooms-label"> Beds </label>
                                 <select id="ihf-select-bedrooms-homes" name="bedrooms" className="form-control ihf-chosen-select-width">
                                   <option value="0">Any</option>
                                   <option value="1">1+</option>
@@ -168,7 +168,7 @@ function Search() {
                                 </select>
                               </div>
                               <div className="col-xs-12 col-sm-2">
-                                <label for="ihf-select-baths-homes" className="field-label ihf-select-baths-label"> Baths </label>
+                                <label htmlFor="ihf-select-baths-homes" className="field-label ihf-select-baths-label"> Baths </label>
                                 <select id="ihf-select-baths-homes" name="bathCount" className="form-control ihf-chosen-select-width">
                                   <option value="0">Any</option>
                                   <option value="1">1+</option>
@@ -213,210 +213,210 @@ function Search() {
                             </div>
                             <div id="ihf-misc7Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc7Yn" className="field-label ihf-misc7Yn-label">
+                                <label htmlFor="ihf-misc7Yn" className="field-label ihf-misc7Yn-label">
                                   <input id="ihf-misc7Yn" name="misc7Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc7Yn" value="on"/> Accessory Dwelling Unit </label>
                               </div>
                             </div>
                             <div id="ihf-agedCommunityYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-agedCommunityYn" className="field-label ihf-agedCommunityYn-label">
+                                <label htmlFor="ihf-agedCommunityYn" className="field-label ihf-agedCommunityYn-label">
                                   <input id="ihf-agedCommunityYn" name="agedCommunityYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_agedCommunityYn" value="on"/> Aged Community </label>
                               </div>
                             </div>
                             <div id="ihf-reoyn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-reoyn" className="field-label ihf-reoyn-label">
+                                <label htmlFor="ihf-reoyn" className="field-label ihf-reoyn-label">
                                   <input id="ihf-reoyn" name="reoyn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_reoyn" value="on"/> Auction </label>
                               </div>
                             </div>
                             <div id="ihf-shortSaleYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-shortSaleYn" className="field-label ihf-shortSaleYn-label">
+                                <label htmlFor="ihf-shortSaleYn" className="field-label ihf-shortSaleYn-label">
                                   <input id="ihf-shortSaleYn" name="shortSaleYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_shortSaleYn" value="on"/> Coming Soon </label>
                               </div>
                             </div>
                             <div id="ihf-misc6Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc6Yn" className="field-label ihf-misc6Yn-label">
+                                <label htmlFor="ihf-misc6Yn" className="field-label ihf-misc6Yn-label">
                                   <input id="ihf-misc6Yn" name="misc6Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc6Yn" value="on"/> Court Confirmation </label>
                               </div>
                             </div>
                             <div id="ihf-misc3Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc3Yn" className="field-label ihf-misc3Yn-label">
+                                <label htmlFor="ihf-misc3Yn" className="field-label ihf-misc3Yn-label">
                                   <input id="ihf-misc3Yn" name="misc3Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc3Yn" value="on"/> Deck </label>
                               </div>
                             </div>
                             <div id="ihf-diningRoomYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-diningRoomYn" className="field-label ihf-diningRoomYn-label">
+                                <label htmlFor="ihf-diningRoomYn" className="field-label ihf-diningRoomYn-label">
                                   <input id="ihf-diningRoomYn" name="diningRoomYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_diningRoomYn" value="on"/> Dining Room </label>
                               </div>
                             </div>
                             <div id="ihf-misc1Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc1Yn" className="field-label ihf-misc1Yn-label">
+                                <label htmlFor="ihf-misc1Yn" className="field-label ihf-misc1Yn-label">
                                   <input id="ihf-misc1Yn" name="misc1Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc1Yn" value="on"/> Dock </label>
                               </div>
                             </div>
                             <div id="ihf-familyRoomYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-familyRoomYn" className="field-label ihf-familyRoomYn-label">
+                                <label htmlFor="ihf-familyRoomYn" className="field-label ihf-familyRoomYn-label">
                                   <input id="ihf-familyRoomYn" name="familyRoomYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_familyRoomYn" value="on"/> Family Room </label>
                               </div>
                             </div>
                             <div id="ihf-fireplaceYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-fireplaceYn" className="field-label ihf-fireplaceYn-label">
+                                <label htmlFor="ihf-fireplaceYn" className="field-label ihf-fireplaceYn-label">
                                   <input id="ihf-fireplaceYn" name="fireplaceYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_fireplaceYn" value="on"/> Fireplace </label>
                               </div>
                             </div>
                             <div id="ihf-garYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-garYn" className="field-label ihf-garYn-label">
+                                <label htmlFor="ihf-garYn" className="field-label ihf-garYn-label">
                                   <input id="ihf-garYn" name="garYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_garYn" value="on"/> Garage </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt6-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt6" className="field-label ihf-miscInt6-label">
+                                <label htmlFor="ihf-miscInt6" className="field-label ihf-miscInt6-label">
                                   <input id="ihf-miscInt6" name="miscInt6" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt6" value="on"/> Gated Community </label>
                               </div>
                             </div>
                             <div id="ihf-golfCourseYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-golfCourseYn" className="field-label ihf-golfCourseYn-label">
+                                <label htmlFor="ihf-golfCourseYn" className="field-label ihf-golfCourseYn-label">
                                   <input id="ihf-golfCourseYn" name="golfCourseYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_golfCourseYn" value="on"/> Golf Course </label>
                               </div>
                             </div>
                             <div id="ihf-misc4Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc4Yn" className="field-label ihf-misc4Yn-label">
+                                <label htmlFor="ihf-misc4Yn" className="field-label ihf-misc4Yn-label">
                                   <input id="ihf-misc4Yn" name="misc4Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc4Yn" value="on"/> Guest House/Quarters </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt5-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt5" className="field-label ihf-miscInt5-label">
+                                <label htmlFor="ihf-miscInt5" className="field-label ihf-miscInt5-label">
                                   <input id="ihf-miscInt5" name="miscInt5" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt5" value="on"/> HUD/Gov. Owned </label>
                               </div>
                             </div>
                             <div id="ihf-horsePropertyYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-horsePropertyYn" className="field-label ihf-horsePropertyYn-label">
+                                <label htmlFor="ihf-horsePropertyYn" className="field-label ihf-horsePropertyYn-label">
                                   <input id="ihf-horsePropertyYn" name="horsePropertyYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_horsePropertyYn" value="on"/> Horse Property </label>
                               </div>
                             </div>
                             <div id="ihf-misc5Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc5Yn" className="field-label ihf-misc5Yn-label">
+                                <label htmlFor="ihf-misc5Yn" className="field-label ihf-misc5Yn-label">
                                   <input id="ihf-misc5Yn" name="misc5Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc5Yn" value="on"/> Lake Front </label>
                               </div>
                             </div>
                             <div id="ihf-newConstructionYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-newConstructionYn" className="field-label ihf-newConstructionYn-label">
+                                <label htmlFor="ihf-newConstructionYn" className="field-label ihf-newConstructionYn-label">
                                   <input id="ihf-newConstructionYn" name="newConstructionYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_newConstructionYn" value="on"/> New Construction </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt7-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt7" className="field-label ihf-miscInt7-label">
+                                <label htmlFor="ihf-miscInt7" className="field-label ihf-miscInt7-label">
                                   <input id="ihf-miscInt7" name="miscInt7" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt7" value="on"/> No HOA Fees </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt4-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt4" className="field-label ihf-miscInt4-label">
+                                <label htmlFor="ihf-miscInt4" className="field-label ihf-miscInt4-label">
                                   <input id="ihf-miscInt4" name="miscInt4" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt4" value="on"/> No Pool </label>
                               </div>
                             </div>
                             <div id="ihf-foreclosureYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-foreclosureYn" className="field-label ihf-foreclosureYn-label">
+                                <label htmlFor="ihf-foreclosureYn" className="field-label ihf-foreclosureYn-label">
                                   <input id="ihf-foreclosureYn" name="foreclosureYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_foreclosureYn" value="on"/> Not Age Restricted </label>
                               </div>
                             </div>
                             <div id="ihf-misc2Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc2Yn" className="field-label ihf-misc2Yn-label">
+                                <label htmlFor="ihf-misc2Yn" className="field-label ihf-misc2Yn-label">
                                   <input id="ihf-misc2Yn" name="misc2Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc2Yn" value="on"/> Ocean View </label>
                               </div>
                             </div>
                             <div id="ihf-waterFrontYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-waterFrontYn" className="field-label ihf-waterFrontYn-label">
+                                <label htmlFor="ihf-waterFrontYn" className="field-label ihf-waterFrontYn-label">
                                   <input id="ihf-waterFrontYn" name="waterFrontYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_waterFrontYn" value="on"/> Ocean/Beach Front </label>
                               </div>
                             </div>
                             <div id="ihf-oneStoryYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-oneStoryYn" className="field-label ihf-oneStoryYn-label">
+                                <label htmlFor="ihf-oneStoryYn" className="field-label ihf-oneStoryYn-label">
                                   <input id="ihf-oneStoryYn" name="oneStoryYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_oneStoryYn" value="on"/> One Story </label>
                               </div>
                             </div>
                             <div id="ihf-poolYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-poolYn" className="field-label ihf-poolYn-label">
+                                <label htmlFor="ihf-poolYn" className="field-label ihf-poolYn-label">
                                   <input id="ihf-poolYn" name="poolYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_poolYn" value="on"/> Pool </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt9-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt9" className="field-label ihf-miscInt9-label">
+                                <label htmlFor="ihf-miscInt9" className="field-label ihf-miscInt9-label">
                                   <input id="ihf-miscInt9" name="miscInt9" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt9" value="on"/> Private Pool </label>
                               </div>
                             </div>
                             <div id="ihf-miscInt3-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-miscInt3" className="field-label ihf-miscInt3-label">
+                                <label htmlFor="ihf-miscInt3" className="field-label ihf-miscInt3-label">
                                   <input id="ihf-miscInt3" name="miscInt3" className="checkbox" type="checkbox" value="1"/>
                                   <input type="hidden" name="_miscInt3" value="on"/> Probate Property </label>
                               </div>
                             </div>
                             <div id="ihf-misc9Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc9Yn" className="field-label ihf-misc9Yn-label">
+                                <label htmlFor="ihf-misc9Yn" className="field-label ihf-misc9Yn-label">
                                   <input id="ihf-misc9Yn" name="misc9Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc9Yn" value="on"/> Trust Property </label>
                               </div>
                             </div>
                             <div id="ihf-misc8Yn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-misc8Yn" className="field-label ihf-misc8Yn-label">
+                                <label htmlFor="ihf-misc8Yn" className="field-label ihf-misc8Yn-label">
                                   <input id="ihf-misc8Yn" name="misc8Yn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_misc8Yn" value="on"/> Two on a Lot </label>
                               </div>
                             </div>
                             <div id="ihf-viewYn-container" className="col-xs-6 col-sm-4">
                               <div className="checkbox">
-                                <label for="ihf-viewYn" className="field-label ihf-viewYn-label">
+                                <label htmlFor="ihf-viewYn" className="field-label ihf-viewYn-label">
                                   <input id="ihf-viewYn" name="viewYn" className="checkbox" type="checkbox" value="true"/>
                                   <input type="hidden" name="_viewYn" value="on"/> View </label>
                               </div>
@@ -424,37 +424,37 @@ function Search() {
                           </div>
                           <div className="row mt-10">
                             <div id="ihf-region-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-region" className="field-label ihf-region-label">APN (leading 6 digits):</label>
+                              <label htmlFor="ihf-region" className="field-label ihf-region-label">APN (leading 6 digits):</label>
                               <div className="clearfix"></div>
                               <input id="ihf-region" name="region" className="form-control" placeholder="Comma separated list" aria-label="APN (leading 6 digits)" type="text" value=""/>
                             </div>
                             <div id="ihf-lotSqFt-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-lotSqFt" className="field-label ihf-lotSqFt-label">Min. Lot SqFt:</label>
+                              <label htmlFor="ihf-lotSqFt" className="field-label ihf-lotSqFt-label">Min. Lot SqFt:</label>
                               <div className="clearfix"></div>
                               <input id="ihf-lotSqFt" name="lotSqFt" className="form-control" aria-label="Min. Lot SqFt" type="text" value=""/>
                             </div>
                             <div id="ihf-miscInt1-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-miscInt1" className="field-label ihf-miscInt1-label">Max. Year Built:</label>
+                              <label htmlFor="ihf-miscInt1" className="field-label ihf-miscInt1-label">Max. Year Built:</label>
                               <div className="clearfix"></div>
                               <input id="ihf-miscInt1" name="miscInt1" className="form-control" aria-label="Max. Year Built" type="text" value=""/>
                             </div>
                             <div id="ihf-yearBuilt-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-yearBuilt" className="field-label ihf-yearBuilt-label">Min. Year Built:</label>
+                              <label htmlFor="ihf-yearBuilt" className="field-label ihf-yearBuilt-label">Min. Year Built:</label>
                               <div className="clearfix"></div>
                               <input id="ihf-yearBuilt" name="yearBuilt" className="form-control" aria-label="Min. Year Built" type="text" value=""/>
                             </div>
                             <div id="ihf-lotAcres-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-lotAcres" className="field-label ihf-lotAcres-label">Min. Lot Acres:</label>
+                              <label htmlFor="ihf-lotAcres" className="field-label ihf-lotAcres-label">Min. Lot Acres:</label>
                               <div className="clearfix"></div>
                               <input id="ihf-lotAcres" name="lotAcres" className="form-control" aria-label="Min. Lot Acres" type="text" value=""/>
                             </div>
                             <div id="ihf-geographicLike-container" className="col-xs-12 col-sm-6 mt-10" data-ihf-geographic-field="true">
-                              <label for="ihf-geographicLike" className="field-label ihf-geographicLike-label"> Builder Tract (Subdivision) Name: <br/> (Enter one value. For more results, use only the first few letters.) </label>
+                              <label htmlFor="ihf-geographicLike" className="field-label ihf-geographicLike-label"> Builder Tract (Subdivision) Name: <br/> (Enter one value. For more results, use only the first few letters.) </label>
                               <div className="clearfix"></div>
                               <input id="ihf-geographicLike" name="geographicLike" className="form-control" aria-label="Builder Tract (Subdivision) Name" type="text" value=""/>
                             </div>
                             <div id="ihf-garageSpaces-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-garageSpaces" className="field-label ihf-garageSpaces-label">Min. Garage Spaces:</label>
+                              <label htmlFor="ihf-garageSpaces" className="field-label ihf-garageSpaces-label">Min. Garage Spaces:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-garageSpaces" name="garageSpaces" className="form-control ihf-chosen-select-width">
                                 <option value="" selected="selected">Any</option>
@@ -464,21 +464,21 @@ function Search() {
                               </select>
                             </div>
                             <div id="ihf-miscString2-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-miscString2" className="field-label ihf-miscString2-label">Terms:</label>
+                              <label htmlFor="ihf-miscString2" className="field-label ihf-miscString2-label">Terms:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-miscString2" name="miscString2[]" className="form-control ihf-chosen-select-width" data-ihf-lazy-load="true" data-ihf-field-name="miscString2">
                                 <option value="">Any</option>
                               </select>
                             </div>
                             <div id="ihf-miscString4-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-miscString4" className="field-label ihf-miscString4-label">View:</label>
+                              <label htmlFor="ihf-miscString4" className="field-label ihf-miscString4-label">View:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-miscString4" name="miscString4[]" className="form-control ihf-chosen-select-width" data-ihf-lazy-load="true" data-ihf-field-name="miscString4">
                                 <option value="">Any</option>
                               </select>
                             </div>
                             <div id="ihf-styleLike-container" className="col-xs-12 col-sm-6 mt-10">
-                              <label for="ihf-styleLike" className="field-label ihf-styleLike-label">Style:</label>
+                              <label htmlFor="ihf-styleLike" className="field-label ihf-styleLike-label">Style:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-styleLike" name="styleLike[]" className="form-control ihf-chosen-select-width" data-ihf-lazy-load="true" data-ihf-field-name="styleLike">
                                 <option value="">Any</option>
@@ -487,48 +487,48 @@ function Search() {
                           </div>
                           <div className="row mt-10">
                             <div className="col-xs-12 col-sm-6" data-ihf-geographic-field="true">
-                              <label for="ihf-neighborhood" className="field-label ihf-neighborhood-label">Builder Tract (Subdivision) List:</label>
+                              <label htmlFor="ihf-neighborhood" className="field-label ihf-neighborhood-label">Builder Tract (Subdivision) List:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-neighborhood" name="neighborhood[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="neighborhood"></select>
                             </div>
                             <div className="col-xs-12 col-sm-6">
-                              <label for="ihf-miscString1" className="field-label ihf-miscString1-label">Condition:</label>
+                              <label htmlFor="ihf-miscString1" className="field-label ihf-miscString1-label">Condition:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-miscString1" name="miscString1[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="miscString1"></select>
                             </div>
                           </div>
                           <div className="row mt-10">
                             <div className="col-xs-12 col-sm-6" data-ihf-geographic-field="true">
-                              <label for="ihf-propertyLocation" className="field-label ihf-propertyLocation-label">County:</label>
+                              <label htmlFor="ihf-propertyLocation" className="field-label ihf-propertyLocation-label">County:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-propertyLocation" name="propertyLocation[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="propertyLocation"></select>
                             </div>
                             <div className="col-xs-12 col-sm-6" data-ihf-geographic-field="true">
-                              <label for="ihf-mlsarea" className="field-label ihf-mlsarea-label">MLS Area(s):</label>
+                              <label htmlFor="ihf-mlsarea" className="field-label ihf-mlsarea-label">MLS Area(s):</label>
                               <div className="clearfix"></div>
                               <select id="ihf-mlsarea" name="mlsarea[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="mlsarea"></select>
                             </div>
                           </div>
                           <div className="row mt-10">
                             <div className="col-xs-12 col-sm-6" data-ihf-geographic-field="true">
-                              <label for="ihf-highSch" className="field-label ihf-highSch-label">High School(s):</label>
+                              <label htmlFor="ihf-highSch" className="field-label ihf-highSch-label">High School(s):</label>
                               <div className="clearfix"></div>
                               <select id="ihf-highSch" name="highSch[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="highSch"></select>
                             </div>
                             <div className="col-xs-12 col-sm-6">
-                              <label for="ihf-propertySubType" className="field-label ihf-propertySubType-label">Property Subtype:</label>
+                              <label htmlFor="ihf-propertySubType" className="field-label ihf-propertySubType-label">Property Subtype:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-propertySubType" name="propertySubType[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="propertySubType"></select>
                             </div>
                           </div>
                           <div className="row mt-10">
                             <div className="col-xs-12 col-sm-6">
-                              <label for="ihf-miscString3" className="field-label ihf-miscString3-label">Land Fee/Lease:</label>
+                              <label htmlFor="ihf-miscString3" className="field-label ihf-miscString3-label">Land Fee/Lease:</label>
                               <div className="clearfix"></div>
                               <select id="ihf-miscString3" name="miscString3[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="miscString3"></select>
                             </div>
                             <div className="col-xs-12 col-sm-6" data-ihf-geographic-field="true">
-                              <label for="ihf-schoolDistrict" className="field-label ihf-schoolDistrict-label">School District(s):</label>
+                              <label htmlFor="ihf-schoolDistrict" className="field-label ihf-schoolDistrict-label">School District(s):</label>
                               <div className="clearfix"></div>
                               <select id="ihf-schoolDistrict" name="schoolDistrict[]" className="form-control ihf-chosen-select-width ihf-multi-select" multiple="multiple" size="4" data-ihf-lazy-load="true" data-ihf-field-name="schoolDistrict"></select>
                             </div>

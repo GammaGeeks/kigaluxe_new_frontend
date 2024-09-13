@@ -8,11 +8,13 @@ import { useTransition, useSpring, animated } from '@react-spring/web'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchPropertyAction } from '../../redux/actions/property'
 import { Link, useParams } from 'react-router-dom'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal, Button, Collapse } from 'react-bootstrap'
 
 import imageOne from '../../assets/images/ld-bg-2.png'
 
 function SingleProperty() {
+  const [isCollapsed, setIsCollapsed] = useState([false, false, false, false])
+
   const topOfPageRef = useRef(null)
   useEffect(() => {
     if (topOfPageRef.current) {
@@ -204,18 +206,18 @@ function SingleProperty() {
               <div className="ip-ld-share">
                 <h3>Share Listing</h3>
                 <div className="share-icons">
-                  <a href="//www.facebook.com/sharer.php?u=https://serioestates.com/homes-for-sale-details/729-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24386575/306/" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
+                  <a href="//www.facebook.com/" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
                     <span className="ai-font-facebook"></span>
                     <span className="tooltips">facebook</span>
                   </a>
                   <a href="#" target="_blank"><span className="ai-font-instagram"></span><span className="tooltips">instagram</span></a>
                   <a href="#" target="_blank"><span className="ai-font-youtube"></span><span className="tooltips">youtube</span></a>
-                  <a href="//www.linkedin.com/sharing/share-offsite/?url=https://serioestates.com/homes-for-sale-details/729-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24386575/306/" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
+                  <a href="//www.linkedin.com/sharing/share-offsite/" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
                     <span className="ai-font-linkedin"></span>
                     <span className="tooltips">linkedin</span>
                   </a>
                   <a href="#" target="_blank"><span className="ai-font-tiktok"></span><span className="tooltips">tiktok</span></a>
-                  <a href="//twitter.com/intent/tweet?url=https://serioestates.com/homes-for-sale-details/729-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24386575/306/" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
+                  <a href="//twitter.com/intent/tweet?" data-title="729 Bel Air Road, Los Angeles, CA 90077" target="_blank">
                     <span className="ai-font-twitter"></span>
                     <span className="tooltips">twitter</span>
                   </a>
@@ -229,176 +231,214 @@ function SingleProperty() {
                 <h2>Property details</h2>
                 <div className="row">
                   <div className="col-md-6" data-key="0">
-                    <div className="panel panel-default" data-key="2">
+                    <div className="panel panel-default">
                       <div className="panel-heading">
-                      <h4 className="panel-title">
-                        <a role="button" data-toggle="collapse" href="#locationinformation"> Location Information</a>
-                      </h4>
+                        <h4 className="panel-title">
+                          <a role="button" data-toggle="collapse" href="#locationinformation"> Location Information</a>
+                        </h4>
+                      </div>
+                      <Collapse in={isCollapsed[0]} id="locationinformation" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <ul>
+                            <li>
+                              <strong> County</strong>: Los Angeles
+                            </li>
+                            <li>
+                              <strong>MLS Area</strong>: Bel Air - Holmby Hills
+                            </li>
+                            <li>
+                              <strong> Community</strong>: Gated
+                            </li>
+                            <li>
+                              <strong>Latitude</strong>: 34.085851
+                            </li>
+                            <li>
+                              <strong> Longitude</strong>: -118.443047
+                            </li>
+                            <li>
+                              <strong>Directions</strong>: North of Sunset on Bel Air Road
+                            </li>
+                          </ul>
+                        </div>
+                      </Collapse>
                     </div>
-                    <div id="locationinformation" className="panel-collapse collapse">
-                      <div className="panel-body">
-                        <ul>
-                          <li><strong> County</strong>: Los Angeles</li>
-                          <li><strong>MLS Area</strong>: Bel Air - Holmby Hills</li>
-                          <li><strong> Community</strong>: Gated</li>
-                          <li><strong>Latitude</strong>: 34.085851</li>
-                          <li><strong> Longitude</strong>: -118.443047</li>
-                          <li><strong>Directions</strong>: North of Sunset on Bel Air Road</li>
-                        </ul>
+                    <div className="panel panel-default" data-key="0">
+                      <div className="panel-heading">
+                        <h4 className="panel-title">
+                          <a role="button" data-toggle="collapse" href="#interiorfeatures"> Interior Features</a>
+                        </h4>
+                      </div>
+                      <div id="interiorfeatures" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <ul>
+                            <li>
+                              <strong> Common Walls</strong>: No Common Walls
+                            </li>
+                            <li>
+                              <strong>Interior</strong>: Attic, Wine Cellar, Walk-In Closet(s)
+                            </li>
+                            <li>
+                              <strong> Full Baths</strong>: 12
+                            </li>
+                            <li>
+                              <strong>1/2 Baths</strong>: 8
+                            </li>
+                            <li>
+                              <strong> Spa</strong>: None
+                            </li>
+                            <li>
+                              <strong>Has Family Room</strong>: Yes
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <strong> Has Fireplace</strong>: Yes
+                            </li>
+                            <li>
+                              <strong>Fireplace Description</strong>: Guest Accommodations, Library, Living Room, Primary Bedroom
+                            </li>
+                            <li>
+                              <strong> Heating</strong>: Central
+                            </li>
+                            <li>
+                              <strong>Cooling</strong>: Central Air
+                            </li>
+                            <li>
+                              <strong> Floors</strong>: Stone, Wood
+                            </li>
+                            <li>
+                              <strong>Laundry</strong>: Inside, Laundry Room
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <strong> Appliances</strong>: Dishwasher, Disposal, Refrigerator, Dryer, Washer
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="panel panel-default" data-key="0">
-                    <div className="panel-heading">
-                      <h4 className="panel-title">
-                        <a role="button" data-toggle="collapse" href="#interiorfeatures"> Interior Features</a>
-                      </h4>
+                  <div className="col-md-6" data-key="1">
+                    <div className="panel panel-default" data-key="1">
+                      <div className="panel-heading">
+                        <h4 className="panel-title">
+                          <a role="button" data-toggle="collapse" href="#exteriorfeatures"> Exterior Features</a>
+                        </h4>
+                      </div>
+                      <div id="exteriorfeatures" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <ul>
+                            <li>
+                              <strong> Stories</strong>: Three Or More
+                            </li>
+                            <li>
+                              <strong>Is New Construction</strong>: No
+                            </li>
+                            <li>
+                              <strong> Roof</strong>: Tile
+                            </li>
+                            <li>
+                              <strong>Security Features</strong>: Gated Community
+                            </li>
+                            <li>
+                              <strong> Parking Description</strong>: Concrete, Covered, Door-Multi, Driveway, Underground, Garage, Gated, Private, Side By Side
+                            </li>
+                            <li>
+                              <strong>Has Garage</strong>: Yes
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <strong> Parking Spaces</strong>: 26
+                            </li>
+                            <li>
+                              <strong>Has a Pool</strong>: Yes
+                            </li>
+                            <li>
+                              <strong> Pool Description</strong>: Heated, In Ground
+                            </li>
+                            <li>
+                              <strong>Other Structures</strong>: Guest House, Greenhouse
+                            </li>
+                            <li>
+                              <strong> Lot Size in Acres</strong>: 3.324
+                            </li>
+                            <li>
+                              <strong>Approximate Size (Sq. Ft.)</strong>: 18,784
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <strong> Lot Size in Sq. Ft.</strong>: 144,785
+                            </li>
+                            <li>
+                              <strong>Zoning</strong>: LARE20
+                            </li>
+                            <li>
+                              <strong> Has View</strong>: Yes
+                            </li>
+                            <li>
+                              <strong>View Description</strong>: City Lights, Canyon, Ocean, Panoramic
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    <div id="interiorfeatures" className="panel-collapse collapse">
-                      <div className="panel-body">
-                        <ul>
-                          <li><strong> Common Walls</strong>: No Common Walls</li>
-                          <li><strong>Interior</strong>: Attic, Wine Cellar, Walk-In Closet(s)</li>
-                          <li><strong> Full Baths</strong>: 12</li>
-                          <li><strong>1/2 Baths</strong>: 8</li>
-                          <li><strong> Spa</strong>: None</li>
-                          <li><strong>Has Family Room</strong>: Yes</li>
-                        </ul>
-                        <ul>
-                          <li><strong> Has Fireplace</strong>: Yes</li>
-                          <li><strong>Fireplace Description</strong>: Guest Accommodations, Library, Living Room, Primary Bedroom</li>
-                          <li><strong> Heating</strong>: Central</li>
-                          <li><strong>Cooling</strong>: Central Air</li>
-                          <li><strong> Floors</strong>: Stone, Wood</li>
-                          <li><strong>Laundry</strong>: Inside, Laundry Room</li>
-                        </ul>
-                        <ul>
-                          <li><strong> Appliances</strong>: Dishwasher, Disposal, Refrigerator, Dryer, Washer</li>
-                        </ul>
+                    <div className="panel panel-default" data-key="3">
+                      <div className="panel-heading">
+                        <h4 className="panel-title">
+                          <a role="button" data-toggle="collapse" href="#additionalinformation"> Additional Information</a>
+                        </h4>
+                      </div>
+                      <div id="additionalinformation" className="panel-collapse collapse">
+                        <div className="panel-body">
+                          <ul>
+                            <li>
+                              <strong> Property Type</strong>: SFR
+                            </li>
+                            <li>
+                              <strong>Property SubType</strong>: Single Family Residence
+                            </li>
+                            <li>
+                              <strong> Year Built</strong>: 1972
+                            </li>
+                            <li>
+                              <strong>APN</strong>: 4362015030
+                            </li>
+                            <li>
+                              <strong> Status</strong>: Active
+                            </li>
+                            <li>
+                              <strong>Is Aged Restricted</strong>: No
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <strong> HOA Fee</strong>: $0
+                            </li>
+                            <li>
+                              <strong>Lot Square Feet Source</strong>: Assessor
+                            </li>
+                            <li>
+                              <strong> Listing Agent CA DRE #</strong>: 0475038
+                            </li>
+                            <li>
+                              <strong>Co-Listing Agt CA DRE #</strong>: 1317962
+                            </li>
+                            <li>
+                              <strong> List Date</strong>: 05/02/2024
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6" data-key="1">
-                  <div className="panel panel-default" data-key="1">
-                    <div className="panel-heading">
-                      <h4 className="panel-title">
-                        <a role="button" data-toggle="collapse" href="#exteriorfeatures"> Exterior Features</a>
-                      </h4>
-                    </div>
-                    <div id="exteriorfeatures" className="panel-collapse collapse">
-                      <div className="panel-body">
-                        <ul>
-                          <li>
-                            <strong> Stories</strong>: Three Or More
-                          </li>
-                          <li>
-                            <strong>Is New Construction</strong>: No
-                          </li>
-                          <li>
-                            <strong> Roof</strong>: Tile
-                          </li>
-                          <li>
-                            <strong>Security Features</strong>: Gated Community
-                          </li>
-                          <li>
-                            <strong> Parking Description</strong>: Concrete, Covered, Door-Multi, Driveway, Underground, Garage, Gated, Private, Side By Side
-                          </li>
-                          <li>
-                            <strong>Has Garage</strong>: Yes
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <strong> Parking Spaces</strong>: 26
-                          </li>
-                          <li>
-                            <strong>Has a Pool</strong>: Yes
-                          </li>
-                          <li>
-                            <strong> Pool Description</strong>: Heated, In Ground
-                          </li>
-                          <li>
-                            <strong>Other Structures</strong>: Guest House, Greenhouse
-                          </li>
-                          <li>
-                            <strong> Lot Size in Acres</strong>: 3.324
-                          </li>
-                          <li>
-                            <strong>Approximate Size (Sq. Ft.)</strong>: 18,784
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <strong> Lot Size in Sq. Ft.</strong>: 144,785
-                          </li>
-                          <li>
-                            <strong>Zoning</strong>: LARE20
-                          </li>
-                          <li>
-                            <strong> Has View</strong>: Yes
-                          </li>
-                          <li>
-                            <strong>View Description</strong>: City Lights, Canyon, Ocean, Panoramic
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="panel panel-default" data-key="3">
-                    <div className="panel-heading">
-                      <h4 className="panel-title">
-                        <a role="button" data-toggle="collapse" href="#additionalinformation"> Additional Information</a>
-                      </h4>
-                    </div>
-                    <div id="additionalinformation" className="panel-collapse collapse">
-                      <div className="panel-body">
-                        <ul>
-                          <li>
-                            <strong> Property Type</strong>: SFR
-                          </li>
-                          <li>
-                            <strong>Property SubType</strong>: Single Family Residence
-                          </li>
-                          <li>
-                            <strong> Year Built</strong>: 1972
-                          </li>
-                          <li>
-                            <strong>APN</strong>: 4362015030
-                          </li>
-                          <li>
-                            <strong> Status</strong>: Active
-                          </li>
-                          <li>
-                            <strong>Is Aged Restricted</strong>: No
-                          </li>
-                        </ul>
-                        <ul>
-                          <li>
-                            <strong> HOA Fee</strong>: $0
-                          </li>
-                          <li>
-                            <strong>Lot Square Feet Source</strong>: Assessor
-                          </li>
-                          <li>
-                            <strong> Listing Agent CA DRE #</strong>: 0475038
-                          </li>
-                          <li>
-                            <strong>Co-Listing Agt CA DRE #</strong>: 1317962
-                          </li>
-                          <li>
-                            <strong> List Date</strong>: 05/02/2024
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="ip-ld-map">
               <div className="map-holder">
-                <iframe title="Description of content in iframe 1" style={{height:'400px',width:'100%',border:0,filter: 'grayscale(1)'}} width="1140" height="400" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=729 Bel Air Road, Los Angeles, CA 90077&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                <iframe title="Description of content in iframe 1" style={{height:'400px',width:'100%',border:0,filter: 'grayscale(1)'}} width="1140" height="400" src="https://www.google.com/maps/embed/v1/place?q=729 Bel Air Road, Los Angeles, CA 90077&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
               </div>
             </div>
             {/* <div className="ip-ld-disclaimer">
@@ -458,16 +498,16 @@ function SingleProperty() {
                             <input type="hidden" name="wpcf7-66d2b960984ed-website-remote-address" value="127.0.0.1"/>
                             <input type="hidden" name="wpcf7-66d2b960984ed-website-time-start" value="1725086048"/>
                             <input type="hidden" name="wpcf7-66d2b960984ed-website-time-check" value="5"/>
-                            <label for="wpcf7-66d2b960984ed-website" className="hp-message">Choose Side:</label>
-                            <input type="text" name="wpcf7-66d2b960984ed-website" id="wpcf7-66d2b960984ed-website" tabindex="-1" autocomplete="off"/>
+                            <label htmlFor="wpcf7-66d2b960984ed-website" className="hp-message">Choose Side:</label>
+                            <input type="text" name="wpcf7-66d2b960984ed-website" id="wpcf7-66d2b960984ed-website" tabindex="-1" autoComplete="off"/>
                           </div>
                           <div id="wpcf7-66d2b960984e7" style={{display:'none !important', visibility:'hidden !important'}}>
                             <input type="hidden" name="queen-bee-id" value="wpcf7-66d2b960984e7"/>
                             <input type="hidden" name="wpcf7-66d2b960984e7-website-remote-address" value="127.0.0.1"/>
                             <input type="hidden" name="wpcf7-66d2b960984e7-website-time-start" value="1725086048"/>
                             <input type="hidden" name="wpcf7-66d2b960984e7-website-time-check" value="5"/>
-                            <label for="wpcf7-66d2b960984e7-website" className="hp-message">Choose Side:</label>
-                            <input type="text" name="wpcf7-66d2b960984e7-website" id="wpcf7-66d2b960984e7-website" tabindex="-1" autocomplete="false"/>
+                            <label htmlFor="wpcf7-66d2b960984e7-website" className="hp-message">Choose Side:</label>
+                            <input type="text" name="wpcf7-66d2b960984e7-website" id="wpcf7-66d2b960984e7-website" tabindex="-1" autoComplete="false"/>
                           </div>
                           <div className="git-form">
                             <div className="col-md-12 listings-field hidden">
@@ -475,13 +515,13 @@ function SingleProperty() {
                             </div>
                             <div className="git-form-row">
                               <div className="git-form-col">
-                                <label className="hidden" for="git-fname">First Name</label>
+                                <label className="hidden" htmlFor="git-fname">First Name</label>
                                 <span className="wpcf7-form-control-wrap" data-name="fname">
                                   <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="git-fname" aria-required="true" aria-invalid="false" placeholder="First Name" value="" type="text" name="fname"/>
                                 </span>
                               </div>
                               <div className="git-form-col">
-                                <label className="hidden" for="git-lname">Last Name</label>
+                                <label className="hidden" htmlFor="git-lname">Last Name</label>
                                 <span className="wpcf7-form-control-wrap" data-name="lname">
                                   <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="git-lname" aria-required="true" aria-invalid="false" placeholder="Last Name" value="" type="text" name="lname"/>
                                 </span>
@@ -489,13 +529,13 @@ function SingleProperty() {
                             </div>
                             <div className="git-form-row">
                               <div className="git-form-col">
-                                <label className="hidden" for="git-phone">Phone Number</label>
+                                <label className="hidden" htmlFor="git-phone">Phone Number</label>
                                 <span className="wpcf7-form-control-wrap" data-name="your-phone">
                                   <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-tel wpcf7-text wpcf7-validates-as-tel" id="git-phone" aria-invalid="false" placeholder="Phone Number" value="" type="tel" name="your-phone"/>
                                 </span>
                               </div>
                               <div className="git-form-col">
-                                <label className="hidden" for="git-email">Email Address</label>
+                                <label className="hidden" htmlFor="git-email">Email Address</label>
                                 <span className="wpcf7-form-control-wrap" data-name="your-email">
                                   <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" id="git-email" aria-required="true" aria-invalid="false" placeholder="Email Address" value="" type="email" name="your-email"/>
                                 </span>
@@ -503,7 +543,7 @@ function SingleProperty() {
                             </div>
                             <div className="git-form-row full">
                               <div className="git-form-col">
-                                <label className="hidden" for="git-message">Message</label>
+                                <label className="hidden" htmlFor="git-message">Message</label>
                                 <span className="wpcf7-form-control-wrap" data-name="your-message">
                                   <textarea cols="40" rows="10" maxlength="2000" className="wpcf7-form-control wpcf7-textarea" id="git-message" aria-invalid="false" placeholder="Message" name="your-message"></textarea>
                                 </span>
@@ -668,25 +708,25 @@ function SingleProperty() {
               <div className="panel-body">
                 <form id="ihf-schedule-showing-request-form" className="form-inline" data-ihf-event="schedule-showing-form-submit" action="https://serioestates.com/wp-admin/admin-ajax.php?action=ihf_schedule_showing" method="GET">
                   <div className="JKGH00920" style={{position: 'absolute', top: '-2000px', left: '-2000px'}}>
-                    <label> Message <textarea name="JKGH00920" placeholder="Enter your message" autocomplete="off"></textarea>
+                    <label> Message <textarea name="JKGH00920" placeholder="Enter your message" autoComplete="off"></textarea>
                     </label>
                   </div>
-                  <input name="actionType" value="create" type="hidden"/>
+                  {/* <input name="actionType" value="create" type="hidden"/>
                   <input id="listingNumber" name="listingNumber" type="hidden" value="24386575"/>
                   <input id="boardId" name="boardId" type="hidden" value="306"/>
                   <input id="clientPropertyId" name="clientPropertyId" type="hidden" value=""/>
                   <input id="sold" name="sold" type="hidden" value="false"/>
-                  <input type="hidden" name="contactType" value="scheduleShowing"/>
+                  <input type="hidden" name="contactType" value="scheduleShowing"/> */}
                   <div className="row mt-10">
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_inforeq_firstname"> First Name* </label>
+                        <label htmlFor="ihf_inforeq_firstname"> First Name* </label>
                         <input id="ihf_inforeq_firstname" name="firstName" className="form-control" required="required" type="text" value=""/>
                       </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_inforeq_lastName"> Last Name* </label>
+                        <label htmlFor="ihf_inforeq_lastName"> Last Name* </label>
                         <input id="ihf_inforeq_lastName" name="lastName" className="form-control" required="required" type="text" value=""/>
                       </div>
                     </div>
@@ -694,21 +734,21 @@ function SingleProperty() {
                   <div className="row mt-10">
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_inforeq_email"> Email* </label>
+                        <label htmlFor="ihf_inforeq_email"> Email* </label>
                         <input id="ihf_inforeq_email" name="newEmail" type="email" className="form-control" required="required" value=""/>
                       </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_inforeq_phone"> Phone </label>
-                        <input id="ihf_inforeq_phone" name="phone" type="tel" className="form-control" value="" autocomplete="off"/>
+                        <label htmlFor="ihf_inforeq_phone"> Phone </label>
+                        <input id="ihf_inforeq_phone" name="phone" type="tel" className="form-control" value="" autoComplete="off"/>
                       </div>
                     </div>
                   </div>
                   <div className="row mt-10">
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_schedshow_pref_date"> Preferred Time and Date* </label>
+                        <label htmlFor="ihf_schedshow_pref_date"> Preferred Time and Date* </label>
                         <div className="row">
                           <div className="col-xs-6">
                             <select id="ihf_schedshow_pref_time" name="prefTime" className="form-control">
@@ -741,14 +781,14 @@ function SingleProperty() {
                             </select>
                           </div>
                           <div className="col-xs-6">
-                            <input id="ihf_schedshow_pref_date" name="prefDate" className="date form-control default-cursor" required="required" readonly="readonly" type="text" value=""/>
+                            <input id="ihf_schedshow_pref_date" name="prefDate" className="date form-control default-cursor" required="required" readOnly="readOnly" type="text" value=""/>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                       <div className="form-group">
-                        <label for="ihf_schedshow_alt_date"> Alternate Time and Date* </label>
+                        <label htmlFor="ihf_schedshow_alt_date"> Alternate Time and Date* </label>
                         <div className="row">
                           <div className="col-xs-6">
                             <select id="ihf_schedshow_alt_time" name="altTime" className="form-control">
@@ -781,7 +821,7 @@ function SingleProperty() {
                             </select>
                           </div>
                           <div className="col-xs-6">
-                            <input id="ihf_schedshow_alt_date" name="altDate" className="date form-control default-cursor" required="required" readonly="readonly" type="text" value=""/>
+                            <input id="ihf_schedshow_alt_date" name="altDate" className="date form-control default-cursor" required="required" readOnly="readOnly" type="text" value=""/>
                           </div>
                         </div>
                       </div>
@@ -789,7 +829,7 @@ function SingleProperty() {
                   </div>
                   <div className="row mt-10">
                     <div className="col-xs-12">
-                      <label for="ihf_schedshow_comments"> Message </label>
+                      <label htmlFor="ihf_schedshow_comments"> Message </label>
                       <textarea id="ihf_schedshow_comments" name="message" style={{height:'100px', width:'100%'}} className="form-control" rows="5"></textarea>
                     </div>
                   </div>
@@ -839,7 +879,7 @@ function SingleProperty() {
                   <div className="panel-body">
                     <form id="ihf-more-info-request-form" className="form-inline" data-ihf-event="more-info-request-form-submit" action="https://serioestates.com/wp-admin/admin-ajax.php?action=ihf_more_info_request" method="GET">
                       <div className="JKGH00920" style={{position: 'absolute', top: '-2000px', left: '-2000px'}}>
-                        <label> Message <textarea name="JKGH00920" placeholder="Enter your message" autocomplete="off"></textarea>
+                        <label> Message <textarea name="JKGH00920" placeholder="Enter your message" autoComplete="off"></textarea>
                         </label>
                       </div>
                       <input name="actionType" value="create" type="hidden"/>
@@ -851,13 +891,13 @@ function SingleProperty() {
                       <div className="row mt-10">
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div className="form-group">
-                            <label for="ihf_inforeq_firstname"> First Name* </label>
+                            <label htmlFor="ihf_inforeq_firstname"> First Name* </label>
                             <input id="ihf_inforeq_firstname" name="firstName" className="form-control" required="required" type="text" value=""/>
                           </div>
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div className="form-group">
-                            <label for="ihf_inforeq_lastName"> Last Name* </label>
+                            <label htmlFor="ihf_inforeq_lastName"> Last Name* </label>
                             <input id="ihf_inforeq_lastName" name="lastName" className="form-control" required="required" type="text" value=""/>
                           </div>
                         </div>
@@ -865,20 +905,20 @@ function SingleProperty() {
                       <div className="row mt-10">
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div className="form-group">
-                            <label for="ihf_inforeq_email"> Email* </label>
+                            <label htmlFor="ihf_inforeq_email"> Email* </label>
                             <input id="ihf_inforeq_email" name="newEmail" type="email" className="form-control" required="required" value=""/>
                           </div>
                         </div>
                         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                           <div className="form-group">
-                            <label for="ihf_inforeq_phone"> Phone </label>
-                            <input id="ihf_inforeq_phone" name="phone" type="tel" className="form-control" value="" autocomplete="off"/>
+                            <label htmlFor="ihf_inforeq_phone"> Phone </label>
+                            <input id="ihf_inforeq_phone" name="phone" type="tel" className="form-control" value="" autoComplete="off"/>
                           </div>
                         </div>
                       </div>
                       <div className="row mt-10">
                         <div className="col-xs-12">
-                          <label for="ihf_schedshow_comments"> Message </label>
+                          <label htmlFor="ihf_schedshow_comments"> Message </label>
                           <textarea id="ihf_schedshow_comments" name="message" style={{height:'100px', width:'100%'}} className="form-control" rows="5"></textarea>
                         </div>
                       </div>
@@ -924,13 +964,11 @@ function SingleProperty() {
   </script> */}
   <div className="clearfix"></div>
 </div>
-      <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
 
-      
-    </main>
-  <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
@@ -943,7 +981,9 @@ function SingleProperty() {
             Save Changes
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
+      
+    </main>
   </>
   )
 }
