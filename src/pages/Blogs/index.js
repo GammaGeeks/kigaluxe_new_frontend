@@ -18,7 +18,6 @@ function Blogs() {
   // eslint-disable-next-line no-unused-vars
   const { listOfBlogs, next, currentPage, getBlogs } = blogs
 
-
   const topOfPageRef = useRef(null)
   useEffect(() => {
     if (topOfPageRef.current) {
@@ -54,21 +53,23 @@ function Blogs() {
                 </span>
               </p>
               <h1 className="archive-title"> Blog </h1>
+              {
+                listOfBlogs.length > 0 ? (
               <div className="row archive-list">
                 <article id="post-204" className="col-md-12 article-long post-204 post type-post status-publish format-standard has-post-thumbnail hentry category-blog" data-aios-reveal="true" data-aios-animation="fadeIn" data-aios-animation-delay="0s" data-aios-animation-reset="false" data-aios-animation-offset="0.3">
                   <div className="entry">
                     <div className="archive-thumbnail">
-                      <Link to={`/blogs/${listOfBlogs && listOfBlogs[0] ? listOfBlogs[0].id : ''}`}>
+                      <Link to={`/blogs/${listOfBlogs ? listOfBlogs[0].id : ''}`}>
                         <canvas width="540" height="360" style={{backgroundImage: `url(${listOfBlogs ? listOfBlogs[0].url : img3})`}}></canvas>
                       </Link>
                     </div>
                     <div className="archive-content archive-has-thumbnail">
                       <h2 className="archive-subtitle">
-                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[0] ? listOfBlogs[0].id : ''}`}>{listOfBlogs && listOfBlogs[0].title}</Link>
+                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[0].id}`}>{listOfBlogs && listOfBlogs[0].title}</Link>
                       </h2>
                       <p>{listOfBlogs && listOfBlogs[0].content}</p>
                       <p>
-                        <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[0] ? listOfBlogs[0].id : ''}`}>Read more</Link>
+                        <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[0].id}`}>Read more</Link>
                       </p>
                     </div>
                     <div className="clearfix"></div>
@@ -77,17 +78,17 @@ function Blogs() {
                 <article id="post-201" className="col-md-6 post-201 post type-post status-publish format-standard has-post-thumbnail hentry category-blog" data-aios-reveal="true" data-aios-animation="fadeIn" data-aios-animation-delay="0.2s" data-aios-animation-reset="false" data-aios-animation-offset="0.3">
                   <div className="entry">
                     <div className="archive-thumbnail">
-                      <Link to={`/blogs/${listOfBlogs && listOfBlogs[1] ? listOfBlogs[1].id : ''}`}>
+                      <Link to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>
                         <canvas width="540" height="360" style={{backgroundImage: `url(${listOfBlogs ? listOfBlogs[0].url : img1})`}}></canvas>
                       </Link>
                     </div>
                     <div className="archive-content archive-has-thumbnail">
                       <h2 className="archive-subtitle">
-                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[1] ? listOfBlogs[1].id : ''}`}>{listOfBlogs && listOfBlogs[1].title}</Link>
+                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>{listOfBlogs && listOfBlogs[1].title}</Link>
                       </h2>
                       <p>{listOfBlogs && listOfBlogs[1].content}</p>
                       <p>
-                        <Link className="archive-more"  to={`/blogs/${listOfBlogs && listOfBlogs[1] ? listOfBlogs[1].id : ''}`}>Read more</Link>
+                        <Link className="archive-more"  to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>Read more</Link>
                       </p>
                     </div>
                     <div className="clearfix"></div>
@@ -96,23 +97,25 @@ function Blogs() {
                 <article id="post-198" className="col-md-6 post-198 post type-post status-publish format-standard has-post-thumbnail hentry category-blog" data-aios-reveal="true" data-aios-animation="fadeIn" data-aios-animation-delay="0.2s" data-aios-animation-reset="false" data-aios-animation-offset="0.3">
                   <div className="entry">
                     <div className="archive-thumbnail">
-                      <Link to={`/blogs/${listOfBlogs && listOfBlogs[2] ? listOfBlogs[2].id : ''}`}>
+                      <Link to={`/blogs/${listOfBlogs && listOfBlogs[2].id}`}>
                         <canvas width="540" height="360" style={{backgroundImage: `url(${listOfBlogs ? listOfBlogs[2].url : img2})`}}></canvas>
                       </Link>
                     </div>
                     <div className="archive-content archive-has-thumbnail">
                       <h2 className="archive-subtitle">
-                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[2] ? listOfBlogs[2].id : ''}`}>{listOfBlogs && listOfBlogs[2].title}</Link>
+                        <Link to={`/blogs/${listOfBlogs && listOfBlogs[2].id}`}>{listOfBlogs && listOfBlogs[2].title}</Link>
                       </h2>
                       <p>{listOfBlogs && listOfBlogs[2].content}</p>
                       <p>
-                        <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[2] ? listOfBlogs[2].id : ''}`}>Read more</Link>
+                        <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[2].id}`}>Read more</Link>
                       </p>
                     </div>
                     <div className="clearfix"></div>
                   </div>
                 </article>
               </div>
+                ) : ''
+              }
               <div className="page-links"></div>
             </section>
             {/* <!-- end #content --> */}
