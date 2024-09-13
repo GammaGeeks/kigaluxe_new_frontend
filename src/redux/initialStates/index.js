@@ -5,6 +5,8 @@ import property from './propertyInitState';
 import properties from './propertiesInitState';
 import place from './placeInitState';
 import places from './placesInitState';
+import blog from './blogInitState';
+import blogs from './blogsInitState';
 
 export default {
   user,
@@ -13,4 +15,6 @@ export default {
   properties,
   place,
   places,
+  blog,
+  blogs
 }

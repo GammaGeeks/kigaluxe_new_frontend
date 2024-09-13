@@ -4,8 +4,8 @@ const initState = {
   listOfPlaces: [],
   // listOfDepartures: [],
   // listOfArrivals: [],
-  Next: {},
-  Previous: {},
+  next: undefined,
+  currentPage: undefined,
   error: '',
   getPlaces: {
     loading: false,

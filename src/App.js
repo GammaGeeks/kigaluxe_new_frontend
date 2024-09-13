@@ -29,7 +29,7 @@ function App() {
           <Route path='places' element={<Places />} />
           <Route path='places/:id' element={<SinglePlace />} />
           <Route path='blog' element={<Blogs />} />
-          <Route path='blog/:id' element={<SingleBlog />} />
+          <Route path='blogs/:id' element={<SingleBlog />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

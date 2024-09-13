@@ -1,5 +1,5 @@
-import fetchAllBlogsAction from './fetchAllBlogsAction';
+import fetchAllBlogs from './fetchAllBlogsAction';
 
 export {
-  fetchAllBlogsAction,
+  fetchAllBlogs,
 };
