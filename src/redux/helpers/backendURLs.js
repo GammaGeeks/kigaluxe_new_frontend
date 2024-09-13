@@ -1,4 +1,4 @@
-const REACT_APP_BASIC_URL = 'https://kigaluxe-lb-773196481.af-south-1.elb.amazonaws.com';
+const REACT_APP_BASIC_URL = 'http://kigaluxe-lb-773196481.af-south-1.elb.amazonaws.com';
 const REACT_APP_FRONTEND_SERVER_URL = 'https://urchin-app-93evo.ondigitalocean.app';
 const REACT_APP_LOCAL_URL = 'http://localhost:4000';
 const REACT_APP_SOCKET_URL = 'https://kigaluxe-backend.onrender.com';
