@@ -468,12 +468,12 @@ function SingleProperty() {
                   </div>
               </div>
             </div>
-            <div className="ip-ld-map">
+            {/* <div className="ip-ld-map">
               <div className="map-holder">
                 <iframe title="Description of content in iframe 1" style={{height:'400px',width:'100%',border:0,filter: 'grayscale(1)'}} width="1140" height="400" src="https://www.google.com/maps/embed/v1/place?q=729 Bel Air Road, Los Angeles, CA 90077&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
               </div>
             </div>
-            {/* <div className="ip-ld-disclaimer">
+            <div className="ip-ld-disclaimer">
               <h4>DISCLAIMER</h4>
               <p> 
                 Based on information from CSMAR, CRMLS, and/or CLAW, and/or CRISNet MLS as of August 29, 2024 9:28 PM PT. 
