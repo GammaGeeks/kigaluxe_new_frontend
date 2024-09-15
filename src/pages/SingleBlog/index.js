@@ -33,6 +33,7 @@ function SingleBlog() {
   }} ref={topOfPageRef}></div>
   <h2 className="aios-starter-theme-hide-title">Main Content</h2>
   {/* <!-- ip banner goes here --> */}
+  <div style={{marginTop: '200px'}}></div>
   <div className="textwidget custom-html-widget">
     <div className="ip-banner">
       <canvas width="1600" height="350" style={{backgroundImage: `url('${require('../../assets/images/slide-img-1.jpg')}')`}}></canvas>

@@ -9,10 +9,42 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchPropertyAction } from '../../redux/actions/property'
 import { Link, useParams } from 'react-router-dom'
 import { Modal, Button, Collapse } from 'react-bootstrap'
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 import imageOne from '../../assets/images/ld-bg-2.png'
 
 function SingleProperty() {
+  const contentRef = useRef();
+  const downloadPDF = () => {
+    const input = contentRef.current;
+
+    html2canvas(input, { scrollY: -window.scrollY, useCORS: true }) // Capture the full page
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const imgWidth = 210; // Width of the A4 page in mm
+        const pageHeight = 295; // Height of the A4 page in mm
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        let heightLeft = imgHeight;
+        let position = 0;
+
+        // Add image to PDF and manage page breaks
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+
+        while (heightLeft >= 0) {
+          position = heightLeft - imgHeight;
+          pdf.addPage();
+          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+          heightLeft -= pageHeight;
+        }
+
+        pdf.save('full-page.pdf');
+      })
+      .catch((err) => console.error(err));
+  };
+
   const [isCollapsed, setIsCollapsed] = useState([false, false, false, false])
 
   const topOfPageRef = useRef(null)
@@ -94,7 +126,7 @@ function SingleProperty() {
   </div> */}
 </div>
 {/* <!-- ip banner goes here --> */}
-<div id="inner-page-wrapper">
+<div ref={contentRef} id="inner-page-wrapper">
   <div style={{padding: 0, margin: 0}} className="container-fluid">
     <div id="ip-listing-details">
       <div className="ip-ld-container">
@@ -201,7 +233,7 @@ function SingleProperty() {
                 </ul>
               </div>
               <div className="ip-ld-btn">
-                <a className="global-btn" href="/contact-us/">Request Info</a>
+                <a className="global-btn" onClick={downloadPDF}>Request Info</a>
               </div>
               <div className="ip-ld-share">
                 <h3>Share Listing</h3>

@@ -17,6 +17,7 @@ function Blogs() {
 
   // eslint-disable-next-line no-unused-vars
   const { listOfBlogs, next, currentPage, getBlogs } = blogs
+  console.log(listOfBlogs);
 
   const topOfPageRef = useRef(null)
   useEffect(() => {
@@ -35,6 +36,7 @@ function Blogs() {
         </div>
       </div>
       {/* <!-- ip banner goes here --> */}
+      <div style={{marginTop: '50px'}}></div>
       <div id="inner-page-wrapper">
         <Container>
           <div id="content-full">
@@ -67,7 +69,7 @@ function Blogs() {
                       <h2 className="archive-subtitle">
                         <Link to={`/blogs/${listOfBlogs && listOfBlogs[0].id}`}>{listOfBlogs && listOfBlogs[0].title}</Link>
                       </h2>
-                      <p>{listOfBlogs && listOfBlogs[0].content}</p>
+                      <p>{listOfBlogs && listOfBlogs[0].content.slice(0, 400)}...</p>
                       <p>
                         <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[0].id}`}>Read more</Link>
                       </p>
@@ -79,14 +81,14 @@ function Blogs() {
                   <div className="entry">
                     <div className="archive-thumbnail">
                       <Link to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>
-                        <canvas width="540" height="360" style={{backgroundImage: `url(${listOfBlogs ? listOfBlogs[0].url : img1})`}}></canvas>
+                        <canvas width="540" height="360" style={{backgroundImage: `url(${listOfBlogs ? listOfBlogs[1].url : img1})`}}></canvas>
                       </Link>
                     </div>
                     <div className="archive-content archive-has-thumbnail">
                       <h2 className="archive-subtitle">
                         <Link to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>{listOfBlogs && listOfBlogs[1].title}</Link>
                       </h2>
-                      <p>{listOfBlogs && listOfBlogs[1].content}</p>
+                      <p>{listOfBlogs && listOfBlogs[1].content.slice(0, 400)}...</p>
                       <p>
                         <Link className="archive-more"  to={`/blogs/${listOfBlogs && listOfBlogs[1].id}`}>Read more</Link>
                       </p>
@@ -105,7 +107,7 @@ function Blogs() {
                       <h2 className="archive-subtitle">
                         <Link to={`/blogs/${listOfBlogs && listOfBlogs[2].id}`}>{listOfBlogs && listOfBlogs[2].title}</Link>
                       </h2>
-                      <p>{listOfBlogs && listOfBlogs[2].content}</p>
+                      <p>{listOfBlogs && listOfBlogs[2].content.slice(0, 400)}...</p>
                       <p>
                         <Link className="archive-more" to={`/blogs/${listOfBlogs && listOfBlogs[2].id}`}>Read more</Link>
                       </p>
