@@ -19,10 +19,10 @@ function AboutUs() {
         {/* <!--<div className="ip-banner" data-type="page" data-id="33"><canvas width="1600" height="350" style="background-image: url(https://serioestates.com/wp-content/uploads/2023/01/slide-img-1.jpg)"></canvas></div>
     --> */}
         <div className="custom-ip-banner">
-          <canvas width="1530" height="568" style={{backgroundImage: "url(images/banner-meet.jpg)"}}></canvas>
-          <div className="custom-ip-tagline">
+          <canvas width="1530" height="568"></canvas>
+          {/* <div className="custom-ip-tagline">
             <div className="container">Respected. Loyal. Relentless. Discreet.</div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* <!-- ip banner goes here --> */}

@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom'
 import Navigation from '../../Navigation';
 import SocialMedia from '../../Navigation/SocialMedia'
 // import PopUp from '../../Navigation/PopUp'
-import FooterPart from '../../Footer';
+import FooterPart from '../../Footer/withoutGetInTouch';
 
 const Layout = () => {
   return (
