@@ -126,7 +126,7 @@ function SingleProperty() {
   </div> */}
 </div>
 {/* <!-- ip banner goes here --> */}
-<div ref={contentRef} id="inner-page-wrapper">
+<div id="inner-page-wrapper">
   <div style={{padding: 0, margin: 0}} className="container-fluid">
     <div id="ip-listing-details">
       <div className="ip-ld-container">
@@ -160,7 +160,7 @@ function SingleProperty() {
           </div>
         </div>
         <div className="ip-ld-section">
-          <div id="ip-content" className="ip-ld-content-main-container aios-scroll-section" data-aios-scroll-title="Communities">
+          <div ref={contentRef} id="ip-content" className="ip-ld-content-main-container aios-scroll-section" data-aios-scroll-title="Communities">
             <div className="ip-ld-bg">
               <canvas width="1600" height="2418" style={{ backgroundImage: `url('${imageOne}')`, width: '100%', backgroundSize: 'cover' }}></canvas>
             </div>
