@@ -416,7 +416,7 @@ const d = Array.from(p).reduce((e, t) => {
         {/* <!-- Welcome --> */}
         <Welcome />
         {/* <!-- Social Media --> */}
-        <Insta />
+        {/* <Insta /> */}
         {/* <!-- Listing of the Day --> */}
         <ListingOfTheDay />
         {/* <!-- Area of Expertise --> */}
