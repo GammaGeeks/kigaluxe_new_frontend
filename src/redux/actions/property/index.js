@@ -1,11 +1,11 @@
-import createPropertyAction from './createPropertyAction';
-import deletePropertyAction from './deletePropertyAction';
-import editPropertyAction from './editPropertyAction';
-import fetchPropertyAction from './fetchPropertyAction'
+import createProperty from './createPropertyAction';
+import deleteProperty from './deletePropertyAction';
+import editProperty from './editPropertyAction';
+import fetchProperty from './fetchPropertyAction'
 
 export {
-  createPropertyAction,
-  deletePropertyAction,
-  editPropertyAction,
-  fetchPropertyAction,
+  createProperty,
+  deleteProperty,
+  editProperty,
+  fetchProperty,
 };

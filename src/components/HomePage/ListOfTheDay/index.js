@@ -5,7 +5,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTransition, useSpring, animated } from '@react-spring/web'
-import { fetchPropertyAction } from '../../../redux/actions/property'
+import { fetchProperty } from '../../../redux/actions/property'
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 
@@ -14,7 +14,7 @@ function ListingOfTheDay() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchPropertyAction(1))
+    dispatch(fetchProperty(1))
   }, [dispatch])
 
   const data = useSelector(state => state.property)

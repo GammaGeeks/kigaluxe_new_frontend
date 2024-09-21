@@ -13,6 +13,7 @@ import Places from './pages/Places';
 import Blogs from './pages/Blogs';
 import SinglePlace from './pages/SinglePlace';
 import SingleBlog from './pages/SingleBlog';
+import ContactUs from './pages/ContactUs';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='places/:id' element={<SinglePlace />} />
           <Route path='blog' element={<Blogs />} />
           <Route path='blogs/:id' element={<SingleBlog />} />
+          <Route path='contact_us' element={<ContactUs />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
