@@ -1,10 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 function ContactUs() {
+  const topOfPageRef = useRef(null)
+  useEffect(() => {
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }, [])
   return (
     <main>
+      <div ref={topOfPageRef}></div>
       <h2 className="aios-starter-theme-hide-title">Main Content</h2>
       {/* <!-- ip banner goes here --> */}
       <div className="textwidget custom-html-widget">
@@ -45,13 +52,13 @@ function ContactUs() {
                         <div className="ai-modern-contact-entry-inner">
                           <div className="ai-modern-contact-photo">
                             <span>
-                              <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/IMG_0107.jpg')})`}}></canvas>
+                              <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/images/contact_us.jpg')})`}}></canvas>
                             </span>
                           </div>
                           <div className="ai-modern-contact-main">
                             <div className="global-title">
                               <h2>
-                                <small>Serio Group</small>
+                                <small>KigaluXe Group</small>
                                 <span>Contact</span>
                               </h2>
                             </div>

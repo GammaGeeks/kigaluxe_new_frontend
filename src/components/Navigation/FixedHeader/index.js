@@ -91,7 +91,7 @@ function FixedHeader({setIsAsideActive, navbar}) {
                                 </ul> */}
                             </li>
                             <li id="menu-item-43" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
-                                <a href="#" data-title="Buyers">Buyers</a>
+                                <Link to='/search' data-title="Buyers">Buyers</Link>
                                 {/* <ul className="sub-menu">
                                     <li id="menu-item-42" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
                                         <a href="#" data-title="Property Search">Property Search</a>

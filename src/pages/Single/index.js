@@ -57,6 +57,13 @@ function SingleProperty() {
     }
   }, [])
 
+  const handleScroll = (id) => {
+    navigate(`/property/${id}`)
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
+  }
+
   // Modal
   const [show, setShow] = useState(false);
 
@@ -73,14 +80,18 @@ function SingleProperty() {
     dispatch(fetchProperty(id))
   }, [dispatch, id])
 
-  useEffect(() => {
-    dispatch(searchProperties())
-  }, [dispatch])
-
   const data = useSelector(state => state.property)
-  const properties = useSelector(state => state.properties)
+  const propertiesData = useSelector(state => state.properties)
 
   const { loading, property, getProperty, message } = data
+
+  const query = property && property.location ? `location=${property && property.location.split(' ')[0]}` : ''
+
+  const { listOfProperties = [], next, currentPage, getProperties } = propertiesData
+
+  useEffect(() => {
+    dispatch(searchProperties(query))
+  }, [dispatch, query])
 
   const imgs = property && property.urls ? property.urls : []
 
@@ -114,10 +125,16 @@ function SingleProperty() {
 
   const nextSlide = () => {
     setActiveIndex((activeIndex + 1) % imgs.length);
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
   };
 
   const previousSlide = () => {
     setActiveIndex((activeIndex - 1 + imgs.length) % imgs.length);
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
   };
 
   return (
@@ -648,105 +665,46 @@ function SingleProperty() {
                       </h2>
                     </div>
                     <div className="ip-fl-listing-row">
-                      <div className="ip-fl-listing-item">
-                        <a href="https://serioestates.com/homes-for-sale-details/10644-BELLAGIO-ROAD-LOS-ANGELES-CA-90077/24396691/306/">
-                          <div className="ip-fl-listing-img-holder">
-                            <div className="ip-fl-listing-img site-img">
-                              <canvas width="488" height="484"></canvas>
-                              <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1075834480/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcyMDU0ODQ5Mw/Kxmuw5uFnsF_mv_dlJQh2n-CuPZVDr_ku1WRsfBIsYY" alt="10644 Bellagio Road" width="488" height="484" />
-                            </div>
-                            <div className="ip-fl-listing-hover">
-                              <div className="ip-fl-listing-price">
-                                <span>$195,000,000</span>
+                      { propertiesData && listOfProperties ? listOfProperties.map(item => (
+                        <div key={item.id} className="ip-fl-listing-item">
+                          <Link to={`/property/${item.id}`}>
+                            <div className="ip-fl-listing-img-holder">
+                              <div className="ip-fl-listing-img site-img">
+                                <canvas width="488" height="484"></canvas>
+                                <img src={`https://d3mpuupcc30lzt.cloudfront.net/${item && item.imageIds[0]}`} alt="10644 Bellagio Road" width="488" height="484" />
                               </div>
-                              <div className="ip-fl-listing-hover-address">
-                                <span>10644 Bellagio Road <br /> Los Angeles, CA 90077 </span>
-                              </div>
-                              <div className="ip-fl-listing-info">
-                                <span>7 Beds <em className="ai-icon-bed"></em>
-                                </span>
-                                <span>20 Baths <em className="ai-icon-bath"></em>
-                                </span>
-                                <span>N/A Sqft <em className="ai-icon-sqft"></em>
-                                </span>
-                              </div>
-                              <div className="ip-fl-listing-hover-btn">
-                                <span className="global-btn">Read More</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="ip-fl-listing-address">
-                            <span>10644 Bellagio Road <br /> Los Angeles, CA 90077 </span>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="ip-fl-listing-item">
-                        <a href="https://serioestates.com/homes-for-sale-details/729-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24386575/306/">
-                          <div className="ip-fl-listing-img-holder">
-                            <div className="ip-fl-listing-img site-img">
-                              <canvas width="488" height="484"></canvas>
-                              <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1073249848/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNjA3MDMyOQ/ko-C9oWmTFpGo0aAiWal2LYmZoOdVEe01d3lW5x1XV0" alt="729 Bel Air Road" width="488" height="484" />
-                            </div>
-                            <div className="ip-fl-listing-hover">
-                              <div className="ip-fl-listing-price">
-                                <span>$150,000,000</span>
-                              </div>
-                              <div className="ip-fl-listing-hover-address">
-                                <span>729 Bel Air Road <br /> Los Angeles, CA 90077 </span>
-                              </div>
-                              <div className="ip-fl-listing-info">
-                                <span>9 Beds <em className="ai-icon-bed"></em>
-                                </span>
-                                <span>12 | 8 Baths <em className="ai-icon-bath"></em>
-                                </span>
-                                <span>18,784 Sqft <em className="ai-icon-sqft"></em>
-                                </span>
-                              </div>
-                              <div className="ip-fl-listing-hover-btn">
-                                <span className="global-btn">Read More</span>
+                              <div className="ip-fl-listing-hover">
+                                <div className="ip-fl-listing-price">
+                                  <span>RWF {item.price}</span>
+                                </div>
+                                <div className="ip-fl-listing-hover-address">
+                                  <span>{item.title}</span>
+                                </div>
+                                <div className="ip-fl-listing-hover-address">
+                                  <span>{item.location}</span>
+                                </div>
+                                <div className="ip-fl-listing-info">
+                                  <span>{item.bedrooms} Beds <em className="ai-icon-bed"></em>
+                                  </span>
+                                  <span>{item.bathrooms} Baths <em className="ai-icon-bath"></em>
+                                  </span>
+                                  <span>{item.property_size} Sqm <em className="ai-icon-sqft"></em>
+                                  </span>
+                                </div>
+                                <div className="ip-fl-listing-hover-btn">
+                                  <span onClick={() => handleScroll(item.id)} className="global-btn">Read More</span>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                          <div className="ip-fl-listing-address">
-                            <span>729 Bel Air Road <br /> Los Angeles, CA 90077 </span>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="ip-fl-listing-item">
-                        <a href="https://serioestates.com/homes-for-sale-details/1200-BEL-AIR-ROAD-LOS-ANGELES-CA-90077/24402569/306/">
-                          <div className="ip-fl-listing-img-holder">
-                            <div className="ip-fl-listing-img site-img">
-                              <canvas width="488" height="484"></canvas>
-                              <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1076545711/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxODY1NDA4MA/w2T_-Sw55k5Hz8XzFTDExt77B0tGmyew-cl5b4vaSTw" alt="1200 Bel Air Road" width="488" height="484" />
+                            <div className="ip-fl-listing-address">
+                              <span>{item.location}</span>
                             </div>
-                            <div className="ip-fl-listing-hover">
-                              <div className="ip-fl-listing-price">
-                                <span>$139,000,000</span>
-                              </div>
-                              <div className="ip-fl-listing-hover-address">
-                                <span>1200 Bel Air Road <br /> Los Angeles, CA 90077 </span>
-                              </div>
-                              <div className="ip-fl-listing-info">
-                                <span>12 Beds <em className="ai-icon-bed"></em>
-                                </span>
-                                <span>17 Baths <em className="ai-icon-bath"></em>
-                                </span>
-                                <span>N/A Sqft <em className="ai-icon-sqft"></em>
-                                </span>
-                              </div>
-                              <div className="ip-fl-listing-hover-btn">
-                                <span className="global-btn">Read More</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="ip-fl-listing-address">
-                            <span>1200 Bel Air Road <br /> Los Angeles, CA 90077 </span>
-                          </div>
-                        </a>
-                      </div>
+                          </Link>
+                        </div>
+                      )) : ''}
                     </div>
                     <div className="ip-fl-listing-more-btn">
-                      <a className="global-btn" href="https://serioestates.com/featured-listings/">Load More</a>
+                      <Link className="global-btn" to='/listings/'>Load More</Link>
                     </div>
                   </div>
                 </div>

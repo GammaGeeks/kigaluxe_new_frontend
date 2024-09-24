@@ -116,7 +116,7 @@ function Header({setIsAsideActive}) {
                             </Nav>
                             <Nav className="main-nav">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
-                                    <a href="#" data-title="Buyers">Buyers</a>
+                                    <Link to='/search' data-title="Buyers">Buyers</Link>
                                     {/* <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
                                             <a href="https://serioestates.com/property-search/" data-title="Property Search">Property Search</a>

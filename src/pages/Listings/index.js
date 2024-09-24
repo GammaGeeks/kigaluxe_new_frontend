@@ -21,14 +21,14 @@ function Listings() {
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const properties = useSelector(state => state.properties)
   useEffect(() => {
     dispatch(fetchAllProperties(1, 12))
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-  const properties = useSelector(state => state.properties)
+  })
 
   // eslint-disable-next-line no-unused-vars
-  const { listOfProperties, next, currentPage, getProperties } = properties
+  const { listOfProperties = [], next, currentPage, getProperties } = properties || {}
 
   
   const nextPagination = () => {
@@ -104,14 +104,15 @@ function Listings() {
                   </div>
                   <div className="ip-fl-listing-row">
                   {
-                    properties && listOfProperties ? listOfProperties.map((item, index) => {
+                    (!properties || properties.listOfProperties.length === 0) || listOfProperties ? listOfProperties.map((item, index) => {
+                      console.log(item);
                       return (
                         <div key={index} className="ip-fl-listing-item">
                           <a href="#">
                             <div className="ip-fl-listing-img-holder">
                               <div className="ip-fl-listing-img site-img">
                                 <canvas width="488" height="484"></canvas>
-                                <img src={item.imageUrl[0]} alt="Featured Listings" width="488" height="484" id="24386575" />
+                                <img src={item && item.imageUrl && item.imageUrl[0]} alt="Featured Listings" width="488" height="484" id="24386575" />
                                 {/* <!-- <img src="https://imageproxy.agentimage.com/488x484/https://api-trestle.corelogic.com/trestle/Media/CRMLS/Property/PHOTO-jpeg/1073249848/1/Mzc4LzgzMDEvMjA/MjAvMTY3MTgvMTcxNjA3MDMyOQ/ko-C9oWmTFpGo0aAiWal2LYmZoOdVEe01d3lW5x1XV0" alt="Featured Listings" width="488" height="484"> --> */}
                               </div>
                               <div className="mls-logo-overlay">
