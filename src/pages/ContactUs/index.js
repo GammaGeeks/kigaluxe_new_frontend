@@ -1,8 +1,51 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 function ContactUs() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form.current);
+    emailjs.sendForm('service_suiqez4', 'template_2c30zan', form.current, 'sYn9j2LcraIwTuaBw')
+      .then((result) => {
+          console.log('SUCCESS!', result.status, result.text);
+          // You can add code here to show a success message to the user
+          toast('MESSAGE SENT!!!', {
+            duration: 4300,
+            position: 'top-center',
+          
+            // Styling
+            style: {
+              background: 'green',
+              color: '#fff',
+            },
+            // className: '',
+          
+            // Custom Icon
+            icon: '👏',
+          
+            // Change colors of success/error/loading icon
+            iconTheme: {
+              primary: '#000',
+              secondary: '#fff',
+            },
+          
+            // Aria
+            ariaProps: {
+              role: 'status',
+              'aria-live': 'polite',
+            },
+          })
+      }, (error) => {
+          console.log('FAILED...', error);
+          // You can add code here to show an error message to the user
+      });
+  };
+
   const topOfPageRef = useRef(null)
   useEffect(() => {
     if (topOfPageRef.current) {
@@ -12,6 +55,7 @@ function ContactUs() {
   return (
     <main>
       <div ref={topOfPageRef}></div>
+      <Toaster />
       <h2 className="aios-starter-theme-hide-title">Main Content</h2>
       {/* <!-- ip banner goes here --> */}
       <div className="textwidget custom-html-widget">
@@ -87,35 +131,35 @@ function ContactUs() {
                                     <p role="status" aria-live="polite" aria-atomic="true"></p>
                                     <ul></ul>
                                   </div>
-                                  <form action="/contact-us/#wpcf7-f86-p18-o2" method="post" className="wpcf7-form init use-floating-validation-tip" aria-label="Contact form" novalidate="novalidate" data-status="init">
+                                  <form ref={form} onSubmit={sendEmail} className="wpcf7-form init use-floating-validation-tip" aria-label="Contact form">
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-fname" className="ai-modern-contact-form-label">First Name</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-fname">
-                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ai-modern-contact-form-control" id="your-fname" aria-required="true" aria-invalid="false" value="" type="text" name="your-fname" />
+                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ai-modern-contact-form-control" id="your-fname" aria-required="true" aria-invalid="false" type="text" name="firstname" />
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-lname" className="ai-modern-contact-form-label">Last Name</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-lname">
-                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ai-modern-contact-form-control" id="your-lname" aria-required="true" aria-invalid="false" value="" type="text" name="your-lname" />
+                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required ai-modern-contact-form-control" id="your-lname" aria-required="true" aria-invalid="false" type="text" name="lastname" />
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-phone" className="ai-modern-contact-form-label">Phone Number</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-phone">
-                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel ai-modern-contact-form-control" id="your-phone" aria-required="true" aria-invalid="false" value="" type="tel" name="your-phone" />
+                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel ai-modern-contact-form-control" id="your-phone" aria-required="true" aria-invalid="false" type="tel" name="phone" />
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-email" className="ai-modern-contact-form-label">Email Address</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-email">
-                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email ai-modern-contact-form-control" id="your-email" aria-required="true" aria-invalid="false" value="" type="email" name="your-email" />
+                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email ai-modern-contact-form-control" id="your-email" aria-required="true" aria-invalid="false" type="email" name="email" />
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field lg">
                                       <label for="your-message" className="ai-modern-contact-form-label">Message</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-message">
-                                        <textarea cols="40" rows="10" maxlength="2000" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required ai-modern-contact-form-control" id="your-message" aria-required="true" aria-invalid="false" name="your-message"></textarea>
+                                        <textarea cols="40" rows="10" maxlength="2000" className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required ai-modern-contact-form-control" id="your-message" aria-required="true" aria-invalid="false" name="message"></textarea>
                                       </span>
                                       <button aria-label="Send Me A Message" type="submit" className="ai-modern-contact-form-submit wpcf7-form-control has-spinner wpcf7-submit">
                                         <i className="ai-font-paper-airplane-alt" aria-hidden="true"></i>

@@ -105,7 +105,6 @@ function Listings() {
                   <div className="ip-fl-listing-row">
                   {
                     (!properties || properties.listOfProperties.length === 0) || listOfProperties ? listOfProperties.map((item, index) => {
-                      console.log(item);
                       return (
                         <div key={index} className="ip-fl-listing-item">
                           <a href="#">
