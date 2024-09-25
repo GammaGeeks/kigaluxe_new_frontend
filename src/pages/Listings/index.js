@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/style-prop-object */
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 // import slideImgOne from '../../assets/images/slide-img-1.jpg'
 // import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
@@ -11,7 +11,7 @@ import { fetchAllProperties } from '../../redux/actions/properties'
 import { useNavigate } from 'react-router-dom'
 
 function Listings() {
-
+  const [page, setPage] = useState(1);
   const topOfPageRef = useRef(null)
   useEffect(() => {
     if (topOfPageRef.current) {
@@ -23,25 +23,50 @@ function Listings() {
   const dispatch = useDispatch()
   const properties = useSelector(state => state.properties)
   useEffect(() => {
-    dispatch(fetchAllProperties(1, 12))
+    dispatch(fetchAllProperties(1, 6))
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  })
+  }, [])
 
   // eslint-disable-next-line no-unused-vars
-  const { listOfProperties = [], next, currentPage, getProperties } = properties || {}
-
+  const { listOfProperties = [], next, currentPage, getProperties = {} } = properties || {}
+  const { loading } = getProperties
   
   const nextPagination = () => {
     const nextPage = next
     console.log("Next Page: " + nextPage);
-    if(nextPage) dispatch(fetchAllProperties(nextPage % listOfProperties.length, 12));
+    if(nextPage) dispatch(fetchAllProperties(nextPage % listOfProperties.length, 6));
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
   };
 
   const prevPagination = (e) => {
     const prevPage = currentPage - 1;
     console.log("Prev Page: " + prevPage);
-    if(prevPage) dispatch(fetchAllProperties(prevPage % listOfProperties.length, 12))
+    if(prevPage) dispatch(fetchAllProperties(prevPage % listOfProperties.length, 6))
+    if (topOfPageRef.current) {
+      topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
+    }
   };
+
+
+  const handleScroll = () => {
+    if (
+      window.innerHeight + document.documentElement.scrollTop
+      === document.documentElement.offsetHeight
+    ) {
+      if (next && !loading) {
+        setPage(prevPage => prevPage + 1);
+        dispatch(fetchAllProperties(page + 1, 6, true));
+      }
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [next, loading]);
 
 
   return (
@@ -147,6 +172,7 @@ function Listings() {
                       )
                     }) : ''
                   }
+                  {loading && <div className="ip-fl-listing-item">Loading more properties...</div>}
                   <div className="ip-fl-listing-pagination" style={{
                     display: 'flex',
                     justifyContent: 'center',

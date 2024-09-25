@@ -121,7 +121,7 @@ function SingleProperty() {
       clearInterval(interval)
       // clearInterval(interval2)
     }
-  }, [])
+  }, [imgs.length])
 
   const nextSlide = () => {
     setActiveIndex((activeIndex + 1) % imgs.length);

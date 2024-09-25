@@ -15,7 +15,11 @@ export default (state = properties, { type, payload }) => {
     case propertiesTypes.FETCH_PROPERTIES_SUCCESS:
       return produce(state, (draft) => {
         draft.loading = false;
-        draft.listOfProperties = [...payload.data.paginate]
+        if (payload.append) {
+          draft.listOfProperties = [...draft.listOfProperties, ...payload.data.paginate];
+        } else {
+          draft.listOfProperties = payload.data.paginate;
+        }
         draft.next = payload.data.next
         draft.currentPage = payload.data.currentPage
         draft.getProperties.loading = false

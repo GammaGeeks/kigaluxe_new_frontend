@@ -11,7 +11,7 @@ const apiMiddleware = ({ dispatch, getState }) => (next) => async ({ type = '', 
       payload.url,
       payload.data
     );
-    dispatch({ type: payload.onSuccess, payload: data });
+    dispatch({ type: payload.onSuccess, payload: {...data, append: payload.append }});
   } catch (error) {
     dispatch({
       type: payload.onFailure,
