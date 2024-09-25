@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,14 +15,23 @@ import Blogs from './pages/Blogs';
 import SinglePlace from './pages/SinglePlace';
 import SingleBlog from './pages/SingleBlog';
 import ContactUs from './pages/ContactUs';
-
+// Function to check if the device is mobile
+const isMobileDevice = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(isMobileDevice());
+  }, []);
+
   return (
     <div className='App'>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={isMobile ? <Navigate to="/listings" replace /> : <Home />} />
           <Route path='services' element={<Services />} />
           <Route path='about_us' element={<AboutUs />} />
           <Route path='listings' element={<Listings />} />
