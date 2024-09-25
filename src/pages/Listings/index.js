@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/style-prop-object */
@@ -173,7 +174,7 @@ function Listings() {
                     }) : ''
                   }
                   {loading && <div className="ip-fl-listing-item">Loading more properties...</div>}
-                  <div className="ip-fl-listing-pagination" style={{
+                  {/* <div className="ip-fl-listing-pagination" style={{
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -183,7 +184,7 @@ function Listings() {
                       <button onClick={prevPagination} className="ip-ld-hero-prev" aria-label="Prev"><em className="ai-icon-prev"></em></button>
                       <button onClick={nextPagination} className="ip-ld-hero-next" aria-label="Next"><em className="ai-icon-next"></em></button>
                     </div>
-                  </div>
+                  </div> */}
                   </div>
                   </div>
                 </div>

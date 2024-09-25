@@ -17,7 +17,7 @@ import SingleBlog from './pages/SingleBlog';
 import ContactUs from './pages/ContactUs';
 // Function to check if the device is mobile
 const isMobileDevice = () => {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return /Mobi|Android/i.test(navigator.userAgent);
 };
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
   useEffect(() => {
     setIsMobile(isMobileDevice());
   }, []);
+
+  console.log(isMobile);
 
   return (
     <div className='App'>
