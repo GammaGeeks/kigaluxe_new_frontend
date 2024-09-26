@@ -3,12 +3,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/style-prop-object */
 import React, { useEffect, useRef, useState } from 'react'
-
+import '../../styles/custom-checkboxes.css';
 // import slideImgOne from '../../assets/images/slide-img-1.jpg'
 import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
 import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllProperties } from '../../redux/actions/properties'
+import { fetchAllCategories } from '../../redux/actions/categories'
 import { useNavigate } from 'react-router-dom'
 import PriceRangeSlider from '../../components/Listings/PriceRangeSlider'
 import SizeRangeSlider from '../../components/Listings/SizeRangeSlider'
@@ -25,8 +26,11 @@ function Listings() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const properties = useSelector(state => state.properties)
+  const categories = useSelector(state => state.categories)
+
   useEffect(() => {
     dispatch(fetchAllProperties(1, 6))
+    dispatch(fetchAllCategories())
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -34,6 +38,9 @@ function Listings() {
   const { listOfProperties = [], next, currentPage, getProperties = {} } = properties || {}
   const { loading } = getProperties
   
+  // eslint-disable-next-line no-unused-vars
+  const { listOfCategories = [], getCategories = {} } = categories || {}
+
   const nextPagination = () => {
     const nextPage = next
     console.log("Next Page: " + nextPage);
@@ -96,23 +103,23 @@ function Listings() {
                 <div className="container">
                   <form className="row g-3">
                     <div className="col-md-6">
-                      <label style={{fontSize: '12px'}} for="inputEmail4" className="form-label">Email</label>
+                      <label style={{fontSize: '16px'}} for="inputEmail4" className="form-label">Email</label>
                       <input type="email" className="form-control" id="inputEmail4"/>
                     </div>
                     <div className="col-md-6">
-                      <label style={{fontSize: '12px'}} for="inputPassword4" className="form-label">Password</label>
+                      <label style={{fontSize: '16px'}} for="inputPassword4" className="form-label">Password</label>
                       <input type="password" className="form-control" id="inputPassword4"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '12px'}} for="inputAddress" className="form-label">Address</label>
-                      <input style={{fontSize: '12px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                      <label style={{fontSize: '16px'}} for="inputAddress" className="form-label">Address</label>
+                      <input style={{fontSize: '16px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '12px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <label style={{fontSize: '16px'}} for="inputAddress2" className="form-label">Address 2</label>
                       <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
                     </div>
                     <div className="col-md-6">
-                      <label style={{fontSize: '12px'}} for="inputCity" className="form-label">City</label>
+                      <label style={{fontSize: '16px'}} for="inputCity" className="form-label">City</label>
                       <input type="text" className="form-control" id="inputCity"/>
                     </div>
                     <div className="col-md-4">
@@ -123,11 +130,11 @@ function Listings() {
                       </select>
                     </div>
                     <div className="col-md-2">
-                      <label style={{fontSize: '12px'}} for="inputZip" className="form-label">Zip</label>
+                      <label style={{fontSize: '16px'}} for="inputZip" className="form-label">Zip</label>
                       <input type="text" className="form-control" id="inputZip"/>
                     </div>
                     <div className="col-12">
-                      <div style={{fontSize: '12px'}} className="form-check">
+                      <div style={{fontSize: '16px'}} className="form-check">
                         <input className="form-check-input" type="checkbox" id="gridCheck"/>
                         <label className="form-check-label" for="gridCheck">
                           Check me out
@@ -163,7 +170,7 @@ function Listings() {
                 </div>
               </div> */}
               <div className="ip-fl-listing-main">
-                <div className="container">
+                <div className="custom-container px-5">
                   <div style={{opacity: 1}} className="global-title is-centered">
                     {/* <h2 style={{fontSize: '0.2em !important'}}>
                       <span>Listings </span>
@@ -174,7 +181,7 @@ function Listings() {
                       <span>Advanced Search </span>
                     </h2>
                     <div className="col-md-3">
-                      <label style={{fontSize: '12px'}} htmlFor="inputLocation" className="form-label">Location</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputLocation" className="form-label">Location</label>
                       <input
                         style={{
                           border: 'none',
@@ -188,10 +195,11 @@ function Listings() {
                         className="form-control"
                         id="inputLocation"
                         name='location'
+                        placeholder='City, Province'
                       />
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '12px', marginBottom: '0.35rem'}} htmlFor="inputType" className="form-label">Property Type</label>
+                      <label style={{fontSize: '16px', marginBottom: '0.35rem'}} htmlFor="inputType" className="form-label">Property Type</label>
                       <select
                         id="inputType"
                         className="form-select"
@@ -205,45 +213,49 @@ function Listings() {
                         }}
                       >
                         <option selected>Choose...</option>
-                        <option>...</option>
+                        {
+                          (!categories || categories.listOfCategories.length === 0) || listOfCategories ? listOfCategories.map((item, index) => (
+                            <option key={index}>{item.name}</option>
+                          )) : <option>...</option>
+                        }
                       </select>
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '12px', marginBottom: '1.2rem'}} for="inputEmail4" className="form-label">Price Range</label>
+                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} for="inputEmail4" className="form-label">Price Range</label>
                       <PriceRangeSlider />
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '12px', marginBottom: '1.2rem'}} for="inputPassword4" className="form-label">Property Size</label>
+                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} for="inputPassword4" className="form-label">Property Size</label>
                       <SizeRangeSlider />
                     </div>
                     <h2 className='fs-6'>
                       <span style={{fontSize: '0.1em !important'}}>Would you like more filters </span>
                     </h2>
                     {/* <div className="col-12">
-                      <label style={{fontSize: '12px'}} for="inputAddress" className="form-label">Address</label>
-                      <input style={{fontSize: '12px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                      <label style={{fontSize: '16px'}} for="inputAddress" className="form-label">Address</label>
+                      <input style={{fontSize: '16px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '12px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <label style={{fontSize: '16px'}} for="inputAddress2" className="form-label">Address 2</label>
                       <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
                     </div> */}
-                    <div className="col-md-6">
-                      {/* <label style={{fontSize: '12px'}} for="inputCity" className="form-label">City</label>
+                    <div className="col-md-4">
+                      {/* <label style={{fontSize: '16px'}} for="inputCity" className="form-label">City</label>
                       <input type="text" className="form-control" id="inputCity"/> */}
                       <div className="d-flex flex-wrap gap-2">
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Residential House
                           </label>
                         </div>
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Commercial
                           </label>
                         </div>
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Office
@@ -251,25 +263,25 @@ function Listings() {
                         </div>
                       </div>
                       <div className="d-flex flex-wrap gap-2">
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Cottage
                           </label>
                         </div>
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Pent House
                           </label>
                         </div>
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Land
                           </label>
                         </div>
-                        <div style={{fontSize: '12px'}} className="form-check">
+                        <div style={{fontSize: '16px'}} className="form-check">
                           <input className="form-check-input" type="checkbox" id="gridCheck"/>
                           <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
                             Appartment
@@ -277,8 +289,33 @@ function Listings() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-6">
-                    <button type="submit" className="btn btn-lg btn-block btn-primary btn-form-submit" id="ihf-search-adv-submit"> Search </button>
+                    <div className='col-md-4'>
+                      <div className="d-flex flex-wrap gap-2">
+                        <div style={{fontSize: '16px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            For Rent
+                          </label>
+                        </div>
+                        <div style={{fontSize: '16px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            For Sale
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <button
+                        type="submit"
+                        className="btn btn-lg btn-block btn-primary btn-form-submit"
+                        id="ihf-search-adv-submit"
+                        style={{
+                          backgroundColor: '#031B28dc',
+                          borderColor: '#031B28dc',
+                          color: 'white'
+                        }}
+                      > Search </button>
                     </div>
                   </form>
                 </div>

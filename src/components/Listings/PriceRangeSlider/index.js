@@ -29,7 +29,7 @@ const PriceRangeSlider = () => {
             ...getBackgroundSize(),
             height: '4px',
             WebkitAppearance: 'none',
-            background: 'linear-gradient(to right, #007bff 0%, #007bff 50%, #dedede 50%, #dedede 100%)',
+            background: 'linear-gradient(to right, #031B28dc 0%, #031B28dc 50%, #dedede 50%, #dedede 100%)',
           }}
         />
         <div 
@@ -41,7 +41,7 @@ const PriceRangeSlider = () => {
             fontWeight: 'bold',
             padding: '2px 6px',
             borderRadius: '10px',
-            backgroundColor: '#007bff',
+            backgroundColor: '#031B28dc',
             color: 'white',
           }}
         >

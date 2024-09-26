@@ -7,12 +7,16 @@ import place from './placeInitState';
 import places from './placesInitState';
 import blog from './blogInitState';
 import blogs from './blogsInitState';
+import category from './categoryInitState';
+import categories from './categoriesInitState';
 
 export default {
   user,
 //   users,
   property,
   properties,
+  category,
+  categories,
   place,
   places,
   blog,

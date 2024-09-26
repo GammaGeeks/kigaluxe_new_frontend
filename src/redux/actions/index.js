@@ -8,6 +8,8 @@ import * as commentsAction from './comments'
 import * as commentAction from './comment'
 import * as placeAction from './place'
 import * as placesAction from './places'
+import * as categoriesAction from './categories'
+import * as categoryAction from './category'
 
 export {
   userAction,
@@ -19,5 +21,7 @@ export {
   commentsAction,
   commentAction,
   placeAction,
-  placesAction
+  placesAction,
+  categoriesAction,
+  categoryAction
 }

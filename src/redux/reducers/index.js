@@ -9,6 +9,8 @@ import comment from './comment';
 import comments from './comments';
 import place from './place';
 import places from './places';
+import category from './category';
+import categories from './categories';
 
 export default {
   user,
@@ -21,4 +23,6 @@ export default {
   comments,
   place,
   places,
+  category,
+  categories
 }

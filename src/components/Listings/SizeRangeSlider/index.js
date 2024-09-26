@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
 const SizeRangeSlider = () => {
-  const [value, setValue] = useState(0);
   const min = 20;
   const max = 200;
+  const [value, setValue] = useState(min);
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    setValue(parseInt(event.target.value));
   };
 
   const getBackgroundSize = () => {
-    return { backgroundSize: `${(value * 100) / (max - min)}% 100%` };
+    return { backgroundSize: `${((value - min) * 100) / (max - min)}% 100%` };
   };
 
   return (
     <div className="d-flex align-items-center" style={{ gap: '10px' }}>
-      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>20sqm</p>
+      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>{min}sqm</p>
       <div className="position-relative flex-grow-1" style={{ margin: '0 10px' }}>
         <input 
           type="range" 
@@ -29,26 +29,26 @@ const SizeRangeSlider = () => {
             ...getBackgroundSize(),
             height: '4px',
             WebkitAppearance: 'none',
-            background: 'linear-gradient(to right, #007bff 0%, #007bff 50%, #dee2e6 50%, #dee2e6 100%)',
+            background: 'linear-gradient(to right, #031B28dc 0%, #031B28dc 50%, #dee2e6 50%, #dee2e6 100%)',
           }}
         />
         <div 
           className="position-absolute translate-middle" 
           style={{ 
-            left: `${(value - min) * 100 / (max - min)}%`, 
+            left: `${((value - min) * 100) / (max - min)}%`, 
             top: '50%',
             fontSize: '12px',
             fontWeight: 'bold',
             padding: '2px 6px',
             borderRadius: '10px',
-            backgroundColor: '#007bff',
+            backgroundColor: '#031B28dc',
             color: 'white',
           }}
         >
           {value}
         </div>
       </div>
-      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>200 sqm</p>
+      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>{max} sqm</p>
     </div>
   );
 };
