@@ -5,11 +5,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 // import slideImgOne from '../../assets/images/slide-img-1.jpg'
-// import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
+import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
 import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllProperties } from '../../redux/actions/properties'
 import { useNavigate } from 'react-router-dom'
+import PriceRangeSlider from '../../components/Listings/PriceRangeSlider'
+import SizeRangeSlider from '../../components/Listings/SizeRangeSlider'
 
 function Listings() {
   const [page, setPage] = useState(1);
@@ -85,19 +87,65 @@ function Listings() {
       <div id="ip-featured-listings">
         <div className="ip-fl-container">
           {/* <div className="ip-fl-section">
-            <div id="ip-comm-banner" className="custom-ip-banner aios-scroll-section">
-              <canvas width="1530" height="581" style={{ backgroundImage: `url(${bannerWithBorderA})` }}></canvas>
-              <div className="custom-ip-tagline">
-                <div className="container">Respected. Loyal. Relentless. Discreet.</div>
-              </div>
-            </div>
+            
           </div> */}
           <div className="ip-fl-section">
+            {/* <div id="ip-comm-banner" className="custom-ip-banner aios-scroll-section">
+              <canvas width="1530" height="581"></canvas>
+              <div style={{marginTop: 400}} className="custom-ip-tagline">
+                <div className="container">
+                  <form className="row g-3">
+                    <div className="col-md-6">
+                      <label style={{fontSize: '12px'}} for="inputEmail4" className="form-label">Email</label>
+                      <input type="email" className="form-control" id="inputEmail4"/>
+                    </div>
+                    <div className="col-md-6">
+                      <label style={{fontSize: '12px'}} for="inputPassword4" className="form-label">Password</label>
+                      <input type="password" className="form-control" id="inputPassword4"/>
+                    </div>
+                    <div className="col-12">
+                      <label style={{fontSize: '12px'}} for="inputAddress" className="form-label">Address</label>
+                      <input style={{fontSize: '12px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                    </div>
+                    <div className="col-12">
+                      <label style={{fontSize: '12px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+                    </div>
+                    <div className="col-md-6">
+                      <label style={{fontSize: '12px'}} for="inputCity" className="form-label">City</label>
+                      <input type="text" className="form-control" id="inputCity"/>
+                    </div>
+                    <div className="col-md-4">
+                      <label for="inputState" className="form-label">State</label>
+                      <select id="inputState" className="form-select">
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div className="col-md-2">
+                      <label style={{fontSize: '12px'}} for="inputZip" className="form-label">Zip</label>
+                      <input type="text" className="form-control" id="inputZip"/>
+                    </div>
+                    <div className="col-12">
+                      <div style={{fontSize: '12px'}} className="form-check">
+                        <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                        <label className="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <button type="submit" className="btn btn-primary">Sign in</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div> */}
             <div id="ip-comm-content" className="ip-fl-listing-container aios-scroll-section">
               <div className="ip-fl-bg attachment-fixed">
                 <canvas width="1600" height="1068" style={{backgroundImage: `url(${flBg})`}}></canvas>
               </div>
-              <div className="custom-breadcrumbs">
+              {/* <div className="custom-breadcrumbs">
                 <div className="container">
                   <p id="breadcrumbs">
                     <span>
@@ -113,8 +161,127 @@ function Listings() {
                     </span>
                   </p>
                 </div>
-              </div>
+              </div> */}
               <div className="ip-fl-listing-main">
+                <div className="container">
+                  <div style={{opacity: 1}} className="global-title is-centered">
+                    {/* <h2 style={{fontSize: '0.2em !important'}}>
+                      <span>Listings </span>
+                    </h2> */}
+                  </div>
+                  <form className="row mt-5 g-3">
+                    <h2 className='fs-4'>
+                      <span>Advanced Search </span>
+                    </h2>
+                    <div className="col-md-3">
+                      <label style={{fontSize: '12px'}} htmlFor="inputLocation" className="form-label">Location</label>
+                      <input
+                        style={{
+                          border: 'none',
+                          borderBottom: '1px solid #000',
+                          borderRadius: '0',
+                          padding: '0.375rem 0.75rem',
+                          backgroundColor: '#dedede',
+                          outline: 'none'
+                        }}
+                        type="text"
+                        className="form-control"
+                        id="inputLocation"
+                        name='location'
+                      />
+                    </div>
+                    <div className="col-md-3">
+                      <label style={{fontSize: '12px', marginBottom: '0.35rem'}} htmlFor="inputType" className="form-label">Property Type</label>
+                      <select
+                        id="inputType"
+                        className="form-select"
+                        style={{
+                          border: 'none',
+                          borderBottom: '1px solid #000',
+                          borderRadius: '0',
+                          padding: '0.375rem 0.75rem',
+                          backgroundColor: '#dedede',
+                          outline: 'none'
+                        }}
+                      >
+                        <option selected>Choose...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                    <div className="col-md-3">
+                      <label style={{fontSize: '12px', marginBottom: '1.2rem'}} for="inputEmail4" className="form-label">Price Range</label>
+                      <PriceRangeSlider />
+                    </div>
+                    <div className="col-md-3">
+                      <label style={{fontSize: '12px', marginBottom: '1.2rem'}} for="inputPassword4" className="form-label">Property Size</label>
+                      <SizeRangeSlider />
+                    </div>
+                    <h2 className='fs-6'>
+                      <span style={{fontSize: '0.1em !important'}}>Would you like more filters </span>
+                    </h2>
+                    {/* <div className="col-12">
+                      <label style={{fontSize: '12px'}} for="inputAddress" className="form-label">Address</label>
+                      <input style={{fontSize: '12px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                    </div>
+                    <div className="col-12">
+                      <label style={{fontSize: '12px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+                    </div> */}
+                    <div className="col-md-6">
+                      {/* <label style={{fontSize: '12px'}} for="inputCity" className="form-label">City</label>
+                      <input type="text" className="form-control" id="inputCity"/> */}
+                      <div className="d-flex flex-wrap gap-2">
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Residential House
+                          </label>
+                        </div>
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Commercial
+                          </label>
+                        </div>
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Office
+                          </label>
+                        </div>
+                      </div>
+                      <div className="d-flex flex-wrap gap-2">
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Cottage
+                          </label>
+                        </div>
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Pent House
+                          </label>
+                        </div>
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Land
+                          </label>
+                        </div>
+                        <div style={{fontSize: '12px'}} className="form-check">
+                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
+                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                            Appartment
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                    <button type="submit" className="btn btn-lg btn-block btn-primary btn-form-submit" id="ihf-search-adv-submit"> Search </button>
+                    </div>
+                  </form>
+                </div>
                 <div className="custom-container">
                   <div style={{opacity: 1, marginTop: '-30px'}} className="global-title is-centered">
                     <h2>
