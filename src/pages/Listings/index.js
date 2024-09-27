@@ -42,15 +42,15 @@ function Listings() {
     }
   
     if (formData.propertySize && (formData.propertySize.min !== 0 || formData.propertySize.max !== 10000)) {
-      queryParts.push(`property_size=${formData.propertySize.min},${formData.propertySize.max}`);
+      queryParts.push(`property_size=[${formData.propertySize.min},${formData.propertySize.max}]`);
     }
   
     if (formData.priceRange && (formData.priceRange.min !== 0 || formData.priceRange.max !== 2000000000)) {
-      queryParts.push(`price=${formData.priceRange.min},${formData.priceRange.max}`);
+      queryParts.push(`price=[${formData.priceRange.min},${formData.priceRange.max}]`);
     }
   
     if (formData.propertyCategories && formData.propertyCategories.length > 0) {
-      queryParts.push(`property_categories=${formData.propertyCategories.join(',')}`);
+      queryParts.push(`property_categories='${formData.propertyCategories.join(',')}'`);
     }
   
     if (formData.listingType && formData.listingType.length > 0) {
@@ -180,61 +180,6 @@ function Listings() {
             
           </div> */}
           <div className="ip-fl-section">
-            {/* <div id="ip-comm-banner" className="custom-ip-banner aios-scroll-section">
-              <canvas width="1530" height="581"></canvas>
-              <div style={{marginTop: 400}} className="custom-ip-tagline">
-                <div className="container">
-                  <form className="row g-3">
-                    <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} htmlFor="inputEmail4" className="form-label">Email</label>
-                      <input type="email" className="form-control" id="inputEmail4"/>
-                    </div>
-                    <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} htmlFor="inputPassword4" className="form-label">Password</label>
-                      <input type="password" className="form-control" id="inputPassword4"/>
-                    </div>
-                    <div className="col-12">
-                      <label style={{fontSize: '16px'}} htmlFor="inputAddress" className="form-label">Address</label>
-                      <input style={{fontSize: '16px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
-                    </div>
-                    <div className="col-12">
-                      <label style={{fontSize: '16px'}} htmlFor="inputAddress2" className="form-label">Address 2</label>
-                      <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
-                    </div>
-                    <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} htmlFor="inputCity" className="form-label">City</label>
-                      <input type="text" className="form-control" id="inputCity"/>
-                    </div>
-                    <div className="col-md-4">
-                      <label htmlFor="inputState" className="form-label">State</label>
-                      <select id="inputState" className="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div className="col-md-2">
-                      <label style={{fontSize: '16px'}} htmlFor="inputZip" className="form-label">Zip</label>
-                      <input type="text" className="form-control" id="inputZip"/>
-                    </div>
-                    <div className="col-12">
-                      <div style={{fontSize: '16px'}} className="form-check">
-                        <input
-                            className="form-check-input"
-                            type="checkbox"
-                            id="gridCheck"
-                          />
-                        <label className="form-check-label" htmlFor="gridCheck">
-                          Check me out
-                        </label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <button type="submit" className="btn btn-primary">Sign in</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div> */}
             <div id="ip-comm-content" className="ip-fl-listing-container aios-scroll-section">
               <div className="ip-fl-bg attachment-fixed">
                 <canvas width="1600" height="1068" style={{backgroundImage: `url(${flBg})`}}></canvas>
@@ -304,7 +249,7 @@ function Listings() {
                           outline: 'none'
                         }}
                       >
-                        <option defaultValue={true}>Choose...</option>
+                        <option value='' defaultValue={true}>Choose...</option>
                         {
                           (!categories || categories.listOfCategories.length === 0) || listOfCategories ? listOfCategories.map((item, index) => (
                             <option key={index} value={item.id}>{item.name}</option>
