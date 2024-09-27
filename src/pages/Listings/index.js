@@ -8,13 +8,96 @@ import '../../styles/custom-checkboxes.css';
 import bannerWithBorderA from '../../assets/images/banner-with-border-a.png'
 import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchAllProperties } from '../../redux/actions/properties'
+import { fetchAllProperties, searchProperties } from '../../redux/actions/properties'
 import { fetchAllCategories } from '../../redux/actions/categories'
 import { useNavigate } from 'react-router-dom'
 import PriceRangeSlider from '../../components/Listings/PriceRangeSlider'
 import SizeRangeSlider from '../../components/Listings/SizeRangeSlider'
 
 function Listings() {
+  const [formData, setFormData] = useState({
+    location: '',
+    propertyType: '',
+    priceRange: {
+      min: 0,
+      max: 1000000
+    },
+    propertySize: {
+      min: 0,
+      max: 10000
+    },
+    propertyCategories: [],
+    listingType: [],
+  });
+
+  const buildQuery = (formData) => {
+    const queryParts = [];
+  
+    if (formData.location) {
+      queryParts.push(`location=${encodeURIComponent(formData.location)}`);
+    }
+  
+    if (formData.propertyType) {
+      queryParts.push(`property_type=${encodeURIComponent(formData.propertyType)}`);
+    }
+  
+    if (formData.propertySize && (formData.propertySize.min !== 0 || formData.propertySize.max !== 10000)) {
+      queryParts.push(`property_size=${formData.propertySize.min},${formData.propertySize.max}`);
+    }
+  
+    if (formData.priceRange && (formData.priceRange.min !== 0 || formData.priceRange.max !== 2000000000)) {
+      queryParts.push(`price=${formData.priceRange.min},${formData.priceRange.max}`);
+    }
+  
+    if (formData.propertyCategories && formData.propertyCategories.length > 0) {
+      queryParts.push(`property_categories=${formData.propertyCategories.join(',')}`);
+    }
+  
+    if (formData.listingType && formData.listingType.length > 0) {
+      queryParts.push(`listing_type=${formData.listingType.join(',')}`);
+    }
+  
+    return queryParts.join('&');
+  };
+  
+  const query = buildQuery(formData);
+
+  const handleSubmit = () => {
+    dispatch(searchProperties(query))
+  }
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    
+    setFormData(prevState => {
+      if (type === 'checkbox') {
+        if (name === 'propertyCategories' || name === 'listingType') {
+          return {
+            ...prevState,
+            [name]: checked 
+              ? [...prevState[name], value]
+              : prevState[name].filter(item => item !== value)
+          };
+        }
+      } else {
+        return {
+          ...prevState,
+          [name]: value
+        };
+      }
+    });
+  };
+
+  const handleRangeChange = (name, values) => {
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: {
+        min: values.min,
+        max: values.max
+      }
+    }));
+  };
+
   const [page, setPage] = useState(1);
   const topOfPageRef = useRef(null)
   useEffect(() => {
@@ -103,40 +186,44 @@ function Listings() {
                 <div className="container">
                   <form className="row g-3">
                     <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} for="inputEmail4" className="form-label">Email</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputEmail4" className="form-label">Email</label>
                       <input type="email" className="form-control" id="inputEmail4"/>
                     </div>
                     <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} for="inputPassword4" className="form-label">Password</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputPassword4" className="form-label">Password</label>
                       <input type="password" className="form-control" id="inputPassword4"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '16px'}} for="inputAddress" className="form-label">Address</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputAddress" className="form-label">Address</label>
                       <input style={{fontSize: '16px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '16px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputAddress2" className="form-label">Address 2</label>
                       <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
                     </div>
                     <div className="col-md-6">
-                      <label style={{fontSize: '16px'}} for="inputCity" className="form-label">City</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputCity" className="form-label">City</label>
                       <input type="text" className="form-control" id="inputCity"/>
                     </div>
                     <div className="col-md-4">
-                      <label for="inputState" className="form-label">State</label>
+                      <label htmlFor="inputState" className="form-label">State</label>
                       <select id="inputState" className="form-select">
                         <option selected>Choose...</option>
                         <option>...</option>
                       </select>
                     </div>
                     <div className="col-md-2">
-                      <label style={{fontSize: '16px'}} for="inputZip" className="form-label">Zip</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputZip" className="form-label">Zip</label>
                       <input type="text" className="form-control" id="inputZip"/>
                     </div>
                     <div className="col-12">
                       <div style={{fontSize: '16px'}} className="form-check">
-                        <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                        <label className="form-check-label" for="gridCheck">
+                        <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                          />
+                        <label className="form-check-label" htmlFor="gridCheck">
                           Check me out
                         </label>
                       </div>
@@ -195,6 +282,8 @@ function Listings() {
                         className="form-control"
                         id="inputLocation"
                         name='location'
+                        value={formData.location} 
+                        onChange={handleInputChange} 
                         placeholder='City, Province'
                       />
                     </div>
@@ -203,6 +292,9 @@ function Listings() {
                       <select
                         id="inputType"
                         className="form-select"
+                        name='propertyType'
+                        value={formData.propertyType} 
+                        onChange={handleInputChange}
                         style={{
                           border: 'none',
                           borderBottom: '1px solid #000',
@@ -212,78 +304,140 @@ function Listings() {
                           outline: 'none'
                         }}
                       >
-                        <option selected>Choose...</option>
+                        <option defaultValue={true}>Choose...</option>
                         {
                           (!categories || categories.listOfCategories.length === 0) || listOfCategories ? listOfCategories.map((item, index) => (
-                            <option key={index}>{item.name}</option>
+                            <option key={index} value={item.id}>{item.name}</option>
                           )) : <option>...</option>
                         }
                       </select>
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} for="inputEmail4" className="form-label">Price Range</label>
-                      <PriceRangeSlider />
+                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} htmlFor="inputEmail4" className="form-label">Price Range</label>
+                      <PriceRangeSlider
+                        onChange={(newValue) => handleRangeChange('priceRange', newValue)}
+                        value={formData.priceRange}
+                      />
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} for="inputPassword4" className="form-label">Property Size</label>
-                      <SizeRangeSlider />
+                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} htmlFor="inputPassword4" className="form-label">Property Size</label>
+                      <SizeRangeSlider 
+                       onChange={(newValue) => handleRangeChange('propertySize', newValue)}
+                       value={formData.propertySize}
+                      />
                     </div>
                     <h2 className='fs-6'>
                       <span style={{fontSize: '0.1em !important'}}>Would you like more filters </span>
                     </h2>
                     {/* <div className="col-12">
-                      <label style={{fontSize: '16px'}} for="inputAddress" className="form-label">Address</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputAddress" className="form-label">Address</label>
                       <input style={{fontSize: '16px'}}  type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
                     </div>
                     <div className="col-12">
-                      <label style={{fontSize: '16px'}} for="inputAddress2" className="form-label">Address 2</label>
+                      <label style={{fontSize: '16px'}} htmlFor="inputAddress2" className="form-label">Address 2</label>
                       <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
                     </div> */}
                     <div className="col-md-4">
-                      {/* <label style={{fontSize: '16px'}} for="inputCity" className="form-label">City</label>
+                      {/* <label style={{fontSize: '16px'}} htmlFor="inputCity" className="form-label">City</label>
                       <input type="text" className="form-control" id="inputCity"/> */}
                       <div className="d-flex flex-wrap gap-2">
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="residentialHouse" 
+                            checked={formData.propertyCategories.includes('residentialHouse')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Residential House
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="commercial" 
+                            checked={formData.propertyCategories.includes('commercial')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Commercial
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="office" 
+                            checked={formData.propertyCategories.includes('office')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Office
                           </label>
                         </div>
                       </div>
                       <div className="d-flex flex-wrap gap-2">
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="cottage" 
+                            checked={formData.propertyCategories.includes('cottage')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Cottage
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="pentHouse" 
+                            checked={formData.propertyCategories.includes('pentHouse')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Pent House
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="land" 
+                            checked={formData.propertyCategories.includes('land')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Land
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="propertyCategories" 
+                            value="appartment" 
+                            checked={formData.propertyCategories.includes('appartment')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             Appartment
                           </label>
                         </div>
@@ -292,14 +446,30 @@ function Listings() {
                     <div className='col-md-4'>
                       <div className="d-flex flex-wrap gap-2">
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="listingType" 
+                            value="forRent" 
+                            checked={formData.listingType.includes('forRent')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             For Rent
                           </label>
                         </div>
                         <div style={{fontSize: '16px'}} className="form-check">
-                          <input className="form-check-input" type="checkbox" id="gridCheck"/>
-                          <label style={{paddingTop: '3px'}} className="form-check-label" for="gridCheck">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="gridCheck"
+                            name="listingType" 
+                            value="forSale" 
+                            checked={formData.listingType.includes('forSale')} 
+                            onChange={handleInputChange} 
+                          />
+                          <label style={{paddingTop: '3px'}} className="form-check-label" htmlFor="gridCheck">
                             For Sale
                           </label>
                         </div>
@@ -307,7 +477,7 @@ function Listings() {
                     </div>
                     <div className="col-md-4">
                       <button
-                        type="submit"
+                        type="button"
                         className="btn btn-lg btn-block btn-primary btn-form-submit"
                         id="ihf-search-adv-submit"
                         style={{
@@ -315,6 +485,7 @@ function Listings() {
                           borderColor: '#031B28dc',
                           color: 'white'
                         }}
+                        onClick={handleSubmit}
                       > Search </button>
                     </div>
                   </form>
@@ -375,7 +546,16 @@ function Listings() {
                           </a>
                         </div>
                       )
-                    }) : ''
+                    }) : <div className="ip-fl-listing-pagination" style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginTop: '30px'
+                    }}>
+                      <div className="ip-ld-hero-controls">
+                        <h2 className='fs-4'>No properties found!!!</h2>
+                      </div>
+                    </div>
                   }
                   {loading && <div className="ip-fl-listing-item">Loading more properties...</div>}
                   {/* <div className="ip-fl-listing-pagination" style={{

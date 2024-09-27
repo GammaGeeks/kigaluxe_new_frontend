@@ -1,54 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const PriceRangeSlider = () => {
-  const [value, setValue] = useState(0);
+const PriceRangeSlider = ({ onChange, value }) => {
   const min = 0;
   const max = 200;
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    const newValue = parseInt(event.target.value);
+    onChange({ min: newValue, max: value.max });
   };
 
   const getBackgroundSize = () => {
-    return { backgroundSize: `${(value * 100) / (max - min)}% 100%` };
+    return { backgroundSize: `${((value.min - min) * 100) / (max - min)}% 100%` };
   };
 
   return (
     <div className="d-flex align-items-center" style={{ gap: '10px' }}>
-      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>Rwf 0</p>
+      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>Rwf {min}</p>
       <div className="position-relative flex-grow-1" style={{ margin: '0 10px' }}>
         <input 
           type="range" 
           className="form-range" 
           min={min}
           max={max}
-          value={value}
+          value={value.min}
           onChange={handleChange}
           id="customRange2"
           style={{
-            ...getBackgroundSize(),
             height: '4px',
             WebkitAppearance: 'none',
-            background: 'linear-gradient(to right, #031B28dc 0%, #031B28dc 50%, #dedede 50%, #dedede 100%)',
+            backgroundImage: 'linear-gradient(to right, #031B28dc 0%, #031B28dc 50%, #dee2e6 50%, #dee2e6 100%)',
+            backgroundRepeat: 'no-repeat',
+            ...getBackgroundSize(),
           }}
         />
         <div 
           className="position-absolute translate-middle" 
           style={{ 
-            left: `${(value - min) * 100 / (max - min)}%`, 
+            left: `${((value.min - min) * 100) / (max - min)}%`, 
             top: '50%',
             fontSize: '12px',
             fontWeight: 'bold',
-            padding: '2px 6px',
-            borderRadius: '10px',
+            padding: '6px 6px',
+            borderRadius: '5px',
             backgroundColor: '#031B28dc',
             color: 'white',
           }}
         >
-          {value}
+          {value.min}
         </div>
       </div>
-      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>Rwf 200 million</p>
+      <p className="mb-0" style={{ whiteSpace: 'nowrap', fontSize: '14px' }}>Rwf {max} million</p>
     </div>
   );
 };
