@@ -15,6 +15,7 @@ import html2canvas from 'html2canvas';
 
 import imageOne from '../../assets/images/ld-bg-2.png'
 import moment from 'moment/moment'
+import YouTubeEmbed from '../../components/Youtube'
 
 function SingleProperty() {
   const navigate = useNavigate()
@@ -215,7 +216,7 @@ function SingleProperty() {
                           <div className="ip-ld-gallery-container">
                             <div className="ip-ld-gallery-row">
                               {
-                                property && imgs.map((item, index) => ( 
+                                property && imgs.slice(0, 2).map((item, index) => ( 
                                   <div key={index} className="ip-ld-gallery-col">
                                     <a href={item} className="ip-ld-gallery-popup">
                                       <div className="ip-ld-gallery-img site-img">
@@ -256,6 +257,8 @@ function SingleProperty() {
                           <div className="ip-ld-content-container">
                             <div className="ip-ld-content">
                               <p>{property.details}</p>
+                              <p>{property.details}</p>
+                              <YouTubeEmbed videoId='Heezf5XCQg0' />
                             </div>
                           </div>
                         </div>
