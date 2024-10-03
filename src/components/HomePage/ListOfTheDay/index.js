@@ -154,7 +154,7 @@ function ListingOfTheDay() {
                                         </div> */}
                                         <Col xs={4} className='mt-2' data-url="#">
                                             {
-                                              property && property.urls.map((img, index) => {
+                                              property && property.urls.slice(0, 2).map((img, index) => {
                                                 // console.log('Image: ' + img);
                                                 // console.log('Index: ' + index);
                                                 return (
