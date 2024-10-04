@@ -18,17 +18,11 @@ function AboutUs() {
       <div className="textwidget custom-html-widget">
         {/* <!--<div className="ip-banner" data-type="page" data-id="33"><canvas width="1600" height="350" style="background-image: url(https://serioestates.com/wp-content/uploads/2023/01/slide-img-1.jpg)"></canvas></div>
     --> */}
-        <div className="custom-ip-banner">
-          <canvas width="1530" height="568"></canvas>
-          {/* <div className="custom-ip-tagline">
-            <div className="container">Respected. Loyal. Relentless. Discreet.</div>
-          </div> */}
-        </div>
       </div>
       {/* <!-- ip banner goes here --> */}
       <div id="inner-page-wrapper">
         <div className="container">
-          <div id="ai-modern-about" className="ai-modern-about">
+          <div style={{marginTop: '120px'}} id="ai-modern-about" className="ai-modern-about">
             <div id="content-full">
               <article id="content" className="hfeed">
                 {/* <p id="breadcrumbs">
@@ -49,18 +43,18 @@ function AboutUs() {
                   <div className="entry entry-content">
                     <div id="ai-modern-about" className="ai-modern-about">
                       <div className="ai-modern-about-entry">
+                        <div className="global-title p-3">
+                          <h2>
+                            <small>Welcome to Kigaluxe:</small>
+                            <span>Your Gateway to Exceptional Real Estate Services</span>
+                          </h2>
+                        </div>
                         <div className="container-fluid">
                           <div className="ai-modern-about-photo">
                             <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/images/b.jpg')})`}}></canvas>
                           </div>
                           <div className="ai-modern-about-main">
                             <div className="ai-modern-about-title">
-                              <div className="global-title">
-                                <h2>
-                                  <small>Welcome to Kigaluxe:</small>
-                                  <span>Your Gateway to Exceptional Real Estate Services</span>
-                                </h2>
-                              </div>
                             </div>
                             <div className="ai-modern-about-content">
                               <p>
@@ -185,7 +179,7 @@ function AboutUs() {
                           </div>
                         </div>
                       </div> */}
-                      <ul className="ai-modern-about-cta">
+                      <ul style={{marginBottom: '70px'}} className="ai-modern-about-cta">
                         <li>
                           <a href="https://serioestates.com/featured-listings/">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/Luxury-Properties.jpg')"}}></canvas>
