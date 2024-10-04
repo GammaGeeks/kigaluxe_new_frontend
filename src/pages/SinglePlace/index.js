@@ -192,7 +192,7 @@ function SinglePlace() {
           <div className="ip-cd-section">
             <div className="ip-comm-content-main">
               <div className="custom-container">
-                <div className="global-title is-centered">
+                {/* <div className="global-title is-centered">
                   <h2>
                     <small>
                       <em className="global-logo-icon">
@@ -200,8 +200,8 @@ function SinglePlace() {
                       </em>Similar </small>
                     <span>Communities</span>
                   </h2>
-                </div>
-                <div className="ip-comm-content-row" data-total="12">
+                </div> */}
+                {/* <div className="ip-comm-content-row" data-total="12">
                   <div className="ip-comm-item">
                     <a href="https://serioestates.com/community/bel-air/">
                       <div className="ip-comm-img site-img">
@@ -442,10 +442,10 @@ function SinglePlace() {
                       </div>
                     </a>
                   </div>
-                </div>
-                <div className="ip-comm-content-more-btn">
+                </div> */}
+                {/* <div className="ip-comm-content-more-btn">
                   <button className="global-btn">Load More</button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

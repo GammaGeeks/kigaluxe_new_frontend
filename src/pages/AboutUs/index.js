@@ -56,7 +56,7 @@ function AboutUs() {
                           <div className="ai-modern-about-main">
                             <div className="ai-modern-about-title">
                             </div>
-                            <div className="ai-modern-about-content">
+                            <div style={{paddingTop: '50px'}} className="ai-modern-about-content">
                               <p>
                                 At Kigaluxe, we are more than a real estate company – we are a trusted partner in facilitating, managing, and optimizing your property investments. With an in-depth understanding of Rwanda’s evolving real estate landscape, we are committed to delivering excellence across all facets of the property market.
                                 <br/><br/>

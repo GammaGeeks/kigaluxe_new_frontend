@@ -7,7 +7,7 @@
 // import moment from 'moment'
 
 import { Link } from "react-router-dom"
-
+import footer_bg from './../../assets/logo/footer1.png'
 // import './index.scss'
 
 function FooterPart() {
@@ -17,7 +17,7 @@ function FooterPart() {
             <div className="footer-container">
             <div className="footer-bg">
                 <div className="textwidget custom-html-widget">
-                <canvas className="bg-main lazyload" width="1600" height="637" data-bgset={require('./../../assets/logo/footer1.png')}></canvas>
+                <canvas className="bg-main lazyload" width="1600" height="637" data-bgset={footer_bg}></canvas>
                 </div>
             </div>
             <div className="footer-main">
