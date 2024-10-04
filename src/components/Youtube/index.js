@@ -4,6 +4,7 @@ const YouTubeEmbed = ({ videoId }) => {
   return (
     <div>
       <iframe
+       className='aspect-video'
         width="100%"
         height="630"
         src={`https://www.youtube.com/embed/${videoId}`}

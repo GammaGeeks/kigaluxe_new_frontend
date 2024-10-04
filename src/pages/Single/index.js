@@ -257,7 +257,6 @@ function SingleProperty() {
                           <div className="ip-ld-content-container">
                             <div className="ip-ld-content">
                               <p>{property.details}</p>
-                              <p>{property.details}</p>
                               <YouTubeEmbed videoId='Heezf5XCQg0' />
                             </div>
                           </div>

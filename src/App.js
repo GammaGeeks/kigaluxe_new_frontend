@@ -15,6 +15,7 @@ import Blogs from './pages/Blogs';
 import SinglePlace from './pages/SinglePlace';
 import SingleBlog from './pages/SingleBlog';
 import ContactUs from './pages/ContactUs';
+import Checkout from './pages/Checkout';
 // Function to check if the device is mobile
 const isMobileDevice = () => {
   return /Mobi|Android/i.test(navigator.userAgent);
@@ -44,6 +45,7 @@ function App() {
           <Route path='blog' element={<Blogs />} />
           <Route path='blogs/:id' element={<SingleBlog />} />
           <Route path='contact_us' element={<ContactUs />} />
+          <Route path='confirmed' element={<Checkout />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

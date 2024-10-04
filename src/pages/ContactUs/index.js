@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
 function ContactUs() {
   const form = useRef();
+  const navigate = useNavigate()
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -40,6 +41,11 @@ function ContactUs() {
               'aria-live': 'polite',
             },
           })
+
+          // Navigate after a short delay to ensure the toast is visible
+          setTimeout(() => {
+            navigate('/confirmed');
+          }, 2000);
       }, (error) => {
           console.log('FAILED...', error);
           // You can add code here to show an error message to the user
