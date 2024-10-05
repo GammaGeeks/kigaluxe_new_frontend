@@ -14,7 +14,7 @@ import { setLocaleData } from '@wordpress/i18n';
 import Testimonials from '../../components/HomePage/Testimonials';
 import Places from '../../components/HomePage/Places';
 import Welcome from '../../components/HomePage/Welcome';
-// import Insta from '../../components/HomePage/Insta';
+import Insta from '../../components/HomePage/Insta';
 import ListingOfTheDay from '../../components/HomePage/ListOfTheDay';
 import Listings from '../../components/HomePage/Listings';
 // import CallToAction from '../../components/HomePage/CallToAction';
@@ -416,7 +416,7 @@ const d = Array.from(p).reduce((e, t) => {
         {/* <!-- Welcome --> */}
         <Welcome />
         {/* <!-- Social Media --> */}
-        {/* <Insta /> */}
+        <Insta />
         {/* <!-- Listing of the Day --> */}
         <ListingOfTheDay />
         {/* <!-- Area of Expertise --> */}
