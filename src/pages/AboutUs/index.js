@@ -181,7 +181,7 @@ function AboutUs() {
                       </div> */}
                       <ul style={{marginBottom: '70px'}} className="ai-modern-about-cta">
                         <li>
-                          <a href="https://serioestates.com/featured-listings/">
+                          <a href="#">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/Luxury-Properties.jpg')"}}></canvas>
                             <div>
                               <span>View our</span>
@@ -190,7 +190,7 @@ function AboutUs() {
                           </a>
                         </li>
                         <li>
-                          <a href="https://serioestates.com/home-valuation/">
+                          <a href="#">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/about-img-2.jpg')"}}></canvas>
                             <div>
                               <span>What Is My</span>
@@ -199,7 +199,7 @@ function AboutUs() {
                           </a>
                         </li>
                         <li>
-                          <a href="#" className="trigger-popup">
+                          <a href="http://eepurl.com/i0Mue6" className="trigger-popup">
                             <canvas width="533" height="340" style={{backgroundImage: "url('images/about-img-3.jpg')"}}></canvas>
                             <div>
                               <span>Join Our</span>
