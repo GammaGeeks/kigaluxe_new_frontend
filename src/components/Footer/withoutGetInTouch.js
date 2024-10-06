@@ -109,13 +109,13 @@ function FooterPart() {
                     <div className="footer-nl-contacts-holder">
                         <div className="footer-nl-form-widget">
                         <div className="textwidget custom-html-widget">
-                            <h2 className="footer-title">Join Our Vip List</h2>
+                            <a href='http://eepurl.com/i0Mue6' target="_blank" rel="noopener"><h2 className="footer-title">Join Our Vip List</h2></a>
                             <div className="wpcf7 no-js" id="wpcf7-f22-o3" lang="en-US" dir="ltr">
                             <div className="screen-reader-response">
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
                                 <ul></ul>
                             </div>
-                            <form action="/#wpcf7-f22-o3" method="post" className="wpcf7-form init use-floating-validation-tip" aria-label="Contact form" noValidate="noValidate" data-status="init">
+                            {/* <form action="/#wpcf7-f22-o3" method="post" className="wpcf7-form init use-floating-validation-tip" aria-label="Contact form" noValidate="noValidate" data-status="init">
                                 <div className="footer-nl-form">
                                 <div className="footer-nl-form-field">
                                     <label className="hidden" htmlFor="nl-email">Email Address</label>
@@ -129,7 +129,7 @@ function FooterPart() {
                                 </div>
                                 </div>
                                 <div className="wpcf7-response-output" aria-hidden="true"></div>
-                            </form>
+                            </form> */}
                             </div>
                         </div>
                         </div>

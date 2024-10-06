@@ -36,7 +36,7 @@ function Insta() {
 
   console.log('POSTS',posts);
   return (
-    <section id="social-media" className="aios-scroll-section" data-aios-scroll-title="Social Media">
+    <section className="aios-scroll-section" data-aios-scroll-title="Social Media">
             <div className="textwidget custom-html-widget">
                 <div className="sm-container">
                     <div className="sm-bg attachment-fixed">
@@ -117,7 +117,7 @@ function Insta() {
                                         <a href={`https://www.instagram.com/p/${post.code}/`} target="_blank" rel="noopener">
                                             <div className="sm-img site-img">
                                                 <canvas width="219" height="235"></canvas>
-                                                <img className="lazyload" src={post.image_versions[0]} alt="Instagram Photo" width="219" height="235"/>
+                                                <img className="lazyload" src={`${post.thumbnail_url}`} alt="Instagram Photo" width="219" height="235"/>
                                             </div>
                                             <div className="sm-hover-details">
                                                 <span>
