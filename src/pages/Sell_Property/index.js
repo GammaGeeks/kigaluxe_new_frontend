@@ -1,12 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
+import { fetchAllCategories } from '../../redux/actions/categories'
+import { useSelector, useDispatch } from 'react-redux'
 
 function SellProperty() {
   const form = useRef();
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const [type, setType] = useState('')
+  const categories = useSelector(state => state.categories)
+
+  useEffect(() => {
+    dispatch(fetchAllCategories())
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // eslint-disable-next-line no-unused-vars
+  const { listOfCategories = [], getCategories = {} } = categories || {}
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -58,6 +71,10 @@ function SellProperty() {
       topOfPageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
     }
   }, [])
+
+  const handleTypeChange = (event) => {
+    setType(event.target.value)
+  }
   return (
     <main>
       <div ref={topOfPageRef}></div>
@@ -156,14 +173,35 @@ function SellProperty() {
                                     </div>
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-phone" className="ai-modern-contact-form-label">Phone Number</label>
-                                      <span className="wpcf7-form-control-wrap" data-name="your-phone">
+                                      <span style={{marginTop: 10}} className="wpcf7-form-control-wrap" data-name="your-phone">
                                         <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel ai-modern-contact-form-control" id="your-phone" aria-required="true" aria-invalid="false" type="tel" name="phone" />
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field">
                                       <label for="your-email" className="ai-modern-contact-form-label">PROPERTY TYPE</label>
                                       <span className="wpcf7-form-control-wrap" data-name="your-email">
-                                        <input size="40" maxlength="400" className="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email ai-modern-contact-form-control" id="your-email" aria-required="true" aria-invalid="false" type="email" name="email" />
+                                        <select
+                                          id="inputType"
+                                          className="form-select"
+                                          name='propertyType'
+                                          value={type} 
+                                          onChange={handleTypeChange}
+                                          style={{
+                                            border: 'none',
+                                            borderBottom: '1px solid #000',
+                                            borderRadius: '0',
+                                            padding: '0.375rem 0.75rem',
+                                            backgroundColor: '#dedede',
+                                            outline: 'none'
+                                          }}
+                                        >
+                                          <option value='' defaultValue={true}>Choose...</option>
+                                          {
+                                            (!categories || categories.listOfCategories.length === 0) || listOfCategories ? listOfCategories.map((item, index) => (
+                                              <option key={index} value={item.id}>{item.name}</option>
+                                            )) : <option>...</option>
+                                          }
+                                        </select>
                                       </span>
                                     </div>
                                     <div className="ai-modern-contact-form-field lg">
