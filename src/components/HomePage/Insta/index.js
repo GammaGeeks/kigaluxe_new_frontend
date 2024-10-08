@@ -110,7 +110,7 @@ function Insta() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="sm-list">
+                            {/* <div className="sm-list">
                               {
                                 posts && posts.items.slice(0, 6).map((post)=> (
                                     <div key={post.code} className="sm-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
@@ -132,7 +132,7 @@ function Insta() {
                                 ))
                               }
                                 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

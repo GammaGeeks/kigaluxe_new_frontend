@@ -119,7 +119,7 @@ function SellProperty() {
                         <div className="ai-modern-contact-entry-inner">
                           <div className="ai-modern-contact-photo">
                             <span>
-                              <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/images/contact_us.jpg')})`}}></canvas>
+                              <canvas width="550" height="825" style={{backgroundImage: `url(${require('../../assets/sell.png')})`}}></canvas>
                             </span>
                           </div>
                           <div className="ai-modern-contact-main">
