@@ -52,7 +52,7 @@ function Header({setIsAsideActive}) {
                                     </ul> */}
                                 </li>
                                 <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-233">
-                                    <Link to="/animation" data-title="Sell Your Property">Sell Your Property</Link>
+                                    <Link to="/sell_property" data-title="Sell Your Property">Sell Your Property</Link>
                                     {/* <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1194">
                                             <a href="https://serioestates.com/interactive-map/" data-title="Interactive Map">Interactive Map</a>
@@ -116,7 +116,7 @@ function Header({setIsAsideActive}) {
                             </Nav>
                             <Nav className="main-nav">
                                 <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-43">
-                                    <Link to='/search' data-title="Buyers">Buyers</Link>
+                                    <Link to='/buyers' data-title="Buyers">Buyers</Link>
                                     {/* <ul className="sub-menu">
                                         <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-42">
                                             <a href="https://serioestates.com/property-search/" data-title="Property Search">Property Search</a>

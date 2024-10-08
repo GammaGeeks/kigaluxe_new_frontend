@@ -106,7 +106,7 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                         <Link onClick={() => setIsAsideActive(false)} to="/blog" data-title="Blog">Blog</Link>
                                     </li>
                                     <li id="menu-item-24929" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24929">
-                                        <a href="#" data-title="Buyers">Buyers</a>
+                                        <Link to='/buyers' onClick={() => setIsAsideActive(false)} data-title="Buyers">Buyers</Link>
                                         {/* <ul className="sub-menu">
                                             <li id="menu-item-24930" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24930">
                                                 <a href="https://serioestates.com/property-search/" data-title="Property Search">Property Search</a>
@@ -114,12 +114,12 @@ function SideMenu({isAsideActive, setIsAsideActive}) {
                                         </ul> */}
                                     </li>
                                     <li id="menu-item-24931" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24931">
-                                        <a href="https://serioestates.com/sellers/" data-title="Sellers">Sellers</a>
-                                        <ul className="sub-menu">
+                                        <Link to='/sellers' onClick={() => setIsAsideActive(false)} data-title="Sellers">Sellers</Link>
+                                        {/* <ul className="sub-menu">
                                             <li id="menu-item-24932" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24932">
                                                 <a href="https://serioestates.com/home-valuation/" data-title="Home Valuation">Home Valuation</a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
                                     </li>
                                     <li id="menu-item-24933" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-24933">
                                         <Link to='/about_us' onClick={() => setIsAsideActive(false)} data-title="About Us">About Us</Link>

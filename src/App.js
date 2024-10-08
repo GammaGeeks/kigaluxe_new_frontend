@@ -8,7 +8,6 @@ import Home from './pages/Home'
 import Listings from './pages/Listings';
 import Services from './pages/Services';
 import SingleProperty from './pages/Single';
-import Search from './pages/Search';
 import AboutUs from './pages/AboutUs';
 import Places from './pages/Places';
 import Blogs from './pages/Blogs';
@@ -16,6 +15,8 @@ import SinglePlace from './pages/SinglePlace';
 import SingleBlog from './pages/SingleBlog';
 import ContactUs from './pages/ContactUs';
 import Checkout from './pages/Checkout';
+import Buyers from './pages/Buyers';
+import SellProperty from './pages/Sell_Property';
 // Function to check if the device is mobile
 const isMobileDevice = () => {
   return /Mobi|Android/i.test(navigator.userAgent);
@@ -38,7 +39,7 @@ function App() {
           <Route path='services' element={<Services />} />
           <Route path='about_us' element={<AboutUs />} />
           <Route path='listings' element={<Listings />} />
-          <Route path='search' element={<Search />} />
+          <Route path='buyers' element={<Buyers />} />
           <Route path='property/:id' element={<SingleProperty />} />
           <Route path='places' element={<Places />} />
           <Route path='places/:id' element={<SinglePlace />} />
@@ -46,6 +47,7 @@ function App() {
           <Route path='blogs/:id' element={<SingleBlog />} />
           <Route path='contact_us' element={<ContactUs />} />
           <Route path='confirmed' element={<Checkout />} />
+          <Route path='sell_property' element={<SellProperty />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

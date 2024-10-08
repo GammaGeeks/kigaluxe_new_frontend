@@ -116,8 +116,8 @@ function Insta() {
                                     <div key={post.code} className="sm-item" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                                         <a href={`https://www.instagram.com/p/${post.code}/`} target="_blank" rel="noopener">
                                             <div className="sm-img site-img">
-                                                <canvas width="219" height="235"></canvas>
-                                                <img className="lazyload" src={`${post.thumbnail_url}`} alt="Instagram Photo" width="219" height="235"/>
+                                                <canvas width="219" height="235" style={{backgroundImage: `url(${post.thumbnail_url})`}}></canvas>
+                                                <img className="lazyload" src={`${post && post.thumbnail_url}`} alt="Instagram Photo" width="219" height="235"/>
                                             </div>
                                             <div className="sm-hover-details">
                                                 <span>
