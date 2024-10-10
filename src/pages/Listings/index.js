@@ -10,7 +10,7 @@ import flBg from '../../assets/images/fl-bg.jpg'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchAllProperties, searchProperties } from '../../redux/actions/properties'
 import { fetchAllCategories } from '../../redux/actions/categories'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import PriceRangeSlider from '../../components/Listings/PriceRangeSlider'
 import SizeRangeSlider from '../../components/Listings/SizeRangeSlider'
 
@@ -493,7 +493,7 @@ function Listings() {
                     (!properties || properties.listOfProperties.length === 0) || listOfProperties ? listOfProperties.map((item, index) => {
                       return (
                         <div key={index} className="ip-fl-listing-item">
-                          <a href="#">
+                          <Link to={`/property/${item.id}`}>
                             <div className="ip-fl-listing-img-holder">
                               <div className="ip-fl-listing-img site-img">
                                 <canvas width="488" height="484"></canvas>
@@ -528,7 +528,7 @@ function Listings() {
                             <div className="ip-fl-listing-address">
                               <span>{item.title} <br /> {item.location} </span>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       )
                     }) : <div className="ip-fl-listing-pagination" style={{
