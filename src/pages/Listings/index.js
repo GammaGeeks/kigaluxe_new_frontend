@@ -202,12 +202,26 @@ function Listings() {
                 </div>
               </div> */}
               <div className="ip-fl-listing-main">
-                <div className="custom-container px-5">
+                <div style={{ marginTop: '150px'}} className="custom-container">
                   <div style={{opacity: 1}} className="global-title is-centered">
-                    {/* <h2 style={{fontSize: '0.2em !important'}}>
+                    <h2>
+                      <small>
+                        <em className="global-logo-icon">
+                          <i className="global-outline"></i>
+                        </em>Latest </small>
                       <span>Listings </span>
-                    </h2> */}
+                    </h2>
                   </div>
+                  <div className="ip-fl-listing-caption">
+                    <p>These are the finest homes currently available on the market. Contact us to schedule a private showing.</p>
+                  </div>
+                </div>
+                <div className="custom-container px-5">
+                  {/* <div style={{opacity: 1}} className="global-title is-centered">
+                    <h2 style={{fontSize: '0.2em !important'}}>
+                      <span>Listings </span>
+                    </h2>
+                  </div> */}
                   <form className="row mt-5 g-3">
                     <h2 className='fs-4'>
                       <span>Advanced Search </span>
@@ -258,21 +272,61 @@ function Listings() {
                       </select>
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} htmlFor="inputEmail4" className="form-label">Price Range</label>
-                      <PriceRangeSlider
+                      <label style={{fontSize: '16px', marginBottom: '0.35rem'}} htmlFor="inputEmail4" className="form-label">Price Range</label>
+                      <select
+                        id="inputType"
+                        className="form-select"
+                        name='priceRange'
+                        value={formData.priceRange} 
+                        onChange={handleInputChange}
+                        style={{
+                          border: 'none',
+                          borderBottom: '1px solid #000',
+                          borderRadius: '0',
+                          padding: '0.375rem 0.75rem',
+                          backgroundColor: '#dedede',
+                          outline: 'none'
+                        }}
+                      >
+                        <option value='0' defaultValue={true}>Below - 50 M</option>
+                        <option value='1'>50M - 100M</option>
+                        <option value='2'>100M - 200M</option>
+                        <option value='3'>200M - Above</option>
+                      </select>
+                      {/* <PriceRangeSlider
                         onChange={(newValue) => handleRangeChange('priceRange', newValue)}
                         value={formData.priceRange}
-                      />
+                      /> */}
                     </div>
                     <div className="col-md-3">
-                      <label style={{fontSize: '16px', marginBottom: '1.2rem'}} htmlFor="inputPassword4" className="form-label">Property Size</label>
-                      <SizeRangeSlider 
+                      <label style={{fontSize: '16px', marginBottom: '0.35rem'}} htmlFor="inputPassword4" className="form-label">Property Size</label>
+                      <select
+                        id="inputType"
+                        className="form-select"
+                        name='propertySize'
+                        value={formData.propertySize}
+                        onChange={handleInputChange}
+                        style={{
+                          border: 'none',
+                          borderBottom: '1px solid #000',
+                          borderRadius: '0',
+                          padding: '0.375rem 0.75rem',
+                          backgroundColor: '#dedede',
+                          outline: 'none'
+                        }}
+                      >
+                        <option value='0' defaultValue={true}>20sqm - 50sqm</option>
+                        <option value='1'>50sqm - 100sqm</option>
+                        <option value='2'>100sqm - 200sqm</option>
+                        <option value='4'>200sqm - Above</option>
+                      </select>
+                      {/* <SizeRangeSlider 
                        onChange={(newValue) => handleRangeChange('propertySize', newValue)}
                        value={formData.propertySize}
-                      />
+                      /> */}
                     </div>
                     <h2 className='fs-6'>
-                      <span style={{fontSize: '0.1em !important'}}>Would you like more filters </span>
+                      <span style={{fontSize: '0.1em !important'}}>Availability </span>
                     </h2>
                     {/* <div className="col-12">
                       <label style={{fontSize: '16px'}} htmlFor="inputAddress" className="form-label">Address</label>
@@ -282,9 +336,7 @@ function Listings() {
                       <label style={{fontSize: '16px'}} htmlFor="inputAddress2" className="form-label">Address 2</label>
                       <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
                     </div> */}
-                    <div className="col-md-4">
-                      {/* <label style={{fontSize: '16px'}} htmlFor="inputCity" className="form-label">City</label>
-                      <input type="text" className="form-control" id="inputCity"/> */}
+                    {/* <div className="col-md-4">
                       <div className="d-flex flex-wrap gap-2">
                         <div style={{fontSize: '16px'}} className="form-check">
                           <input
@@ -387,8 +439,8 @@ function Listings() {
                           </label>
                         </div>
                       </div>
-                    </div>
-                    <div className='col-md-4'>
+                    </div> */}
+                    <div className='col-md-12'>
                       <div className="d-flex flex-wrap gap-2">
                         <div style={{fontSize: '16px'}} className="form-check">
                           <input
@@ -420,7 +472,7 @@ function Listings() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-md-4">
+                    {/* <div className="col-md-4">
                       <button
                         type="button"
                         className="btn btn-lg btn-block btn-primary btn-form-submit"
@@ -432,22 +484,10 @@ function Listings() {
                         }}
                         onClick={handleSubmit}
                       > Search </button>
-                    </div>
+                    </div> */}
                   </form>
                 </div>
                 <div className="custom-container">
-                  <div style={{opacity: 1, marginTop: '-30px'}} className="global-title is-centered">
-                    <h2>
-                      <small>
-                        <em className="global-logo-icon">
-                          <i className="global-outline"></i>
-                        </em>Latest </small>
-                      <span>Listings </span>
-                    </h2>
-                  </div>
-                  <div className="ip-fl-listing-caption">
-                    <p>These are the finest homes currently available on the market. Contact us to schedule a private showing.</p>
-                  </div>
                   <div className="ip-fl-listing-row">
                   {
                     (!properties || properties.listOfProperties.length === 0) || listOfProperties ? listOfProperties.map((item, index) => {

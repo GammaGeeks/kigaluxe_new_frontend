@@ -6,7 +6,7 @@ import { apiAction } from '../../helpers';
 const getAllPlaces = (page = 1, limit = 12) => (dispatch) => dispatch(apiAction({
   method: 'get',
   httpOptions: { token: localStorage.token },
-  url: `${REACT_APP_BASIC_URL}/api/places?page=${page}&limit=${limit}`,
+  url: `${REACT_APP_BASIC_URL}/api/place?page=${page}&limit=${limit}`,
   onStart: placesTypes.FETCH_PLACES_START,
   onEnd: placesTypes.FETCH_PLACES_END,
   onSuccess: placesTypes.FETCH_PLACES_SUCCESS,
